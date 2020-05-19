@@ -1,0 +1,60 @@
+* {padding: 0; margin: 0; font-family: "Trebuchet MS", Helvetica, sans-serif}
+
+body, html {height: 100%;}
+
+.grid-container {
+	height: 100%;
+	display: grid;
+	grid-template-columns: .3fr 2fr;
+	grid-template-rows: 1fr 1fr auto;
+	grid-template-areas: 
+    "n h"
+    "n h"
+	"n f"; 
+}
+
+header {
+	grid-area: h;
+	padding: 8% 0 0 15%;
+	font-size: 5.5em;
+	color: #4998D2;
+}
+
+
+h5 {
+	font-size: 3rem; 
+	padding-top:1.25%; 
+	text-align:center; 
+	color: black;
+}
+
+nav { 
+	grid-area: n;
+	background-color: #f1f1f1;
+	font-size:1.25em;
+}
+
+nav ul {list-style-type: none;}
+
+nav a {
+display: block; 
+text-decoration: none; 
+color: black; 
+padding: 10% 1em;
+}
+
+.active {
+  background-color: #4998D2;
+  color: white;  
+}
+
+.not-active:hover  {
+  background-color: #4998D2;
+}
+
+#book_icon {height:5em; width:5em; padding: 15% 3.5em;}
+
+footer {
+	grid-area: f;
+	justify-self: center;
+}
