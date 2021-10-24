@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Miranda Holliday | Home </title>
+        <meta name="descripiton" content="Miranda Holliday's Online Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="test-mobile.css">
+    </head>
+        <body>
+                <!----------------------------------------HEADER--------------------------------------------->
+                <!--Header-->
+                <header class="header side-padding" id="page-header" >
+                    <!--logo-->
+                    <div id="logo"><a href = "index.html" id="logo-link">MH</a></div>
+
+                    <!--Navigation Menu & Items-->
+                    <nav id="nav-overlay">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="file:///C:/Users/Robert%20Dixon/Documents/MirandaHolliday.com/index.html#bio-link" class="nav-link" onclick="closeMenu()">Bio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="Acting.html" class="nav-link">Acting</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Writing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link" id="active-link">Contact</a>
+                            </li>
+                        </ul> 
+                    </nav>
+
+                    <!--hamburger menu-->
+                    <div class="hamburger-menu" id="menu" onclick="toggle_menu(this)">
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+                        <div class="line" id="line3"></div>
+                    </div>
+                </header>
+
+            <!---------------------------------------- PAGE WRAPPER--------------------------------------------->
+            <!--PAGE WRAPPER-->
+            <div class="page-wrapper">
+
+              
+
+            </div>
+
+
+            <!----------------------------------------FOOTER-------------------------------------------->
+            <div class="push-footer"></div>
+
+            <!--FOOTER WRAPPER--> 
+            <footer class = "footer-wrapper">
+                <!--Footer Text-->
+                <p class="footer-text">
+                    &#169;All rights reserved by 
+                    <span class="bold-footer-text">Robert Dixon </span> 
+                    <span>| </span>
+                    <span class="bold-footer-text">Realize Digital</span>
+                </p>
+            </footer>
+
+    <!----------------------------------------JQUERY-------------------------------------------->    
+       <script>
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar        
+        var prevScrollpos = window.pageYOffset;
+        
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        var header = document.getElementById("page-header");
+
+            if (prevScrollpos > currentScrollPos) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-40px";
+            }
+            prevScrollpos = currentScrollPos;
+            }*/
+
+        /*Hamburger Menu Change & Transition*/   
+        function toggle_menu(x) {
+            x.classList.toggle("open-menu");
+
+            var x = document.getElementById("nav-overlay")
+            var logo = document.getElementById("logo-link")
+            var header = document.getElementById("page-header")
+
+            if (x.style.height === "100vh") {
+                x.style.height = "0vh"; 
+                logo.style.color = "#ffffff"; 
+                
+                /* 
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+
+                if (prevScrollpos > currentScrollPos) {
+                    header.style.top = "0";
+                } else {
+                    header.style.top = "-40px";
+                }
+                prevScrollpos = currentScrollPos;
+                }*/
+
+            } else {
+                x.style.height = "100vh";
+                logo.style.color = "#c3874d";
+                
+                /*
+                window.onscroll = function() {
+                    header.style.top = "0"*/
+                }
+            }
+        
+        /*WHEN BIO LINK IS CLICKED*/
+        function closeMenu() {
+            var nav = document.getElementById("nav-overlay")
+            nav.style.height = "0";
+            document.getElementById("menu").classList.remove("open-menu");
+            document.getElementById("logo-link").style.color = "#ffffff";
+        }
+
+        /*Disable body scrolling when nav-overlay is 100vh*/
+
+    </script>
+    </body>
+</html>
