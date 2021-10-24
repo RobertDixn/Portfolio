@@ -65,7 +65,7 @@ body {
   z-index: 4;
   position: fixed;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
-  overflow-y: hidden;
+  overflow-y: none;
 }
 /*logo*/
 #logo {
@@ -178,7 +178,7 @@ body {
   position: fixed;
   z-index: 3;
   background-color: teal;
-  overflow-y: hidden;
+  overflow-y: none;
 }
 /*Acting Menu Buttons*/
 .headshots-menu-btn {
@@ -210,16 +210,17 @@ body {
 .headshots-menu {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  overflow-y: hidden;
+  overflow-y: none;
 }
 
 .headshots-menu::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
+  overflow-y: none;
 }
 
 /*Headshots Menu Item*/
 .headshots-menu-item {
-  background-color: black;
+  background-color: teal;
   font-size: 0.875em; /*14px*/
   font-weight: 700; /*BOLD*/
   color: #ffffff;
