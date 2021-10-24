@@ -209,7 +209,7 @@ body {
 .headshots-menu {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .headshots-menu::-webkit-scrollbar {
