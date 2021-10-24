@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Miranda Holliday | Home </title>
+        <meta name="descripiton" content="Miranda Holliday's Online Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="contact-mobile.css">
+    </head>
+        <body>
+                <!----------------------------------------HEADER--------------------------------------------->
+                <!--Header-->
+                <header class="header side-padding" id="page-header" >
+                    <!--logo-->
+                    <div id="logo"><a href = "index.html" id="logo-link">MH</a></div>
+
+                    <!--Navigation Menu & Items-->
+                    <nav id="nav-overlay">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="file:///C:/Users/Robert%20Dixon/Documents/MirandaHolliday.com/index.html#bio-link" class="nav-link" onclick="closeMenu()">Bio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="Acting.html" class="nav-link">Acting</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Writing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link" id="active-link">Contact</a>
+                            </li>
+                        </ul> 
+                    </nav>
+
+                    <!--hamburger menu-->
+                    <div class="hamburger-menu" id="menu" onclick="toggle_menu(this)">
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+                        <div class="line" id="line3"></div>
+                    </div>
+                </header>
+
+            <!---------------------------------------- PAGE WRAPPER--------------------------------------------->
+            <!--PAGE WRAPPER-->
+            <div class="page-wrapper">
+
+               <!---------------------------------------- CONNECT WRAPPER--------------------------------------------->
+               <!--Contact Wrapper-->
+               <div class="contact-wrapper side-padding mobile-grid">
+                   
+                    <!--contact content wrapper-->
+                    <div class="content-wrapper">
+
+                        <!--connect header-->
+                        <h1 class="connect-header">CONNECT WITH ME</h1>
+
+                        <!--connect text wrapper-->
+                        <div class="connect-txt-wrapper">
+                            <p class="connect-txt">Email: <a href="mailto:MirandaHolliday@Gmail.com">MirandaHolliday@Gmail.com</a></p>
+                            <p class="connect-txt">Phone: <a href="tel:+4439896635">443-989-6635</a></p>
+                            <p class="connect-txt">Fax: <a href="#">443-989-6635</a></p>
+                        </div>
+
+                        <!--social media iconss-->
+                        <div class="social-media-icons">
+                            <!--instagram-->
+                            <div class="instagram-wrapper">
+                                <a href="https://www.instagram.com/miranda_holliday1/?hl=en">
+                                    <img class="instagram-logo" src="social-media-icons/Instagram-Black-Logo.png" alt="Instagram Link">
+                                </a>
+                            </div>
+
+                            <!--youtube-->
+                            <div class="youtube logo-wrapper">
+                                <a href="https://www.youtube.com/channel/UC0hY_RKrs200SClAyhumrbA">
+                                    <img class="youtube-logo" src="social-media-icons/Youtube-FullColor-Logo.png" alt="YouTube Link">
+                                </a>
+                            </div>
+
+                            <!--linkedin-->
+                            <div class="linkedin logo-wrapper">
+                                <a href="https://www.linkedin.com/in/miranda-holliday-0baa61126?trk=people-guest_people_search-card">
+                                    <img class="linkedin-logo" src="social-media-icons/LI-In-Bug.png" alt="Linkedin Link">
+                                    <div class="linkedin-white-background"></div>
+                                </a>
+                            </div>   
+                        </div>  
+
+                    </div>
+               </div>
+
+            </div>
+
+
+            <!----------------------------------------FOOTER-------------------------------------------->
+            <div class="push-footer"></div>
+
+            <!--FOOTER WRAPPER--> 
+            <footer class = "footer-wrapper">
+                <!--Footer Text-->
+                <p class="footer-text">
+                    &#169;All rights reserved by 
+                    <span class="bold-footer-text">Robert Dixon </span> 
+                    <span>| </span>
+                    <span class="bold-footer-text">Realize Digital</span>
+                </p>
+            </footer>
+
+    <!----------------------------------------JQUERY-------------------------------------------->    
+       <script>
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar        
+        var prevScrollpos = window.pageYOffset;
+        
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        var header = document.getElementById("page-header");
+
+            if (prevScrollpos > currentScrollPos) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-40px";
+            }
+            prevScrollpos = currentScrollPos;
+            }*/
+
+        /*Hamburger Menu Change & Transition*/   
+        function toggle_menu(x) {
+            x.classList.toggle("open-menu");
+
+            var x = document.getElementById("nav-overlay")
+            var logo = document.getElementById("logo-link")
+            var header = document.getElementById("page-header")
+
+            if (x.style.height === "100vh") {
+                x.style.height = "0vh"; 
+                logo.style.color = "#ffffff"; 
+                
+                /* 
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+
+                if (prevScrollpos > currentScrollPos) {
+                    header.style.top = "0";
+                } else {
+                    header.style.top = "-40px";
+                }
+                prevScrollpos = currentScrollPos;
+                }*/
+
+            } else {
+                x.style.height = "100vh";
+                logo.style.color = "#c3874d";
+                
+                /*
+                window.onscroll = function() {
+                    header.style.top = "0"*/
+                }
+            }
+        
+        /*WHEN BIO LINK IS CLICKED*/
+        function closeMenu() {
+            var nav = document.getElementById("nav-overlay")
+            nav.style.height = "0";
+            document.getElementById("menu").classList.remove("open-menu");
+            document.getElementById("logo-link").style.color = "#ffffff";
+        }
+
+        /*Disable body scrolling when nav-overlay is 100vh*/
+
+    </script>
+    </body>
+</html>
