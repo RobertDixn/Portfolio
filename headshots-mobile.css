@@ -177,7 +177,7 @@ body {
   position: fixed;
   z-index: 3;
   background-color: teal;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 /*Acting Menu Buttons*/
 .headshots-menu-btn {
