@@ -1,36 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Homepage</title>
-<meta charset="utf-8">
-<link href="home.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+<html>
+    <head>
+        <title>Miranda Holliday | Home </title>
+        <meta name="descripiton" content="Miranda Holliday's Online Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="home-mobile.css">
+    </head>
+        <body>
+                <!----------------------------------------HEADER--------------------------------------------->
+                <!--Header-->
+                <header class="header side-padding" id="page-header" >
+                    <!--logo-->
+                    <div id="logo"><a href = "index.html" id="logo-link">MH</a></div>
 
-	<div class= "grid-container">
-		<!--NAVIGATION ELEMENTS-->
-		<nav>
-			<a href="index.html"><img id= "book_icon" src="book_icon.png" 
-			alt="Picture of an opened book"></a>
-			<ul>
-			<li><a class="active" href="index.html">Home</a></li>
-			<li><a class="not-active" href="Overview.html">Overview</a></li>
-			<li><a class="not-active" href="Process.html">Process</a></li>
-			<li><a class="not-active" href="BannedBooks.html">Banned Books List</a></li>
-			<li><a class="not-active" href="Resources.html">Resources</a></li>
-			<li><a class="not-active" href="Contact.html">Contact Us</a></li>
-			</ul> 
-		</nav> 
-		
-		<!--HOMEPAGE TITLE + SUBHEADING-->
-		<header>
-			<h1>Book &#124; <br> Censorship</h1>
-			<h5>The Truth Behind The Cover</h5>
-		</header>
-				
-		<!--FOOTER-->
-		<footer>
-			<p><small>Copyright &copy; 2020 Robert Dixon</small></p>
-		</footer>
-	</div>
-</body>
+                    <!--Navigation Menu & Items-->
+                    <nav id="nav-overlay">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link" id="active-link">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#bio-link" class="nav-link" onclick="closeMenu()">Bio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="acting.html" class="nav-link">Acting</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Writing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                            </li>
+                        </ul> 
+                    </nav>
+
+                    <!--hamburger menu-->
+                    <div class="hamburger-menu" id="menu" onclick="toggle_menu(this)">
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+                        <div class="line" id="line3"></div>
+                    </div>
+                </header>
+
+        <div class="page-wrapper">
+
+
+            <!----------------------------------------LANDING PAGE--------------------------------------------->
+            <!--LANDING PAGE WRAPPER-->
+            <div class="landing-page-wrapper">
+                <!--Hero Image-->
+                <div class="hero-image"></div>
+            </div>
+            
+            <!----------------------------------------BIO SECTION--------------------------------------------->
+            <!--BIO WRAPPER-->
+            <div class="bio-wrapper mobile-grid page-padding" id="bio">
+                
+                
+                    <!--Bio Image-->
+                    <div class="bio-image">
+                        <!--Bio Link-->
+                        <div class="link" id="bio-link"></div>
+
+                        <!--Bio White Background-->
+                        <div class="bio-background"></div>
+                    </div>
+
+                    <!--Bio Text Wrapper-->
+                    <main class="bio-text-wrapper">
+                        
+                        <!--bio header-->
+                        <div class="bio-header">
+                            <p class="sub-header">HI I'M</p>
+                            <h1>MIRANDA<br>HOLLIDAY</h1>
+                        </div>
+
+                        <!--bio text-->
+                        <div class="bio-text">
+                            <p>
+                                Miranda Holliday (They/Them)  is a vocalist and theatre artist 
+                                from Columbus, NJ with a passion for empowering others through 
+                                art. Their training in music and theatre includes a semester.
+                            </p>
+                        
+                            <p id="more-text">
+                                With the National Musical Theatre Institute at the Eugene O’Neill 
+                                Theatre Center, a summer intensive program at the Westminster 
+                                Musical Theatre Intensive and at Albright College where she 
+                                co-majored in Theatre and Political Science. 
+                            </p>
+                        </div>
+
+                        <!--read more button-->
+                        <button onclick="bio_button()" id="bio-button">Read More</button>  
+                    </main>
+                    
+                    <!--Social Media Icons-->
+                    <div class="social-media-icons">
+                        <!--instagram-->
+                        <div class="instagram-wrapper">
+                            <a href="https://www.instagram.com/miranda_holliday1/?hl=en">
+                                <img class="instagram-logo" src="social-media-icons/Instagram-Black-Logo.png" alt="Instagram Link">
+                            </a>
+                        </div>
+
+                        <!--youtube-->
+                        <div class="youtube logo-wrapper">
+                            <a href="https://www.youtube.com/channel/UC0hY_RKrs200SClAyhumrbA">
+                                <img class="youtube-logo" src="social-media-icons/Youtube-FullColor-Logo.png" alt="YouTube Link">
+                            </a>
+                        </div>
+
+                        <!--linkedin-->
+                        <div class="linkedin logo-wrapper">
+                            <a href="https://www.linkedin.com/in/miranda-holliday-0baa61126?trk=people-guest_people_search-card">
+                                <img class="linkedin-logo" src="social-media-icons/LI-In-Bug.png" alt="Linkedin Link">
+                                <div class="linkedin-white-background"></div>
+                            </a>
+                        </div>   
+                    </div>     
+            </div>
+            <!----------------------------------------NEWS SECTION-------------------------------------------->
+            <!--NEWS WRAPPER--> 
+            <div class="news-wrapper mobile-grid page-padding">
+                
+                <!--News White Background-->
+                <div class="news-background"></div>
+                
+                <!--News Header-->
+                <div class="news-header">
+                    <h2>WHAT IS HAPPENING WITH ME</h2>
+                </div>
+
+                <!--News Block Wrapper-->
+                <div class="news-block-wrapper">
+
+                    <!--block1-->
+                    <div class="news-block">
+                        <!--block image-->
+                        <div class="block-img block1-img"></div>
+
+                        <!--block text wrapper-->
+                        <div class="block-text-wrapper">
+                            <!--block text-->
+                            <p class="block-text">
+                                Lorem ipsum dolor sit amet, the laura 
+                                consec tetur del me adipiscing elit.
+                            </p>
+
+                            <!--block link-->
+                            <a href="#" class="block-link">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!--block2-->
+                    <div class="news-block">
+                        <!--block image-->
+                        <div class="block-img block2-img"></div>
+
+                        <!--block text wrapper-->
+                        <div class="block-text-wrapper">
+                            <!--block text-->
+                            <p class="block-text">
+                                Lorem ipsum dolor sit amet, the laura 
+                                consec tetur del me adipiscing elit.
+                            </p>
+
+                            <!--block link-->
+                            <a href="#" class="block-link">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!--block3-->
+                    <div class="news-block">
+                        <!--block image-->
+                        <div class="block-img block3-img"></div>
+
+                        <!--block text wrapper-->
+                        <div class="block-text-wrapper">
+                            <!--block text-->
+                            <p class="block-text">
+                                Lorem ipsum dolor sit amet, the laura 
+                                consec tetur del me adipiscing elit.
+                            </p>
+
+                            <!--block link-->
+                            <a href="#" class="block-link">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!--block4-->
+                    <div class="news-block">
+                        <!--block image-->
+                        <div class="block-img block4-img"></div>
+
+                        <!--block text wrapper-->
+                        <div class="block-text-wrapper">
+                            <!--block text-->
+                            <p class="block-text">
+                                Lorem ipsum dolor sit amet, the laura 
+                                consec tetur del me adipiscing elit.
+                            </p>
+
+                            <!--block link-->
+                            <a href="#" class="block-link">Learn More</a>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </div>
+
+            <!----------------------------------------FOOTER-------------------------------------------->
+
+            <div class="push-footer"></div>
+
+            <!--FOOTER WRAPPER--> 
+            <footer class = "footer-wrapper">
+                <!--Footer Text-->
+                <p class="footer-text">
+                    &#169;All rights reserved by 
+                    <span class="bold-footer-text">Robert Dixon </span> 
+                    <span>| </span>
+                    <span class="bold-footer-text">Realize Digital</span>
+                </p>
+            </footer>
+
+    <!----------------------------------------JQUERY-------------------------------------------->    
+       <script>
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar        
+        var prevScrollpos = window.pageYOffset;
+        
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        var header = document.getElementById("page-header");
+
+            if (prevScrollpos > currentScrollPos) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-40px";
+            }
+            prevScrollpos = currentScrollPos;
+            }*/
+
+        /*Hamburger Menu Change & Transition*/   
+        function toggle_menu(x) {
+            x.classList.toggle("open-menu");
+
+            var x = document.getElementById("nav-overlay")
+            var logo = document.getElementById("logo-link")
+            var header = document.getElementById("page-header")
+
+            if (x.style.height === "100vh") {
+                x.style.height = "0vh"; 
+                logo.style.color = "#ffffff"; 
+                
+                /* 
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+
+                if (prevScrollpos > currentScrollPos) {
+                    header.style.top = "0";
+                } else {
+                    header.style.top = "-40px";
+                }
+                prevScrollpos = currentScrollPos;
+                }*/
+
+            } else {
+                x.style.height = "100vh";
+                logo.style.color = "#c3874d";
+                
+                /*
+                window.onscroll = function() {
+                    header.style.top = "0"*/
+                }
+            }
+        
+
+        /*WHEN BIO LINK IS CLICKED*/
+        function closeMenu() {
+            var nav = document.getElementById("nav-overlay")
+            nav.style.height = "0";
+            document.getElementById("menu").classList.remove("open-menu");
+            document.getElementById("logo-link").style.color = "#ffffff";
+        }
+
+        /*Disable body scrolling when nav-overlay is 100vh*/
+  
+
+         /*Bio Button Animation*/
+        function bio_button() {
+            var more = document.getElementById("more-text")
+            var btn = document.getElementById("bio-button")
+
+            if (more.style.display === "block") {
+                more.style.display = "none";
+                btn.innerHTML = "Read More";    
+            } else {
+                more.style.display = "block";
+                btn.innerHTML = "Read Less";
+            }
+        }
+    </script>
+    </body>
+</html>

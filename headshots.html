@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Miranda Holliday | Acting Portfolio </title>
+        <meta name="descripiton" content="Miranda Holliday's Online Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="headshots-mobile.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+                <!----------------------------------------HEADER--------------------------------------------->
+                <!--HEADER-->
+                <header class="header side-padding" id="page-header" >
+
+                    <!--logo-->
+                    <div id="logo"><a href = "index.html" id="logo-link">MH</a></div>
+
+                    <!--Navigation Menu & Items-->
+                    <nav id="nav-overlay">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link" >Home</a>
+                            </li>
+
+                            <!--CHANGE WHEN PAGE IS PUBLIC AN HAS A DOMAIN NAME!!!!-->
+                            <li class="nav-item">
+                                <a href="file:///C:/Users/Robert%20Dixon/Documents/MirandaHolliday.com/index.html#bio-link" class="nav-link" onclick="closeMenu()">Bio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="acting.html" class="nav-link active-link">Acting</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Writing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                            </li>
+                        </ul> 
+                    </nav>
+
+                    <!--hamburger menu-->
+                    <div class="hamburger-menu" id="menu" onclick="toggle_menu(this)">
+                        <div class="line" id="line1"></div>
+                        <div class="line" id="line2"></div>
+                        <div class="line" id="line3"></div>
+                    </div>
+                </header>
+                
+                <!----------------------------------------HEADSHOTS HEADER-------------------------------------------->
+                <!--ACTING PORTFOLIO MENU-->
+                <div class="headshots-menu-wrapper">
+
+                    <!--Headshots Menu Button-->
+                    <div class="headshots-menu-btn">Headshots Gallery</div>
+
+                    <!--headshots menu-->
+                    <nav class="headshots-menu side-padding">
+                        <a href="#commerical-link" class="headshots-menu-item commerical-item" onclick="changeMenu(this)">Commerical</a>
+                        <a href="#theatrical-link" class="headshots-menu-item theatrical-item" onclick="changeMenu(this)">Theatrical</a>
+                        <a href="#dramatic-link" class="headshots-menu-item Dramatic-item" onclick="changeMenu(this)">Dramatic</a>
+                        <a href="#comedic-link" class="headshots-menu-item Comedic-item" onclick="changeMenu(this)">Comedic</a>
+                    </nav>
+ 
+                </div>
+                
+                <!----------------------------------------PAGE WRAPPER-------------------------------------------->
+                <!--PAGE WRAPPER-->
+                <div class="page-wrapper side-padding">
+
+                    <!----------------------------------------HEADSHOTS =-------------------------------------------->
+                    <section class="first-section first-sect-padding">
+                        <div class="section-wrapper">
+
+                                <!--Headshots Content-->
+                                <div class="content-grid-4">
+                                    
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+                                </div>
+
+                        </div>
+                    </section>
+                    
+                    <!----------------------------------------HEADSHOTS =-------------------------------------------->
+                    <section class="nth-section">
+                        <div class="section-wrapper">
+
+                                <!--Headshots Content-->
+                                <div class="content-grid-4">
+                                    
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+
+                                    <div class="img-wrapper">
+                                        <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    </div>
+                                </div>
+
+                        </div>
+                    </section> 
+
+                </div>
+
+                    <!----------------------------------------FOOTER-------------------------------------------->
+                    <div class="push-footer"></div>
+
+                    <!--FOOTER WRAPPER--> 
+                    <footer class = "footer-wrapper">
+                        <!--Footer Text-->
+                        <p class="footer-text">
+                            &#169;All rights reserved by 
+                            <span class="bold-footer-text">Robert Dixon </span> 
+                            <span>| </span>
+                            <span class="bold-footer-text">Realize Digital</span>
+                        </p>
+                    </footer>
+
+        
+       <!----------------------------------------JQUERY-------------------------------------------->    
+       <script>
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar        
+        var prevScrollpos = window.pageYOffset;
+        
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        var header = document.getElementById("page-header");
+
+            if (prevScrollpos > currentScrollPos) {
+                header.style.top = "0";
+            } else {
+                header.style.top = "-40px";
+            }
+            prevScrollpos = currentScrollPos;
+            }*/
+
+        /*Hamburger Menu Change & Transition*/   
+
+        /*Acting menu links*/
+
+
+
+
+        
+
+        function toggle_menu(x) {
+            x.classList.toggle("open-menu");
+
+            var x = document.getElementById("nav-overlay")
+            var logo = document.getElementById("logo-link")
+            var header = document.getElementById("page-header")
+
+            if (x.style.height === "100vh") {
+                x.style.height = "0vh"; 
+                logo.style.color = "#ffffff"; 
+                
+        /*const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".acting-menu-btn");
+        
+        window.onscroll = () => {
+            var current = "";
+
+            sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 135) {
+                    current = section.getAttribute("id"); }
+                });
+
+                navLi.forEach((navLi) => {
+                    navLi.classList.remove("active-menu-btn");
+                    if (navLi.classList.contains(current)) {
+                    navLi.classList.add("active-menu-btn");
+                }
+            });
+        };*/
+                
+            /*window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+
+                if (prevScrollpos > currentScrollPos) {
+                    header.style.top = "0";
+                } else {
+                    header.style.top = "-40px";
+                }
+                prevScrollpos = currentScrollPos;
+                }*/
+
+            } else {
+                x.style.height = "100vh";
+                logo.style.color = "#c3874d";
+
+                /*
+                window.onscroll = function() {
+                    header.style.top = "0"*/
+            }            
+        }
+
+        /*WHEN BIO LINK IS CLICKED*/
+        function closeMenu() {
+            var nav = document.getElementById("nav-overlay")
+            
+            document.getElementById("menu").classList.remove("open-menu");
+            document.getElementById("logo-link").style.color = "#ffffff";
+        }       
+    
+
+        /*function changeMenu(item) {
+            var className = item.classList.contains("video-item");
+            
+            if (className = "true") {
+                item.style.color = "#000000";
+                
+            }
+        }*/
+/*
+        function changeMenu(item) {
+            
+            var headshots = item.classList.contains("headshots-item");
+            var video = item.classList.contains("video-item");
+            var gallery = item.classList.contains("gallery-item");
+            var audio = item.classList.contains("audio-item");
+            var resume = item.classList.contains("resume-item");
+            var r = item.className;
+
+         
+            if (video == true) {
+                item.classList.add("white")
+            } else if (gallery == true) {
+                item.style.color = "#4200FF";
+                video === "false";
+            } else if (audio == true) {
+                item.style.color = "#42FF00";
+            } else {
+                item.style.color = "#000000";
+            }
+            document.getElementById("me").innerHTML = r;
+        }
+*/
+/*
+        function changeMenu(item) {
+                    
+                    var headshots = item.classList.contains("headshots-item");
+                    var video = item.classList.contains("video-item");
+                    var gallery = item.classList.contains("gallery-item");
+                    var audio = item.classList.contains("audio-item");
+                    var resume = item.classList.contains("resume-item");
+                    var r = item.className;
+
+                
+                    if (video == true) {
+                        $("a").each(function(){
+                        this.style.color = "#ffffff";
+                        });
+
+                        item.classList.add("white")
+
+                        
+
+                    } else if (gallery == true) {
+                        item.style.color = "#4200FF";
+                        video === "false";
+                    } else if (audio == true) {
+                        item.style.color = "#42FF00";
+                    } else {
+                        item.style.color = "#000000";
+                    }
+                    document.getElementById("me").innerHTML = r;
+                }
+
+*/
+                /*Acting Menu ~ Show DropDown Menu*/
+                /* When the user clicks on the button, toggle between hiding and showing the dropdown content*/ 
+                function actingMenu() {
+                    document.getElementById("headshots-menu").classList.toggle("active-menu");
+                }
+
+                function videoMenu() {
+                    document.getElementById("video-menu").classList.toggle("active-menu");
+                }
+
+                function galleryMenu() {
+                    document.getElementById("gallery-menu").classList.toggle("active-menu");
+                }
+                
+                function audioMenu() {
+                    document.getElementById("audio-menu").classList.toggle("active-menu");
+                }
+
+                function resumeMenu() {
+                    document.getElementById("resume-menu").classList.toggle("active-menu");
+                }
+
+                /*FUNCTION FOR WHEN MENU ITEMS ARE CLICKED TO NAVBIGATE TO LINK IN PAGE AND CHANGE MENU AND BUTTON*/
+                function changeMenu(item) {
+                    
+                    var headshots = item.classList.contains("headshots-item");
+                    var video = item.classList.contains("video-item");
+                    var gallery = item.classList.contains("gallery-item");
+                    var audio = item.classList.contains("audio-item");
+                    var resume = item.classList.contains("resume-item");
+                    var r = item.className;
+
+        
+                    if(headshots == true) {
+                        $(".acting-menu-btn").removeClass("active-menu-btn");
+                        $(".acting-menu").removeClass("active-menu");
+
+                        $("#headshots-menu-btn").addClass("active-menu-btn");
+
+                    } else if (video == true) {
+                        $(".acting-menu-btn").removeClass("active-menu-btn");
+                        $(".acting-menu").removeClass("active-menu");
+
+                        $("#video-menu-btn").addClass("active-menu-btn");
+                        
+
+                    } else if (gallery == true) {
+                        $(".acting-menu-btn").removeClass("active-menu-btn");
+                        $(".acting-menu").removeClass("active-menu");
+
+                        $("#gallery-menu-btn").addClass("active-menu-btn");
+
+                    } else if (audio == true) {
+                        $(".acting-menu-btn").removeClass("active-menu-btn");
+                        $(".acting-menu").removeClass("active-menu");
+
+                        $("#audio-menu-btn").addClass("active-menu-btn");
+
+                    } else {
+                        $(".acting-menu-btn").removeClass("active-menu-btn");
+                        $(".acting-menu").removeClass("active-menu");
+
+                        $("#resume-menu-btn").addClass("active-menu-btn");
+
+                    }
+                  /* document.getElementById("me").innerHTML = r; */  
+                }
+          
+        /*AS PAGE SCROLLS TO A SPECIFIC SECTION ALTER ACTIVE acting-menu-btn & acting-menu     
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll(".acting-menu-btn");
+        
+        window.onscroll = () => {
+            var current = "";
+
+            sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 135) {
+                    current = section.getAttribute("id"); }
+                });
+
+                navLi.forEach((navLi) => {
+                    navLi.classList.remove("active-menu-btn");
+                    if (navLi.classList.contains(current)) {
+                    navLi.classList.add("active-menu-btn");
+                }
+            });
+        };*/
+
+
+        
+
+    </script>
+    </body>
+</html>
+

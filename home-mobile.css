@@ -1,0 +1,459 @@
+:root {
+  --background-color: #060606;
+  --white-background: #fdfbfb;
+  --accent_color: #c3874d;
+  --white: #ffffff;
+}
+/*EFFECTS EVERY PARENT ELEMENT*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: var(--background-color);
+  position: relative;
+  width: 100%; /*vw makes it extend off screen*/
+  height: 100%;
+}
+.mobile-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px; /*row gap + column gap*/
+}
+.side-padding {
+  padding: 0 20px;
+}
+.page-padding {
+  padding: 40px 20px;
+}
+
+/********************************************LOGO OVERLAY***********************************************/
+#logo-overlay {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#logo-overlay-text {
+  color: var(--accent_color);
+}
+
+/*PAGE WRAPPER*/
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -40px;
+}
+
+/********************************************LANDING PAGE***********************************************/
+/*LANDING PAGE WRAPPER*/
+.landing-page-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/*Header*/
+.header {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+/*logo*/
+#logo {
+  font-size: 1.5em; /*24px*/
+  font-weight: 500;
+  z-index: 2;
+  grid-area: logo;
+}
+#logo-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.35s;
+  transition-delay: 0.25s;
+}
+/*Navigation Menu & Items*/
+#nav-overlay {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.nav-menu {
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.nav-item {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--white);
+  opacity: 50%;
+}
+
+#active-link {
+  opacity: 100%;
+  color: var(--accent_color);
+}
+
+/*hamburger menu*/
+.line {
+  height: 2.332px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+#line1 {
+  transition: 0.35s;
+  transition-delay: 0.25s;
+}
+
+#line2 {
+  margin: 5.002px auto;
+  transition: 0.25s;
+  transition-delay: 0.35s;
+}
+
+#line3 {
+  transition: 0.35s;
+  transition-delay: 0.25s;
+}
+/*Hamburger Menu Animaiton*/
+/*Rotate bar 1*/
+.open-menu #line1 {
+  transform: rotate(-40deg) translate(-3.5px, 6.5px);
+  -webkit-transform: rotate(-40deg) translate(-3.5px, 6.5px);
+  transition: 0.5s;
+  opacity: 50%;
+  height: 2.75px;
+  width: 27px;
+}
+
+/*Change opacaity of bar2 to 0*/
+.open-menu #line2 {
+  opacity: 0;
+  transition: 0s;
+}
+
+/*Rotate bar 3*/
+.open-menu #line3 {
+  transform: rotate(40deg) translate(-3.5px, -6.5px);
+  -webkit-transform: rotate(40deg) translate(-3.5px, -6.5px);
+  transition: 0.5s;
+  opacity: 50%;
+  height: 2.75px;
+  width: 27px;
+}
+
+/*Hero Image*/
+.hero-image {
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  background-image: url("landing-page-images/hero-image-tinted-copy.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/********************************************BIO PAGE***********************************************/
+/*BIO WRAPPER*/
+.bio-wrapper {
+  min-height: ;
+  grid-template-areas:
+    "img img img img"
+    "bio bio bio bio"
+    "social social . .";
+}
+/*Bio Text Wrapper*/
+.bio-text-wrapper {
+  background-color: ;
+  grid-area: bio;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px; /*"row* in row-gap represents the main axis as opposed to rows in a grid layout*/
+}
+/*Bio Background*/
+.bio-background {
+  background-color: var(--white-background);
+  width: auto;
+  height: calc(100% - 60px); /*CHANGE BASED ON NEWS BLOCKS*/
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  right: -20px;
+  z-index: -1;
+}
+/*Bio Image*/
+.bio-image {
+  position: relative;
+  min-height: 202px; /*-40px*/
+  max-height: ; /*IGNORES MAX-HEIGHT ~ MAYBE BECAUCE THERES NO RELATIVE VALUE SET */
+  border-radius: 20px;
+  background-image: url("bio-page-images/bio-image-translated.JPG");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  grid-area: img;
+}
+/*sub header*/
+.sub-header {
+  font-weight: 550; /*semi-bold*/
+  color: var(--accent_color);
+  margin-bottom: 5px; /*could change to padding- no effect found since bio-wrapper height isn't a set value*/
+}
+h1 {
+  font-size: 2em; /*32px*/
+  line-height: 35px;
+  letter-spacing: 2.5px;
+}
+/*bio-text*/
+.bio-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px; /*"row* in row-gap represents the main axis as opposed to rows in a grid layout*/
+  line-height: 30px;
+  text-align: left;
+}
+#more-text {
+  display: none;
+  /*transition: height 4s; FIND A WAY TO DO TRANSITION DOWN AND UP WITH JQUERY*/
+}
+/*read more button*/
+#bio-button {
+  background-color: var(--background-color);
+  font-size: 1em; /*16px*/
+  color: var(--white);
+  opacity: 50%;
+  text-decoration: underline;
+  border: none;
+  text-align: left;
+}
+/*Social Media Icons*/
+.social-media-icons {
+  width: max-content;
+  height: 30px; /*CHANGE WHEN YOU WANT TO RESIZE SOCIAL MEIDA ICONS*/
+  grid-area: social;
+  display: flex;
+}
+/*Instagram icon*/
+.instagram-wrapper {
+  width: 30px;
+  height: 100%;
+  background-color: var(--accent_color);
+  border-radius: 5px;
+  padding: 0.75%;
+}
+.instagram-logo {
+  width: auto;
+  height: 100%;
+}
+.logo-wrapper {
+  width: auto;
+  height: 100%;
+  background-color: ;
+}
+/*YouTUbe icon*/
+.youtube {
+  margin: 0 25px;
+}
+.youtube-logo {
+  width: auto;
+  height: 100%;
+}
+/*Linkeden icon*/
+.linkedin {
+  position: relative;
+}
+.linkedin-white-background {
+  background-color: #ffffff;
+  width: 80%;
+  height: 85%;
+  border-radius: 5px;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  right: 0;
+  z-index: -1;
+}
+.linkedin-logo {
+  width: auto;
+  height: 100%;
+}
+
+/********************************************NEWS PAGE**********************************************/
+/*NEWS WRAPPER*/
+.news-wrapper {
+  min-height: calc(
+    100vh - 40px
+  ); /* CAN CHANGE THIS TO ALTER NEW SECTIO HEIGHT+ MAY NOT NEED THIS*/
+  height: auto;
+  position: relative;
+  grid-template-rows: min-content;
+  grid-template-areas:
+    "header header header header"
+    "block block block block";
+}
+/*News Background*/
+.news-background {
+  background-color: var(--white-background);
+  width: 100%;
+  height: calc(100% - 100px); /*CHANGE BASED ON NEWS BLOCKS*/
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+/*News Header*/
+.news-header {
+  font-size: 1.25em; /*20px*/
+  font-weight: 700; /*BOLD*/
+  color: #000000;
+  text-align: center;
+  line-height: 35px;
+  grid-area: header;
+}
+/*News Block Wrapper*/
+.news-block-wrapper {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 40px;
+  grid-area: block;
+}
+/*news block*/
+.news-block {
+  background-color: var(--background-color);
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+/*block image*/
+.block-img {
+  width: 65%;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+}
+/*block text wrapper*/
+.block-text-wrapper {
+  background-color: ;
+  padding: 15px 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+/*block text*/
+.block-text {
+  font-size: 0.87em; /*14px*/
+  text-align: left;
+  line-height: 20px; /*MAY NEED TO ALTER THIS*/
+}
+/*block link*/
+.block-link {
+  width: max-content; /*INCLUDES FULL WIDTH OF TEXT RATHER THAN ENTIRE WIDTH OF THE block-text-wrapper*/
+  font-size: 0.875em; /*14px*/
+  color: #ffffff;
+  opacity: 50%;
+  text-decoration: underline;
+}
+/*block1*/
+.block1-img {
+  background-image: url("news-block-images/block1-img.JPG");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+/*block2*/
+.block2-img {
+  background-image: url("news-block-images/block2-img.JPG");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+/*block1*/
+.block3-img {
+  background-image: url("news-block-images/block3-img.JPG");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+/*block1*/
+.block4-img {
+  background-image: url("news-block-images/block4-img.JPG");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+/********************************************FOOTER**********************************************/
+.push-footer {
+  height: 40px;
+}
+
+/*FOOTER WRAPPER*/
+.footer-wrapper {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Footer Text*/
+.footer-text {
+  font-size: 0.75em; /*14px*/
+  font-weight: 550;
+  color: #828282;
+}
+/*Footer Text */
+.bold-footer-text {
+  color: #ffffff;
+}
+
+/*.bio-wrapper {
+  border-top: 40px solid transparent;
+  margin-top: -40px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}*/
+#bio-link {
+  position: relative;
+  top: -80px;
+}
