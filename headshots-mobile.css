@@ -217,7 +217,7 @@ body {
 
 /*Headshots Menu Item*/
 .headshots-menu-item {
-  background-color: black;
+  background-color: #000000;
   font-size: 0.875em; /*14px*/
   font-weight: 700; /*BOLD*/
   color: #ffffff;
