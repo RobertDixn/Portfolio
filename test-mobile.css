@@ -55,12 +55,12 @@ body {
 /*logo*/
 #logo {
   font-size: 2em; /*24px*/
-  font-weight: 700;
   z-index: 2;
   grid-area: logo;
 }
 #logo-link {
   color: #ffffff;
+  font-weight: 600;
   text-decoration: none;
   transition: 0.35s;
   transition-delay: 0.25s;
