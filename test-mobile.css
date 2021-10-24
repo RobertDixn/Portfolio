@@ -54,7 +54,7 @@ body {
 }
 /*logo*/
 #logo {
-  font-size: 2em; /*32px*/
+  font-size: 1.5em; /*32px*/
   z-index: 2;
   grid-area: logo;
 }
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-menu {
-  line-height: 3rem;
+  line-height: 2.5rem;
   text-align: center;
 }
 
@@ -91,7 +91,7 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .nav-link {
@@ -108,7 +108,7 @@ body {
 /*hamburger menu*/
 .line {
   height: 2.8px;
-  width: 30px;
+  width: 35px;
   border-radius: 5px;
   background-color: var(--white);
 }
