@@ -197,7 +197,7 @@ body {
 
 /*connect header*/
 .connect-header {
-  font-size: 1.75em; /*28px*/
+  font-size: 2em; /*32px*/
   font-weight: 700; /*bold*/
   letter-spacing: 2.5px;
   text-align: left;
@@ -210,7 +210,7 @@ body {
 }
 /*ALL LINKS*/
 a {
-  font-size: 1em; /*16px*/
+  font-size: 1.5em; /*24px*/
   color: #ffffff;
   font-weight: 350; /*semi-bold*/
   text-decoration: none;
