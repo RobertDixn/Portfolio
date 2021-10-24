@@ -41,7 +41,7 @@ body {
 /********************************************LANDING PAGE***********************************************/
 /*Header*/
 .header {
-  background-color: red;
+  background-color: green;
   width: 100%;
   height: 50px;
   display: flex;
@@ -60,7 +60,7 @@ body {
 }
 #logo-link {
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: 0.35s;
   transition-delay: 0.25s;
