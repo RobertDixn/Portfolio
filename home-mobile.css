@@ -38,35 +38,7 @@ body {
   padding: 45px 20px;
 }
 
-/********************************************LOGO OVERLAY***********************************************/
-#logo-overlay {
-  background-color: var(--background-color);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-#logo-overlay-text {
-  color: var(--accent_color);
-}
-
-/*PAGE WRAPPER*/
-.page-wrapper {
-  min-height: 100%;
-  margin-bottom: -45px;
-}
-
-/********************************************LANDING PAGE***********************************************/
-/*LANDING PAGE WRAPPER*/
-.landing-page-wrapper {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+/********************************************************************************************************/
 /*Header*/
 .header {
   background-color: var(--background-color);
@@ -75,7 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 5;
   position: fixed;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
@@ -182,12 +154,42 @@ body {
   width: 40px;
 }
 
+/********************************************LOGO OVERLAY***********************************************/
+#logo-overlay {
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#logo-overlay-text {
+  color: var(--accent_color);
+}
+
+/********************************************LANDING PAGE***********************************************/
+/*LANDING PAGE WRAPPER*/
+/*PAGE WRAPPER*/
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -45px;
+}
+
+.landing-page-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /*Hero Image*/
 .hero-image {
   width: 100%;
   height: 100%;
   margin-top: 45px;
-  background-image: url("landing-page-images/hero-image-shaded.jpg");
+  background-image: url("landing-page-images/hero-image-shaded.JPG");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -423,6 +425,7 @@ h1 {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
+
 /********************************************FOOTER**********************************************/
 .push-footer {
   height: 45px;
