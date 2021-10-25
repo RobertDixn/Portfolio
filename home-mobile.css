@@ -187,7 +187,7 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 45px;
-  background-image: url("landing-page-images/hero-image-shaded.jpg");
+  background-image: url("/landing-page-images/hero-image-shaded.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
