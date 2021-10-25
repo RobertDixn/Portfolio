@@ -29,38 +29,37 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px 20px; /*row gap + column gap*/
+  gap: 45px 20px; /*row gap + column gap*/
 }
 .side-padding {
   padding: 0 20px;
 }
 .page-padding {
-  padding: 40px 20px;
+  padding: 45px 20px;
 }
 
-/********************************************LANDING PAGE***********************************************/
+/********************************************************************************************************/
 /*Header*/
 .header {
   background-color: var(--background-color);
   width: 100%;
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 5;
   position: fixed;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
-  z-index: 5;
 }
 /*logo*/
 #logo {
-  font-size: 1.5em; /*24px*/
-  font-weight: 500;
+  font-size: 2em; /*24px*/
   z-index: 2;
   grid-area: logo;
 }
 #logo-link {
   color: #ffffff;
+  font-weight: 500;
   text-decoration: none;
   transition: 0.35s;
   transition-delay: 0.25s;
@@ -83,7 +82,7 @@ body {
 }
 
 .nav-menu {
-  line-height: 2.5rem;
+  line-height: 3rem;
   text-align: center;
 }
 
@@ -91,7 +90,7 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .nav-link {
@@ -107,8 +106,8 @@ body {
 
 /*hamburger menu*/
 .line {
-  height: 2.332px;
-  width: 25px;
+  height: 2.8px;
+  width: 35px;
   border-radius: 5px;
   background-color: var(--white);
 }
@@ -119,7 +118,7 @@ body {
 }
 
 #line2 {
-  margin: 5.002px auto;
+  margin: 7px auto;
   transition: 0.25s;
   transition-delay: 0.35s;
 }
@@ -131,12 +130,12 @@ body {
 /*Hamburger Menu Animaiton*/
 /*Rotate bar 1*/
 .open-menu #line1 {
-  transform: rotate(-40deg) translate(-3.5px, 6.5px);
-  -webkit-transform: rotate(-40deg) translate(-3.5px, 6.5px);
+  transform: rotate(-40deg) translate(-7px, 8px);
+  -webkit-transform: rotate(-40deg) translate(-7px, 8px);
   transition: 0.5s;
   opacity: 50%;
-  height: 2.75px;
-  width: 27px;
+  height: 3px;
+  width: 40px;
 }
 
 /*Change opacaity of bar2 to 0*/
@@ -147,12 +146,12 @@ body {
 
 /*Rotate bar 3*/
 .open-menu #line3 {
-  transform: rotate(40deg) translate(-3.5px, -6.5px);
-  -webkit-transform: rotate(40deg) translate(-3.5px, -6.5px);
+  transform: rotate(40deg) translate(-4px, -8px);
+  -webkit-transform: rotate(40deg) translate(-4px, -8px);
   transition: 0.5s;
   opacity: 50%;
-  height: 2.75px;
-  width: 27px;
+  height: 3px;
+  width: 40px;
 }
 
 /********************************************LOGO OVERLAY***********************************************/
@@ -174,7 +173,7 @@ body {
 /*PAGE WRAPPER*/
 .page-wrapper {
   min-height: 100%;
-  margin-bottom: -40px;
+  margin-bottom: -45px;
 }
 
 /*Contact Wrapper*/
@@ -185,7 +184,7 @@ body {
   flex-direction: column;
   justify-content: center; /*MAIN AXIS ~ y-axis*/
   align-items: center;
-  background-image: url("landing-page-images/hero-image-tinted-copy.jpg");
+  background-image: url("landing-page-images/hero-image-shaded.JPG");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -195,14 +194,14 @@ body {
   background-color: ;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 25px;
 }
 
 /*connect header*/
 .connect-header {
-  font-size: 1.75em; /*28px*/
+  font-size: 1.875rem; /*30px*/
   font-weight: 700; /*bold*/
-  letter-spacing: 2.5px;
+  letter-spacing: 2.125px;
   text-align: left;
 }
 
@@ -211,11 +210,13 @@ body {
   font-weight: 350; /*semi-bold*/
   line-height: 30px;
 }
+.connect-txt {
+  font-size: 1.125rem; /*18px*/
+  font-weight: 350; /*semi-bold*/
+}
 /*ALL LINKS*/
 a {
-  font-size: 1em; /*16px*/
   color: #ffffff;
-  font-weight: 350; /*semi-bold*/
   text-decoration: none;
 }
 /*Social Media Icons*/
@@ -270,15 +271,15 @@ a {
   position: relative;
   z-index: 2;
 }
-/********************************************FOOTER**********************************************/
 
-/*pusher element*/
+/********************************************FOOTER**********************************************/
 .push-footer {
-  height: 40px;
+  height: 45px;
 }
+
 /*FOOTER WRAPPER*/
 .footer-wrapper {
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
