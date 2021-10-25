@@ -29,13 +29,13 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px 20px; /*row gap + column gap*/
+  gap: 45px 20px; /*row gap + column gap*/
 }
 .side-padding {
   padding: 0 20px;
 }
 .page-padding {
-  padding: 40px 20px;
+  padding: 45px 20px;
 }
 
 /********************************************LOGO OVERLAY***********************************************/
@@ -186,8 +186,8 @@ body {
 .hero-image {
   width: 100%;
   height: 100%;
-  margin-top: 40px;
-  background-image: url("landing-page-images/hero-image-tinted-copy.jpg");
+  margin-top: 45px;
+  background-image: url("landing-page-images/hero-image-shaded.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -216,7 +216,7 @@ body {
   width: auto;
   height: calc(100% - 60px); /*CHANGE BASED ON NEWS BLOCKS*/
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: -20px;
   right: -20px;
   z-index: -1;
@@ -322,7 +322,7 @@ h1 {
 /*NEWS WRAPPER*/
 .news-wrapper {
   min-height: calc(
-    100vh - 40px
+    100vh - 45px
   ); /* CAN CHANGE THIS TO ALTER NEW SECTIO HEIGHT+ MAY NOT NEED THIS*/
   height: auto;
   position: relative;
@@ -353,7 +353,7 @@ h1 {
 .news-block-wrapper {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  row-gap: 40px;
+  row-gap: 45px;
   grid-area: block;
 }
 /*news block*/
@@ -425,12 +425,12 @@ h1 {
 }
 /********************************************FOOTER**********************************************/
 .push-footer {
-  height: 40px;
+  height: 45px;
 }
 
 /*FOOTER WRAPPER*/
 .footer-wrapper {
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -455,5 +455,5 @@ h1 {
 }*/
 #bio-link {
   position: relative;
-  top: -80px;
+  top: -65px;
 }
