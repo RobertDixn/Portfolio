@@ -71,7 +71,7 @@ body {
 .header {
   background-color: var(--background-color);
   width: 100%;
-  height: 40px;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,13 +81,13 @@ body {
 }
 /*logo*/
 #logo {
-  font-size: 1.5em; /*24px*/
-  font-weight: 500;
+  font-size: 2em; /*24px*/
   z-index: 2;
   grid-area: logo;
 }
 #logo-link {
   color: #ffffff;
+  font-weight: 500;
   text-decoration: none;
   transition: 0.35s;
   transition-delay: 0.25s;
@@ -110,7 +110,7 @@ body {
 }
 
 .nav-menu {
-  line-height: 2.5rem;
+  line-height: 2.75rem;
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .nav-link {
@@ -134,8 +134,8 @@ body {
 
 /*hamburger menu*/
 .line {
-  height: 2.332px;
-  width: 25px;
+  height: 2.8px;
+  width: 35px;
   border-radius: 5px;
   background-color: var(--white);
 }
@@ -146,7 +146,7 @@ body {
 }
 
 #line2 {
-  margin: 5.002px auto;
+  margin: 7px auto;
   transition: 0.25s;
   transition-delay: 0.35s;
 }
@@ -158,12 +158,12 @@ body {
 /*Hamburger Menu Animaiton*/
 /*Rotate bar 1*/
 .open-menu #line1 {
-  transform: rotate(-40deg) translate(-3.5px, 6.5px);
-  -webkit-transform: rotate(-40deg) translate(-3.5px, 6.5px);
+  transform: rotate(-40deg) translate(-4px, 8px);
+  -webkit-transform: rotate(-40deg) translate(-4px, 8px);
   transition: 0.5s;
   opacity: 50%;
-  height: 2.75px;
-  width: 27px;
+  height: 3px;
+  width: 40px;
 }
 
 /*Change opacaity of bar2 to 0*/
@@ -174,12 +174,12 @@ body {
 
 /*Rotate bar 3*/
 .open-menu #line3 {
-  transform: rotate(40deg) translate(-3.5px, -6.5px);
-  -webkit-transform: rotate(40deg) translate(-3.5px, -6.5px);
+  transform: rotate(40deg) translate(-4px, -8px);
+  -webkit-transform: rotate(40deg) translate(-4px, -8px);
   transition: 0.5s;
   opacity: 50%;
-  height: 2.75px;
-  width: 27px;
+  height: 3px;
+  width: 40px;
 }
 
 /*Hero Image*/
