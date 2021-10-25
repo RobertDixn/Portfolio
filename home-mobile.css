@@ -110,7 +110,7 @@ body {
 }
 
 .nav-menu {
-  line-height: 2.75rem;
+  line-height: 3rem;
   text-align: center;
 }
 
@@ -118,7 +118,7 @@ body {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .nav-link {
@@ -158,8 +158,8 @@ body {
 /*Hamburger Menu Animaiton*/
 /*Rotate bar 1*/
 .open-menu #line1 {
-  transform: rotate(-40deg) translate(-4px, 8px);
-  -webkit-transform: rotate(-40deg) translate(-4px, 8px);
+  transform: rotate(-40deg) translate(-7px, 8px);
+  -webkit-transform: rotate(-40deg) translate(-7px, 8px);
   transition: 0.5s;
   opacity: 50%;
   height: 3px;
