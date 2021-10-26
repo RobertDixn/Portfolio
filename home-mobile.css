@@ -189,7 +189,7 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 45px;
-  background-image: url("landing-page-images/hero-image-shaded.JPG");
+  background-image: url("landing-page-images/hero-image-tinted.JPG");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -226,7 +226,7 @@ body {
 /*Bio Image*/
 .bio-image {
   position: relative;
-  min-height: 202px; /*-40px*/
+  min-height: 232px; /*+30px*/
   max-height: ; /*IGNORES MAX-HEIGHT ~ MAYBE BECAUCE THERES NO RELATIVE VALUE SET */
   border-radius: 20px;
   background-image: url("bio-page-images/bio-image-translated.JPG");
@@ -458,5 +458,5 @@ h1 {
 }*/
 #bio-link {
   position: relative;
-  top: -80px;
+  top: -85px;
 }
