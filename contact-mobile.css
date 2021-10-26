@@ -29,13 +29,13 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 45px 20px; /*row gap + column gap*/
+  gap: 40px 20px; /*row gap + column gap*/
 }
 .side-padding {
   padding: 0 20px;
 }
 .page-padding {
-  padding: 45px 20px;
+  padding: 40px 20px;
 }
 
 /********************************************************************************************************/
@@ -43,7 +43,7 @@ body {
 .header {
   background-color: var(--background-color);
   width: 100%;
-  height: 45px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,7 +173,7 @@ body {
 /*PAGE WRAPPER*/
 .page-wrapper {
   min-height: 100%;
-  margin-bottom: -45px;
+  margin-bottom: -40px;
 }
 
 /*Contact Wrapper*/
@@ -184,7 +184,7 @@ body {
   flex-direction: column;
   justify-content: center; /*MAIN AXIS ~ y-axis*/
   align-items: center;
-  background-image: url("landing-page-images/hero-image-tinted-black.JPG");
+  background-image: url("landing-page-images/hero-image-shaded.JPG");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -194,9 +194,14 @@ body {
   background-color: ;
   display: flex;
   flex-direction: column;
-  row-gap: 25px;
+  row-gap: 40px;
 }
-
+/*all text wrapper*/
+.all-txt-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
 /*connect header*/
 .connect-header {
   font-size: 1.875rem; /*30px*/
@@ -204,11 +209,10 @@ body {
   letter-spacing: 2.125px;
   text-align: left;
 }
-
 /*connect text wrapper*/
 .connect-txt-wrapper {
   font-weight: 350; /*semi-bold*/
-  line-height: 30px;
+  line-height: 20px;
 }
 .connect-txt {
   font-size: 1.125rem; /*18px*/
@@ -274,12 +278,12 @@ a {
 
 /********************************************FOOTER**********************************************/
 .push-footer {
-  height: 45px;
+  height: 40px;
 }
 
 /*FOOTER WRAPPER*/
 .footer-wrapper {
-  height: 45px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
