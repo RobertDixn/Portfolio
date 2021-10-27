@@ -217,7 +217,7 @@ body {
   line-height: 30px; /*CHANGES OVERALL HEIGHT OF ELEMENT BY SPECIFYING THE HEIGT OF THE LINE ITS ON*/
   text-decoration: none;
 }
-.active-acting-item {
+.active-menu-item {
   opacity: 100%;
 }
 
@@ -329,6 +329,10 @@ body {
   color: #000000;
   text-decoration: none;
 }
+.link {
+  position: relative;
+  top: -140px;
+}
 
 /********************************************HEADSHOTS***********************************************/
 /*headshots button*/
@@ -402,40 +406,4 @@ body {
 /*Footer Text */
 .bold-footer-text {
   color: #ffffff;
-}
-
-/*Page Overlay (FOr Dropdown Transition)*/
-.page-overlay {
-}
-.link {
-  position: relative;
-  top: -132px;
-}
-.me {
-  background-color: var(--background-color);
-  width: max-content;
-  height: 35px;
-  padding-left: 20px;
-  font-size: 1.125em; /*24px*/
-  font-weight: 700; /*BOLD*/
-  color: #ffffff;
-  letter-spacing: 2px;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.5s;
-  display: none;
-}
-
-.white {
-  color: #ffffff;
-}
-.blue {
-  color: #4200ff;
-}
-.black {
-  color: #000000;
-}
-.green {
-  color: #42ff00;
 }
