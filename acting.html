@@ -26,7 +26,7 @@
 
                             <!--CHANGE WHEN PAGE IS PUBLIC AN HAS A DOMAIN NAME!!!!-->
                             <li class="nav-item">
-                                <a href="file:///C:/Users/Robert%20Dixon/Documents/MirandaHolliday.com/index.html#bio-link" class="nav-link" onclick="closeMenu()">Bio</a>
+                                <a href="bio.html" class="nav-link" onclick="closeMenu()">Bio</a>
                             </li>
 
                             <li class="nav-item">
@@ -53,27 +53,15 @@
                 
                 <!----------------------------------------ACTING PORTFOLIO MENU-------------------------------------------->
                 <!--ACTING PORTFOLIO MENU-->
-                <div class="acting-menu-wrapper side-padding">
-
-                    <!--Headshots Sub Header-->
-                    <h2 class="acting-sub-header active-sub-header headshots-sect" id="headshots-sub-header">Headshots</h2>
-                    <!--Video Reel Sub Header-->
-                    <h2 class="acting-sub-header video-sect" id="video-sub-header">Video Reel</h2>
-                    <!--Gallery Sub Header-->
-                    <h2 class="acting-sub-header gallery-sect" id="gallery-sub-header">Gallery</h2>
-                    <!--Audio Sub Header-->
-                    <h2 class="acting-sub-header audio-sect" id="audio-sub-header">Audio</h2>
-                    <!--Resume Sub Header-->
-                    <h2 class="acting-sub-header resume-sect" id="resume-sub-header">Resume</h2>
-                    
+                <div class="acting-menu-wrapper side-padding">                    
 
                     <!--Headshots Menu-->
                     <nav class="acting-menu active-menu" id="headshots-menu">
-                        <a href="#headshots" class="acting-menu-item active-acting-item headshots-item" onclick="changeMenu(this)">Headshots</a>
-                        <a href="#video-reel" class="acting-menu-item video-item" onclick="changeMenu(this)">Video&nbspReel</a>
-                        <a href="#gallery" class="acting-menu-item gallery-item" onclick="changeMenu(this)">Gallery</a>
-                        <a href="#audio" class="acting-menu-item audio-item" onclick="changeMenu(this)">Audio</a>
-                        <a href="#resume" class="acting-menu-item resume-item" onclick="changeMenu(this)">Resume</a>
+                        <a href="#headshots" class="acting-menu-item active-menu-item headshots-sect headshots-item" onclick="changeMenu(this)">Headshots</a>
+                        <a href="#video-reel" class="acting-menu-item video-sect video-item" onclick="changeMenu(this)">Video&nbspReel</a>
+                        <a href="#gallery" class="acting-menu-item gallery-sect gallery-item" onclick="changeMenu(this)">Gallery</a>
+                        <a href="#audio" class="acting-menu-item audio-sect audio-item" onclick="changeMenu(this)">Audio</a>
+                        <a href="#resume" class="acting-menu-item resume-sect resume-item" onclick="changeMenu(this)">Resume</a>
                     </nav>
 
                     <!--Video Reel Menu
@@ -279,31 +267,7 @@
 
         
        <!----------------------------------------JQUERY-------------------------------------------->    
-       <script>
-        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar        
-        var prevScrollpos = window.pageYOffset;
-        
-        window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        var header = document.getElementById("page-header");
-
-            if (prevScrollpos > currentScrollPos) {
-                header.style.top = "0";
-            } else {
-                header.style.top = "-40px";
-            }
-            prevScrollpos = currentScrollPos;
-            }*/
-
-        /*Hamburger Menu Change & Transition*/   
-
-        /*Acting menu links*/
-
-
-
-
-        
-
+       <script>    
         function toggle_menu(x) {
             x.classList.toggle("open-menu");
 
@@ -334,25 +298,11 @@
                 }
             });
         };
-                
-            /*window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-
-                if (prevScrollpos > currentScrollPos) {
-                    header.style.top = "0";
-                } else {
-                    header.style.top = "-40px";
-                }
-                prevScrollpos = currentScrollPos;
-                }*/
 
             } else {
                 x.style.height = "100vh";
                 logo.style.color = "#c3874d";
 
-                /*
-                window.onscroll = function() {
-                    header.style.top = "0"*/
             }            
         }
 
@@ -364,6 +314,22 @@
             document.getElementById("logo-link").style.color = "#ffffff";
         }       
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         /*function changeMenu(item) {
             var className = item.classList.contains("video-item");
@@ -429,29 +395,8 @@
                 }
 
 */
-                /*Acting Menu ~ Show DropDown Menu*/
-                /* When the user clicks on the button, toggle between hiding and showing the dropdown content*/ 
-                function actingMenu() {
-                    document.getElementById("headshots-menu").classList.toggle("active-menu");
-                }
 
-                function videoMenu() {
-                    document.getElementById("video-menu").classList.toggle("active-menu");
-                }
-
-                function galleryMenu() {
-                    document.getElementById("gallery-menu").classList.toggle("active-menu");
-                }
-                
-                function audioMenu() {
-                    document.getElementById("audio-menu").classList.toggle("active-menu");
-                }
-
-                function resumeMenu() {
-                    document.getElementById("resume-menu").classList.toggle("active-menu");
-                }
-
-                /*FUNCTION FOR WHEN MENU ITEMS ARE CLICKED TO NAVBIGATE TO LINK IN PAGE AND CHANGE MENU AND BUTTON*/
+                /*FUNCTION FOR WHEN MENU ITEMS ARE CLICKED TO NAVBIGATE TO LINK IN PAGE AND CHANGE MENU*/
                 function changeMenu(item) {
                     
                     var headshots = item.classList.contains("headshots-item");
@@ -459,39 +404,37 @@
                     var gallery = item.classList.contains("gallery-item");
                     var audio = item.classList.contains("audio-item");
                     var resume = item.classList.contains("resume-item");
-                    var r = item.className;
 
         
                     if(headshots == true) {
-                        $(".acting-menu-btn").removeClass("active-menu-btn");
-                        $(".acting-menu").removeClass("active-menu");
-
-                        $("#headshots-menu-btn").addClass("active-menu-btn");
+                        /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
+                        $(".acting-menu-item").removeClass("active-menu-item");
+                        /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
+                        $(".headshots-item").addClass("active-menu-item");
 
                     } else if (video == true) {
-                        $(".acting-menu-btn").removeClass("active-menu-btn");
-                        $(".acting-menu").removeClass("active-menu");
-
-                        $("#video-menu-btn").addClass("active-menu-btn");
-                        
+                        /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
+                        $(".acting-menu-item").removeClass("active-menu-item");
+                        /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
+                        $(".video-item").addClass("active-menu-item");
 
                     } else if (gallery == true) {
-                        $(".acting-menu-btn").removeClass("active-menu-btn");
-                        $(".acting-menu").removeClass("active-menu");
-
-                        $("#gallery-menu-btn").addClass("active-menu-btn");
+                        /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
+                        $(".acting-menu-item").removeClass("active-menu-item");
+                        /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
+                        $(".gallery-item").addClass("active-menu-item");
 
                     } else if (audio == true) {
-                        $(".acting-menu-btn").removeClass("active-menu-btn");
-                        $(".acting-menu").removeClass("active-menu");
-
-                        $("#audio-menu-btn").addClass("active-menu-btn");
+                        /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
+                        $(".acting-menu-item").removeClass("active-menu-item");
+                        /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
+                        $(".audio-item").addClass("active-menu-item");
 
                     } else {
-                        $(".acting-menu-btn").removeClass("active-menu-btn");
-                        $(".acting-menu").removeClass("active-menu");
-
-                        $("#resume-menu-btn").addClass("active-menu-btn");
+                        /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
+                        $(".acting-menu-item").removeClass("active-menu-item");
+                        /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
+                        $(".resume-item").addClass("active-menu-item");
 
                     }
                   /* document.getElementById("me").innerHTML = r; */  
