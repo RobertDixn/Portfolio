@@ -44,7 +44,7 @@ body {
   padding-bottom: 40px;
 }
 .first-sect-padding {
-  padding-top: 172.5px;
+  padding-top: 140px;
   padding-bottom: 40px;
 }
 /********************************************************************************************************/
@@ -187,36 +187,16 @@ body {
   width: 100%;
   position: fixed;
   top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 20px;
+  padding-top: 17.5px; /* - THE BOT PADDING OF THE ACTING MENU*/ /*DOING IT THIS WEAYS ALLOWS US TO KEEP THE SAME MEASUREMENTS*/
   overflow: hidden;
   z-index: 3;
 }
-/*Acting Sub Header*/
-.acting-sub-header {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px; /*28px*/
-  font-weight: 450; /*SEMI-BOLD*/
-  letter-spacing: 2px;
-  line-height: 30px;
-  transition: 0.5s;
-}
-/*Active Sub Header*/
-.active-sub-header {
-  display: flex;
-}
 /*Acting Menu*/
 .acting-menu {
-  display: none;
   padding-bottom: 2.5px;
-  align-items: center;
+  display: none;
   flex-wrap: nowrap;
-  column-gap: /*12.5%*/ 30px; /*40px*/
+  column-gap: 8.5%; /*28px on 414 vw*/
   /* hide scrollbar but allow scrolling */
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -229,7 +209,7 @@ body {
 }
 /*Acting Menu Item*/
 .acting-menu-item {
-  font-size: 18px; /*20px*/
+  font-size: 1.25rem; /*20px*/
   font-weight: 450; /*SEMI-BOLD*/
   color: #ffffff;
   opacity: 50%;
@@ -258,7 +238,7 @@ body {
 /*All Other Section*/
 .nth-section {
   width: 100%;
-  height: calc(100vh - 172.5px);
+  height: calc(100vh - 140px);
 }
 /*Section Wrapper*/
 .section-wrapper {
