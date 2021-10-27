@@ -50,7 +50,6 @@ body {
 /********************************************************************************************************/
 /*Header*/
 .header {
-  background-color: teal;
   width: 100%;
   height: 50px;
   display: flex;
@@ -183,7 +182,6 @@ body {
 /********************************************ACTING MENU*********************************************/
 /*ACTING MENU*/
 .acting-menu-wrapper {
-  background-color: crimson;
   width: 100%;
   position: fixed;
   top: 50px;
@@ -196,7 +194,6 @@ body {
 }
 /*Acting Sub Header*/
 .acting-sub-header {
-  background-color: darkblue;
   height: ; /*CHANGE*/
   display: none;
   flex-direction: column;
@@ -213,7 +210,6 @@ body {
 }
 /*Acting Menu*/
 .acting-menu {
-  background-color: var(--accent_color);
   height: ;
   display: none;
   align-items: center;
@@ -231,7 +227,6 @@ body {
 }
 /*Acting Menu Item*/
 .acting-menu-item {
-  background-color: green;
   font-size: 20px; /*20px*/
   font-weight: 450; /*SEMI-BOLD*/
   color: #ffffff;
