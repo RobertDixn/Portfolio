@@ -44,12 +44,13 @@ body {
   padding-bottom: 40px;
 }
 .first-sect-padding {
-  padding-top: 132px;
+  padding-top: 172.5px;
   padding-bottom: 40px;
 }
 /********************************************************************************************************/
 /*Header*/
 .header {
+  background-color: var(--background-color);
   width: 100%;
   height: 50px;
   display: flex;
@@ -182,6 +183,7 @@ body {
 /********************************************ACTING MENU*********************************************/
 /*ACTING MENU*/
 .acting-menu-wrapper {
+  background-color: var(--background-color);
   width: 100%;
   position: fixed;
   top: 50px;
@@ -194,14 +196,14 @@ body {
 }
 /*Acting Sub Header*/
 .acting-sub-header {
-  height: ; /*CHANGE*/
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 24px; /*28px*/
-  font-weight: 700; /*BOLD*/
+  font-size: 22px; /*28px*/
+  font-weight: 450; /*SEMI-BOLD*/
   letter-spacing: 2px;
+  line-height: 30px;
   transition: 0.5s;
 }
 /*Active Sub Header*/
@@ -210,11 +212,11 @@ body {
 }
 /*Acting Menu*/
 .acting-menu {
-  height: ;
   display: none;
+  padding-bottom: 2.5px;
   align-items: center;
   flex-wrap: nowrap;
-  column-gap: 12.5%; /*40px*/
+  column-gap: /*12.5%*/ 30px; /*40px*/
   /* hide scrollbar but allow scrolling */
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -232,7 +234,7 @@ body {
   color: #ffffff;
   opacity: 50%;
   letter-spacing: 2px;
-  line-height: ; /*ALTER TO EDIT SPACING BETWEEN LINKS*/
+  line-height: 30px; /*CHANGES OVERALL HEIGHT OF ELEMENT BY SPECIFYING THE HEIGT OF THE LINE ITS ON*/
   text-decoration: none;
 }
 .active-acting-item {
@@ -244,7 +246,7 @@ body {
 .page-wrapper {
   min-height: 100%;
   margin-bottom: -40px;
-  display: none; /*undo*/
+  display: flex;
   flex-direction: column;
   row-gap: 40px;
 }
@@ -256,7 +258,7 @@ body {
 /*All Other Section*/
 .nth-section {
   width: 100%;
-  height: calc(100vh - 132px);
+  height: calc(100vh - 172.5px);
 }
 /*Section Wrapper*/
 .section-wrapper {
@@ -407,7 +409,7 @@ body {
 /*FOOTER WRAPPER*/
 .footer-wrapper {
   height: 40px;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
