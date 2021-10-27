@@ -199,7 +199,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.75rem; /*28px*/
+  font-size: 24px; /*28px*/
   font-weight: 700; /*BOLD*/
   letter-spacing: 2px;
   transition: 0.5s;
@@ -227,7 +227,7 @@ body {
 }
 /*Acting Menu Item*/
 .acting-menu-item {
-  font-size: 20px; /*20px*/
+  font-size: 18px; /*20px*/
   font-weight: 450; /*SEMI-BOLD*/
   color: #ffffff;
   opacity: 50%;
@@ -407,7 +407,7 @@ body {
 /*FOOTER WRAPPER*/
 .footer-wrapper {
   height: 40px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
