@@ -196,7 +196,7 @@ body {
   padding-bottom: 2.5px;
   display: none;
   flex-wrap: nowrap;
-  column-gap: 8.5%; /*28px on 414 vw*/
+  column-gap: 9%; /*28px on 414 vw*/
   /* hide scrollbar but allow scrolling */
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
