@@ -210,7 +210,7 @@ body {
 /*Acting Menu Item*/
 .acting-menu-item {
   font-size: 1.25rem; /*20px*/
-  font-weight: 450; /*SEMI-BOLD*/
+  font-weight: 700; /*BOLD*/
   color: #ffffff;
   opacity: 50%;
   letter-spacing: 2px;
