@@ -411,6 +411,8 @@
                         $(".acting-menu-item").removeClass("active-menu-item");
                         /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
                         $(".headshots-item").addClass("active-menu-item");
+                        
+                        document.getElementById("headshots-menu").scrollLeft = 0;
 
                     } else if (video == true) {
                         /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
@@ -418,11 +420,33 @@
                         /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
                         $(".video-item").addClass("active-menu-item");
 
+                        var h = $(".headshots-item").offset();
+                        var x = $(".video-item").offset()
+                        var y =  x.left - h.left
+
+                        /*alert("Left: " + $(".video-item").offset().left);*/
+                        document.getElementById("headshots-menu").scrollLeft = y;
+                        /*alert("Left: " + $(".video-item").offset().left);*/
+
                     } else if (gallery == true) {
                         /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
                         $(".acting-menu-item").removeClass("active-menu-item");
                         /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
                         $(".gallery-item").addClass("active-menu-item");
+
+
+                        var h = $(".headshots-item").offset();
+                        var x = $(".gallery-item").offset()
+                        var y =  x.left - h.left
+
+                        /*alert("Left: " + h.left);
+                        alert("Left: " + x.left);*/
+
+                        document.getElementById("headshots-menu").scrollLeft = y;
+
+                        /*var z = $(".gallery-item").offset()
+                        alert("Left: " + h.left);
+                        alert("Left: " + z.left);*/
 
                     } else if (audio == true) {
                         /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
@@ -430,17 +454,28 @@
                         /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
                         $(".audio-item").addClass("active-menu-item");
 
+                        var h = $(".headshots-item").offset();
+                        var x = $(".audio-item").offset()
+                        var y =  x.left - h.left
+
+                        document.getElementById("headshots-menu").scrollLeft = y;
+
                     } else {
                         /*REMOVE THE ACTIVE MENU ITEM CLASS FROM ALL ACTING MENU ITEMS*/
                         $(".acting-menu-item").removeClass("active-menu-item");
                         /*ADD THE ACTIVE MENU ITEM CLASS TO THE ELEMENT THAT HAS THE ____-item class*/
                         $(".resume-item").addClass("active-menu-item");
 
+                        var h = $(".headshots-item").offset();
+                        var x = $(".resume-item").offset()
+                        var y =  x.left - h.left
+
+                        document.getElementById("headshots-menu").scrollLeft = y;
                     }
                   /* document.getElementById("me").innerHTML = r; */  
                 }
           
-        /*AS PAGE SCROLLS TO A SPECIFIC SECTION ALTER ACTIVE acting-menu-btn & acting-menu*/
+        /*AS PAGE SCROLLS TO A SPECIFIC SECTION ALTER ACTIVE acting-menu-btn & acting-menu
         window.onscroll = () => {
             var current = "";
 
@@ -456,37 +491,31 @@
                 li.classList.add("active");
                 }
             });
-        };
+        };*/
 
 
-
-
-
-        
-        
 
         const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll(".acting-menu-btn");
+        const navLi = document.querySelectorAll(".acting-menu-item");
         
         window.onscroll = () => {
             var current = "";
 
             sections.forEach((section) => {
                     const sectionTop = section.offsetTop;
-                    if (pageYOffset >= sectionTop - 135) {
+                    if (pageYOffset >= sectionTop - 140) {
                     current = section.getAttribute("id"); }
                 });
 
                 navLi.forEach((navLi) => {
-                    navLi.classList.remove("active-menu-btn");
+                    navLi.classList.remove("active-menu-item");
                     if (navLi.classList.contains(current)) {
-                    navLi.classList.add("active-menu-btn");
+
+                    changeMenu(navLi);
+
                 }
             });
-        };
-
-
-        
+        };    
 
     </script>
     </body>
