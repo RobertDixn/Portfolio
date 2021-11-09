@@ -488,3 +488,21 @@ body {
   -webkit-user-select: none;
   z-index: 5;
 }
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.green {
+  background-color: green;
+}
+.white {
+  background-color: white;
+}
+.teal {
+  background-color: teal;
+}
+.orange {
+  background-color: orange;
+}
