@@ -103,25 +103,25 @@
                             </div>                           
 
                             <!--Full Image Wrapper Displaying A 1 Column Layout-->
-                            <div class="full-img-wrapper none">
+                            <div class="full-img-wrapper none" id="mey">
                                 <!--full images-->
                                 <div class="full-img">
-                                    <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    <img src="" alt="Miranda Holliday's headshot." class="img-vid red">
                                 </div>
-                                <div class="full-img" id="mey">
-                                    <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
-                                </div>
-                                <div class="full-img">
-                                    <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                <div class="full-img" >
+                                    <img src="" alt="Miranda Holliday's headshot." class="img-vid blue">
                                 </div>
                                 <div class="full-img">
-                                    <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    <img src="" alt="Miranda Holliday's headshot." class="img-vid green">
                                 </div>
                                 <div class="full-img">
-                                    <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    <img src="" alt="Miranda Holliday's headshot." class="img-vid white">
                                 </div>
                                 <div class="full-img">
-                                    <img src="headshot-images/headshot2.JPG" alt="Miranda Holliday's headshot." class="img-vid">
+                                    <img src="" alt="Miranda Holliday's headshot." class="img-vid teal">
+                                </div>
+                                <div class="full-img">
+                                    <img src="" alt="Miranda Holliday's headshot." class="img-vid orange">
                                 </div>
                                 <div class="full-img">
                                     <img src="headshot-images/headshot1.JPG" alt="Miranda Holliday's headshot." class="img-vid">
@@ -299,10 +299,10 @@
                 var slideIndex = 1;
                 showSlides(slideIndex);
 
-                // Next/previous controls
+                /*// Next/previous controls
                 function plusSlides(n) {
                 showSlides(slideIndex += n);
-                }
+                }*/
 
                   
 
@@ -345,12 +345,19 @@
                 } 
 
 
+
+
+                // Next/previous controls
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
                 let touchstartX = 0
                 let touchendX = 0
 
                 const slider = document.getElementById('mey')
 
-                function handleGesture() {
+                function plusSlides() {
                 if (touchendX < touchstartX) alert('swiped left!')
                 if (touchendX > touchstartX) alert('swiped right!')
                 }
@@ -361,7 +368,8 @@
 
                 slider.addEventListener('touchend', e => {
                 touchendX = e.changedTouches[0].screenX
-                handleGesture()
+                n = touchendX
+                showSlides(slideIndex += n);
                 })
     </script>
     </body>
