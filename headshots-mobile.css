@@ -47,6 +47,7 @@ body {
   padding-top: 140px;
   padding-bottom: 40px;
 }
+
 /********************************************************************************************************/
 /*Header*/
 .header {
@@ -419,7 +420,7 @@ body {
 /*2 columns wrapper for small images*/
 .small-img-wrapper {
   flex-wrap: wrap;
-  gap: 40px 20px; /*row gap + column gap*/
+  gap: 20px 20px; /*row gap + column gap*/
 }
 .small-img {
   position: relative;
@@ -429,7 +430,7 @@ body {
     50% - 10px
   ); /*-10px because the row gap is 20px so each container should be 50% - (20px/2)*/
   height: calc(
-    50vh - 110px
+    50vh - 90px
   ); /*50vh because one container should take up half the overall vh and - 110px because header and acting-menu = 100px and column-gap = 40px -> 100 - (20/2)*/
 }
 /*1 column wrapper for full images*/
@@ -437,7 +438,10 @@ body {
   width: 100%;
   height: calc(100vh - 180px);
 }
-.full-img {
+.full-img,
+.full-img1,
+.full-img2,
+.full-img3 {
   display: none;
   position: relative;
   border-radius: 20px;
@@ -472,11 +476,34 @@ body {
 .prev {
   left: 0;
 }
-.x {
+.red {
+  background-color: red;
+  color: red;
+}
+.blue {
+  background-color: blue;
+  color: blue;
+}
+.green {
+  background-color: green;
+  color: green;
+}
+.white {
+  background-color: white;
+  color: white;
+}
+.teal {
   background-color: teal;
+  color: teal;
+}
+.orange {
+  background-color: orange;
+  color: orange;
+}
+
+.x {
   position: absolute;
   cursor: pointer;
-  height: 50px;
   width: 40px;
   right: 40px;
   top: 160px;
@@ -488,21 +515,23 @@ body {
   -webkit-user-select: none;
   z-index: 5;
 }
-.red {
-  background-color: red;
-}
-.blue {
-  background-color: blue;
-}
-.green {
-  background-color: green;
-}
-.white {
+.xline {
+  height: 4.8px;
+  width: 40px;
+  border-radius: 5px;
   background-color: white;
 }
-.teal {
-  background-color: teal;
+#line11 {
+  transform: rotate(-40deg) translate(-7px, 8px);
+  -webkit-transform: rotate(-40deg) translate(-7px, 8px);
 }
-.orange {
-  background-color: orange;
+#line22 {
+  margin: 7px auto;
+  transition: 0.25s;
+  transition-delay: 0.35s;
+  opacity: 0%;
+}
+#line33 {
+  transform: rotate(40deg) translate(-6px, -10.5px);
+  -webkit-transform: rotate(40deg) translate(-6px, -10.5px);
 }
