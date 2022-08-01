@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About - Robert Dixon</title>
+        <meta name="descripiton" content="Robert Dixon's UX/UI Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="about.css">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
+    </head>
+        <body>
+                <!--NAVIGATION OVERLAY-->
+                <div id="nav_overlay">
+
+                    <!--NAVIGATION LINKS-->
+                    <ul id="nav_menu">
+                        <li class="nav_item">
+                            <a href="index.html" class="nav_link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="about.html" class="nav_link active_link">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="resume.html" class="nav_link" onclick="closeMenu()">Resume</a>
+                        </li>
+                    </ul> 
+                </div>
+            <!--PAGE HEADER-->
+            <header>
+                <!--NAVIGATION MENU-->
+                <nav id="menu" onclick="toggle_menu(this)">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div>
+                </nav>
+                
+            </header>
+                <main class="page_wrapper">
+                 
+                    <!--CONTENT WRAPPER-->
+                    <div class="content_wrapper">
+
+                        <!--EXPERIENCE-->
+                        <h2>About Me</h2>
+                        <p>I am a designer based in Maryland that operates at the point where brand and audience meet.</p> 
+                        <p>I talk to brands to understand both their product and the desired relationship they want with their audience. 
+                               I then sit down with users to discuss what they need and want from that product. Then I create practical 
+                               solutions aimed to address the wants and needs of each party, and that enriches the relationship between 
+                               brand and audience.</p>
+                    </div>   
+                        <!--FOOTER-->
+                        <footer>
+                            <!--FOOTER HEADER-->
+                            <h3>Ready to reconnect with your <span class="extra_bold">audience</span></h3>
+
+                            <!--FOOTER EMAIL BUTTON-->
+                            <div class="social_media_wrapper">
+                                <div class="media_icons"></div>
+                                <div class="media_icons"></div>
+                                <div class="media_icons"></div>
+                            </div>
+
+                            <!--COPYRIGHT-->
+                            <p class="copyright">&#169; 2022 Robert Dixon</p>
+                        </footer>
+
+                    
+
+                </main>
+        </body>
+
+        <!--JQUERY SCRIPT-->
+        <script>
+           /*Hamburger Menu Change & Transition*/   
+        function toggle_menu(x) {
+            x.classList.toggle("open_menu");
+
+            var x = document.getElementById("nav_overlay")
+            var y = document.getElementById("page")
+
+            if (x.style.height === "100vh") {
+                x.style.height = "0"; 
+            } else {
+                x.style.height = "100vh";
+                
+                /*
+                window.onscroll = function() {
+                    header.style.top = "0"*/
+                }
+            }
+
+        function closeMenu() {
+            var nav = document.getElementById("nav_overlay")  
+            document.getElementById("nav_menu").classList.remove("open_menu");
+        }   
+        </script>
+    </html>

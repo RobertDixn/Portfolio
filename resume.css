@@ -1,0 +1,201 @@
+:root {
+  --cashapp: #01b844;
+}
+/*EFFECTS EVERY PARENT ELEMENT*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", Open Sans, sans-serif;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+}
+/************************************************************************************/
+.page_wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+}
+.content_wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 60px 40px 0 40px; /*TOP PADIONG IS 60PX BECASUE THE PADDING ON ALL H2 ELEMNTS IS ALREADY 40PX TO GIVE 100PX*/
+  line-height: 25px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+} /**/
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 50%;
+  padding-top: 40px;
+  z-index: -1;
+}
+.bold {
+  font-weight: 700;
+}
+.extra_bold {
+  font-weight: 800;
+}
+.job_position {
+  color: #0038ff;
+  font-weight: 700;
+}
+.btn_wrapper {
+  background-color: #000000;
+  height: 40px;
+  width: 144px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  font-size: 0.875rem;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+/********************************************FOOTER SECTION***********************************************/
+footer {
+  background-color: #000000;
+  padding-top: 80px;
+}
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  color: #ffffff;
+  line-height: initial;
+  margin-bottom: 40px;
+}
+.extra_bold {
+  font-weight: 800;
+}
+.social_media_wrapper {
+  display: flex;
+  column-gap: 40px;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+.media_icons {
+  background-color: #ffffff;
+  height: 40px;
+  width: 40px;
+  border-radius: 2.5px;
+}
+.copyright {
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+/********************************************NAVIGATION MENU + ANIMATION***********************************************/
+#nav_overlay {
+  background-color: #ffffff;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.45s;
+  overflow: hidden;
+}
+#nav_menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.nav_item {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 1.5rem;
+  line-height: initial;
+  font-weight: 600;
+}
+.nav_link {
+  text-decoration: none;
+  opacity: 50%;
+  color: #000000;
+}
+.active_link {
+  opacity: 100%;
+}
+/*Rotate bar 1*/
+.open_menu #line1 {
+  transform: rotate(-45deg) translate(-3px, 8px);
+  -webkit-transform: rotate(-45deg) translate(-3px, 8px);
+  transition: 0.5s;
+  width: 30px;
+}
+/*Change opacaity of bar2 to 0*/
+.open_menu #line2 {
+  opacity: 0;
+  transition: 0s;
+}
+/*Rotate bar 3*/
+.open_menu #line3 {
+  transform: rotate(45deg) translate(-3px, -8px);
+  -webkit-transform: rotate(45deg) translate(-3px, -8px);
+  transition: 0.5s;
+  width: 30px;
+}
+nav {
+  height: 44px;
+  width: 44px;
+  position: fixed;
+  top: 28px; /*40 - ((44px- 3 lines height) / 2) */
+  right: 10px; /*20 - ((44 - lines width) / 2)*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 7px;
+  z-index: 3;
+}
+.line {
+  background-color: #000000;
+  height: 2px; /*height of 3 lines = 20px*/
+  width: 24px;
+  border-radius: 0.5px;
+}
+#line1 {
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+
+#line2 {
+  width: 15px;
+  position: relative;
+  left: 2.5px;
+  transition: 0.25s;
+  transition-delay: 0.3s;
+}
+
+#line3 {
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}

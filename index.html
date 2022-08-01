@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home - Robert Dixon</title>
+        <meta name="descripiton" content="Robert Dixon's UX/UI Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="home.css">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
+    </head>
+        <body>
+                <!--NAVIGATION OVERLAY-->
+                <div id="nav_overlay">
+
+                    <!--NAVIGATION LINKS-->
+                    <ul id="nav_menu">
+                        <li class="nav_item">
+                            <a href="index.html" class="nav_link active_link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="about.html" class="nav_link">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="resume.html" class="nav_link" onclick="closeMenu()">Resume</a>
+                        </li>
+                    </ul> 
+                </div>
+
+          
+                <!--NAVIGATION MENU-->
+                <nav id="menu" onclick="toggle_menu(this)">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div>
+                </nav>
+                 <!-------------------------------------------------------->
+ 
+
+
+
+            
+               
+                <!--PAGE WRAPPER-->
+                <main class="page_wrapper">
+                 
+                    <!--COVER PAGE-->
+                    <div class="cover_wrapper">
+                        <div class="name_wrapper">
+                            <div class="first_name"><span>R</span><span>O</span><span>B</span><span>E</span><span>R</span><span>T</span></div>
+                            <div class="last_name"><span>D</span><span>I</span><span>X</span><span>O</span><span>N</span></div>      
+                        </div>               
+                    </div>
+
+
+                    <!--CONTENT WRAPPER-->
+                    <div class="content_wrapper">
+
+
+                        <!--CASH APP PROJECT-->
+                        <div class="project_wrapper cashapp">
+                                 <!--PROJECT IMAGE-->
+                                <img src="Cash App Images\Home_cashapp_mobile_compressed.png" alt="Home Screen for Cash App Project">
+
+   
+                                <!--PROJECT TEXT-->
+                                <div class="text_section1">
+                                   <h2>Cash App</h2>
+                                   <p>Making payments less stressful and more convenient for users.</p>
+                                   <div class="btn_wrapper cash">
+                                       <a href="cashapp_project.html" class="btn">View Project</a>
+                                   </div>
+                               </div>
+                        </div>
+
+                        <!--MIRANDAHOLLIDAY.COM PROJECT-->
+                        <div class="project_wrapper mirandaholliday">
+                            <!--PROJECT IMAGE-->                           
+                               <div class="background miranda_background">
+                                   <div class="background_accent miranda_accent"></div>
+                                   <img src="Cash App Images\Home_miranda_mobile_compressed.png" alt="Home screen for MirandaHolliday.com">
+                               </div>
+                          
+                           <!--PROJECT TEXT-->
+                           <div class="text_section1">
+                              <h2>MirandaHolliday.com</h2>
+                              <p>Creating an online persona befitting of a brilliant actress and playwright.</p>
+                              <div class="btn_wrapper miranda">
+                                  <a href="mirandaholliday_project.html" class="btn">View Project</a>
+                              </div>
+                          </div>
+                   </div>
+
+                   <!--HOMES FOR VALUE PROJECT-->
+                   <div class="project_wrapper homesforvalue">
+                    <!--PROJECT IMAGE-->
+                   <div class="background homes_background">
+                                   <div class="background_accent homes_accent"></div>
+                                   <img src="Cash App Images\Home_homesforvalue_mobile_compressed.png" alt="Home screen for HomesForValue.com">
+                               </div>
+
+
+                   <!--PROJECT TEXT-->
+                   <div class="text_section1">
+                      <h2>Homes For Value</h2>
+                      <p>Recreating the conversation between homeowners and real estate agents.</p>
+                      <div class="btn_wrapper homes">
+                          <a href="homesforvalue.html" class="btn">View Project</a>
+                      </div>
+                  </div>
+           </div>
+
+
+                    
+
+                    </div>   
+                
+
+
+                    <!--FOOTER-->
+                    <footer>
+                        <!--FOOTER HEADER-->
+                        <h3>Ready to reconnect with your <span class="extra_bold">audience</span></h3>
+
+                        <!--FOOTER EMAIL BUTTON-->
+                        <div class="social_media_wrapper">
+                            <div class="media_icons"></div>
+                            <div class="media_icons"></div>
+                            <div class="media_icons"></div>
+                        </div>
+
+                        <!--COPYRIGHT-->
+                        <p class="copyright">&#169; 2022 Robert Dixon</p>
+                    </footer>   
+
+                </main>
+        </body>
+
+        <!--JQUERY SCRIPT-->
+        <script>
+           /*Hamburger Menu Change & Transition*/   
+        function toggle_menu(x) {
+            x.classList.toggle("open_menu");
+
+            var x = document.getElementById("nav_overlay")
+            var y = document.getElementById("page")
+
+            if (x.style.height === "100vh") {
+                x.style.height = "0"; 
+            } else {
+                x.style.height = "100vh";
+                
+                /*
+                window.onscroll = function() {
+                    header.style.top = "0"*/
+                }
+            }
+
+        function closeMenu() {
+            var nav = document.getElementById("nav_overlay")  
+            document.getElementById("nav_menu").classList.remove("open_menu");
+        }   
+        </script>
+    </html>
