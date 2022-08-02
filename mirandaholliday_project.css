@@ -41,11 +41,11 @@ body {
   margin-bottom: -80px;
 }
 .background {
-  background-color: red;
+  background-color: #f2f2f2f2;
   width: 100%;
   height: 42.5%;
   position: absolute;
-  bottom: 0;
+  bottom: -80px;
 }
 .cover_imgs {
   width: 100%;
