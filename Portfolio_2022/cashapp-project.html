@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cash App - Project</title>
+        <meta name="descripiton" content="Robert Dixon's UX/UI Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="cashapp-project.css">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Domine:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    </head>
+        <body>
+            <!-------------------------------------NAVIGATION---------------------------------------->
+            <!--NAV BAR-->
+            <div id="navbar">
+
+                <!--LOGO-->
+                <div class="logo-wrapper">
+                    <a href="index.html"><img src="Cash App Images\logo-white.png" alt="website logo"></a>
+                </div>
+
+                <!--HAMBURGER MENU-->
+                <div id="hamburger-menu" onclick="toggle_menu(this)">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div> 
+                </div>
+            </div>
+
+            <!--NAV OVERLAY-->
+            <nav id="nav-overlay">
+
+                <!--NAV-MENU/ITEMS-->
+                <ul id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" onclick="close-Menu()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link" onclick="close-Menu()">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resume.html" class="nav-link" onclick="close-Menu()">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-------------------------------------CONTENT---------------------------------------->
+            <!--PAGE WRAPPER-->
+            <main class="page-wrapper">
+
+                <!--COVER PAGE-->
+                <div class="cover-page">
+
+                    <div class="cover-wrapper">
+
+                        <!--HEADER-WRAPPER-->
+                        <div class="header-wrapper">
+                            <!--CASH APP LOGO-->
+                            <div class="cover-image">
+                                <img src="Cash App Images\cashapp-logo.png" alt="Photo of a Miranda's writing portfolio.">
+                            </div>
+                            <h1>Cash App</h1>
+                        </div>                
+
+                        <p class="cashapp-header">Putting People<br>Before<br>Payments</p>
+                        <div class="dates-times">
+                            <p>4 weeks</p>
+                            <p>40 screens</p>
+                        </div>
+                    </div>
+
+                    <!--IMAGE-->
+                    <div class="project-image cashapp-home">
+                        <img src="Cash App Images\cashapp-home.png" alt="Photo of a Miranda's writing portfolio.">
+                    </div>
+                </div>
+
+                </div>               
+
+                <!--CONTENT WRAPPER-->
+                <div class="content-wrapper">
+                    
+                    <!--INTRODUCTION-->
+                    <section class="cont1">
+                        <div class="text-section">
+                            <h4>The problem</h4>
+                            <h2>Payments shouldn’t <span class="line-break">be stressful</span></h2>
+                            <div class="paragraph">
+                                <p>Cash app was created to give users an easy means to complete transactions, however most users find themselves hesitating when it's time to hit pay.</p> 
+                                <p>This redesign uncovers those reasons of hesitation, and addresses them to remove any additional stress from an already stressful process.</p>
+                            </div>
+                        </div>
+
+                        <!--IMAGE-->
+                        <div class="project-image slanted">
+                            <img src="Cash App Images\Cashapp-slanted.png" alt="Photo of a Miranda's writing portfolio.">
+                        </div>
+                    </section>
+                    
+                    <!--SOLUTION 1-->
+                    <section class="cont2 row-layout">
+                        <div class="text-section row-text">
+                            <h2>Reassurance <span class="line-break">at a glance</span></h2>
+                        <div class="paragraph">
+                            <p>Instead of seeing an inaccurate cash balance, users can quickly gain insight into their finances to decide whether they need to add additional funds before beginning a transaction.</p>                          
+                            </div>
+                        </div>
+
+                        <!--IMAGE-->
+                        <div class="project-image">
+                            <img src="Cash App Images\cashapp-home.png" alt="Photo of a Miranda's writing portfolio.">
+                        </div>   
+                    </section>
+
+
+                    <!--SOLUTION 2-->
+                    <section class="cont3 reverserow-layout">
+                        <div class="text-section row-text">
+                            <h2>A little <span class="line-break">reminder</span></h2>
+                            <div class="paragraph">
+                                <p>By reminding users about the decisions they made during a transaction, users can quickly catch when $10 accidentally turns into $100.</p>                          
+                            </div>
+                        </div>
+
+                        <!--IMAGE-->
+                        <div class="project-image">
+                            <img src="Cash App Images\cashapp-payments.gif" alt="Photo of a Miranda's writing portfolio.">
+                        </div>
+                    </section>  
+                        
+                    <!--SOLUTION 3-->
+                    <section class=" cont4 row-layout">
+                        <div class="text-section row-text">
+                            <h2>Memorization <span class="line-break">made easy</span></h2>
+                            <div class="paragraph">
+                                <p>The Favorites feature allows users to use preset data about past transactions to complete new ones.</p>                          
+                            </div>
+                        </div>
+
+                        <!--IMAGE-->
+                        <div class="project-image">
+                            <img src="Cash App Images\cashapp-favorites.gif" alt="Photo of a Miranda's writing portfolio.">
+                        </div>
+                    </section>  
+
+                    <!--INSIGHT-->
+                    <section class="cont5">
+                        <div class="text-section">
+                            <h4>Insight</h4>
+                            <h2>The undeniable truth</h2>
+                            <div class="paragraph">
+                                <p>By introducing design solutions into Cash App’s payment process I can significantly reduce the likelihood of users making mistakes and increase the likelihood of them noticing when they’ve made a mistake before a call to customer service.</p>                          
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!--COLLAGE WRAPPER-->
+                <div class="collage-wrapper">
+
+                    <div class="slimeguy-wrapper">
+                        <!--IMAGE-->
+                        <div class="project-image slimeguy">
+                            <img src="Cash App Images\cashapp-slimeguy.png" alt="Photo of a Miranda's writing portfolio.">
+                        </div>
+                    </div>
+
+                    <!--COLLAGE-->
+                    <img class="photo-collage"src="Cash App Images\cashapp-collage.png" alt="">
+                </div>
+
+                <!--NEXT-WRAPPER-->
+                <div class="next-wrapper">
+                    <!--IMAGE-->
+                    <div class="project-image next-image">
+                        <img src="Cash App Images\miranda-laptop.png" alt="Image of Cash App screen">
+                    </div>
+                    <!--NEXT BUTTON-->
+                    <div class="btn-wrapper">
+                        <a href="mirandaholliday-project.html" class="btn">Next Project</a>
+                    </div>
+                </div>
+
+
+                <!------------------------------------FOOTER------------------------------------------------->
+                <footer>
+                    <!--HEADER-->
+                    <h3>Ready to reconnect with your <span class="extra-bold">audience</span></h3>
+
+                    <!--CONTACT LINKS-->
+                    <div class="social-media-wrapper">
+                        <div class="media-icons"><a href="https://www.linkedin.com/in/robert-dixon-34a3b0154/">Linkedin</a></div>
+                        <div class="media_icons"><a href="https://profile.indeed.com/?hl=en&co=US&from=gnav-homepage&_ga=2.228005400.405605151.1659400805-1104227890.1623627628">Indeed</a></div>
+                        <div class="media_icons"><a href="https://towson.joinhandshake.com/stu/users/19678440">Handshake</a></div>
+                        <div class="media_icons"><a href="mailto:RobertDixn369@Gmail.com?subject=Ready%20To%20Reconnect%20With%20My%20Audinece!"">Email</a></div>
+                    </div>
+
+                    <!--COPYRIGHT-->
+                    <p class="copyright">&#169; 2022 Robert Dixon</p>
+                </footer>
+            </main>
+        </body>
+
+         <!------------------JQUERY SCRIPT----------------------------->
+         <script>
+            if (window.matchMedia('(max-width: 1023px)').matches) {
+        // do functionality on screens smaller than 1024px
+    
+                /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
+                document.querySelectorAll('.nav-item').forEach(function(el) {
+                el.style.opacity = '0';
+                });
+    
+                /*Hamburger Menu Change & Transition*/   
+                 function toggle_menu(x) {
+                     x.classList.toggle("open-menu");
+         
+                     var x = document.getElementById("nav-overlay")
+                     var y = document.getElementById("page")
+                     var n = document.getElementById("nav-menu")     
+    
+                     if (x.style.height === "100vh") {
+                         x.style.height = "0"; 
+                         
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '0';
+                        });
+    
+                     } else {
+                         x.style.height = "100vh";
+                         
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '100';
+                        });
+
+                        }
+                     }
+         
+                     function closeMenu() {
+                     var nav = document.getElementById("nav-overlay")  
+                     document.getElementById("nav-menu").classList.remove("open-menu");
+                    } 
+            }
+                 </script>
+    </html>

@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", Open Sans, sans-serif;
+  font-size: 16px;
+  background-color: #f3eff5;
+  letter-spacing: 0.5px;
+}
+/************************************CONTENT***************************************/
+.page-wrapper {
+  font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.cover-page {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*margin: 0 max(40px, 4%);*/
+}
+.content-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 80px;
+  margin: 0 max(40px, 4%);
+}
+section {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cont3 {
+  min-height: 100%;
+}
+.miranda-background {
+  background-color: #161615;
+  width: 100vw;
+  height: 30%;
+  position: absolute;
+  top: -40px;
+  z-index: 1;
+}
+.text-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  text-align: center;
+  max-width: 300px;
+}
+h2 {
+  font-size: 2.125em;
+  font-weight: 600; /*semi-bold*/
+  text-transform: capitalize;
+  line-height: 1.5em;
+  white-space: nowrap;
+  /* margin-bottom: -8px;*/
+}
+p {
+  line-height: 2em;
+  opacity: 62.5%;
+}
+.project-image {
+  width: 100%;
+  max-width: 400px;
+  block-size: auto;
+  z-index: 2;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 2;
+}
+.cashapp-image {
+  width: calc(100% - 140px);
+  max-width: 200px;
+}
+.cashapp-image img {
+  object-fit: contain;
+}
+.miranda-image {
+  margin-top: 40px;
+}
+.radius {
+  border-radius: 3.5px;
+}
+.btn-wrapper {
+  background-color: #141414;
+  height: 48px; /*15px of top+bot padding*/
+  width: calc(110.133px + 40px); /*20px of side padding*/
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  font-size: 0.875em; /*14px*/
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.cashapp {
+  background-color: #01b844;
+}
+.miranda {
+  background-color: #c3874d;
+}
+.homes {
+  background-color: #f2bb06;
+}
+/************************************NAVIGATION***************************************/
+#navbar {
+  background-color: #0a0a0a;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  transition: top 0.4s;
+  z-index: 7;
+}
+#hamburger-menu {
+  /*menu height of 20px with top and bot padding of 20px*/
+  width: 30px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  row-gap: 7px;
+  position: fixed;
+  right: 0;
+  margin-right: 20px;
+}
+.line {
+  background-color: #f3eff5;
+  width: 24px;
+  height: 2px;
+  border-radius: 0.5px;
+  transition: 0.4s;
+}
+#line2 {
+  width: 17px;
+  transition: 0.4s;
+  transition-delay: 0.2s;
+}
+#nav-overlay {
+  background-color: #141414;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  transition: 0.8s;
+  z-index: 6;
+}
+.logo-wrapper {
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
+}
+.logo-wrapper img {
+  inline-size: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+.nav-item {
+  font-size: 1.5em; /*24px*/
+  font-weight: 600;
+  text-align: center;
+  list-style-type: none;
+  transition: 0.4s;
+}
+.nav-link {
+  color: #f3eff5;
+  text-decoration: none;
+  opacity: 50%;
+}
+.active-link {
+  opacity: 100%;
+}
+/*Rotate bar 1*/
+.open-menu #line1 {
+  transform: rotate(-43deg) translate(-3px, 8px);
+  -webkit-transform: rotate(-43deg) translate(-3px, 8px);
+  transition: 0.4s;
+  width: 35px;
+}
+/*Change opacaity of bar2 to 0*/
+.open-menu #line2 {
+  opacity: 0;
+  transition: 0s;
+}
+/*Rotate bar 3*/
+.open-menu #line3 {
+  transform: rotate(41deg) translate(-3px, -8px);
+  -webkit-transform: rotate(41deg) translate(-3px, -8px);
+  transition: 0.4s;
+  width: 35px;
+}
+
+/************************************FOOTER***************************************/
+footer {
+  background-color: #0a0a0a;
+  color: #f3eff5;
+  height: 100vh;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
+  z-index: 2;
+}
+h3 {
+  font-size: 2.125em;
+  font-weight: 500; /*medium*/
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.5em;
+}
+.extra-bold {
+  font-weight: 800;
+}
+.social-media-wrapper {
+  font-size: 0.875em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.social-media-wrapper a {
+  color: #f3eff5;
+  text-decoration: none;
+}
+.copyright {
+  font-size: 0.625em; /*12px*/
+  text-align: center;
+  color: #ffffff;
+  opacity: 50%;
+}
+/***************************MOBILE************************/
+@media screen and (min-width: 414px) {
+  .miranda-background {
+    height: 38%;
+  }
+}
+/***************************TABLET**********************/
+@media only screen and (min-width: 768px) {
+  .content-wrapper {
+    margin: 0 max(60px, 4%);
+  }
+  .row-layout {
+    flex-direction: row-reverse;
+    gap: 0 40px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .cashapp-image {
+    width: 100%;
+    max-width: 300px;
+  }
+  .cash-text {
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+  /************************************NAVIGATION***************************************/
+  #hamburger-menu {
+    margin-right: max(60px, 4%);
+  }
+  .logo-wrapper {
+    height: 30px;
+    margin-left: max(60px, 4%);
+  }
+  /************************************FOOTER***************************************/
+  footer {
+    height: calc(100vh - 60px);
+    row-gap: 60px;
+  }
+  h3 {
+    font-size: 2.375em;
+  }
+  .extra-bold::before {
+    content: "\A";
+    white-space: pre;
+  }
+  .social-media-wrapper {
+    row-gap: 30px;
+  }
+}
+/***************************DESKTOP**************************/
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+  .page-wrapper {
+    row-gap: 120px;
+  }
+  .content-wrapper {
+    margin: 0 max(80px, 4%);
+  }
+  .text-section {
+    max-width: 400px;
+  }
+  .cash-text {
+    max-width: 350px;
+  }
+  .btn-wrapper {
+    height: 49px; /*15px of top+bot padding*/
+    width: calc(125.767px + 40px); /*20px of side padding*/
+  }
+  .btn {
+    font-size: 0.8888888888888888em; /*16px*/
+  }
+  /************************************NAVIGATION***************************************/
+  #navbar {
+    z-index: 6;
+  }
+  #nav-overlay {
+    background-color: #0a0a0a;
+    width: auto;
+    height: 60px;
+    right: 0;
+    transition: 0s;
+    margin-right: max(80px, 4%);
+  }
+  #nav-menu {
+    flex-direction: row;
+    gap: 0 40px;
+  }
+  .nav-item {
+    font-size: 14px;
+    transition: 0s;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+  .nav-item:nth-child(1) {
+    display: none;
+  }
+  .logo-wrapper {
+    margin-left: max(80px, 4%);
+  }
+  /************************************FOOTER***************************************/
+  h3 {
+    font-size: 3.125em; /*Added .25*2 = .5px*/
+  }
+  footer {
+    row-gap: 80px;
+  }
+}
+/***********************************LARGE DESKTOP****************************************/
+@media only screen and (min-width: 1440px) {
+  .content-wrapper {
+    margin: 0 max(80px, 4%);
+  }
+  section {
+    row-gap: 60px;
+  }
+  .text-section {
+    row-gap: 30px;
+  }
+  .miranda-background {
+    height: 42%;
+  }
+  .project-image {
+    max-width: 600px;
+  }
+  .row-layout {
+    gap: 0 80px;
+  }
+  .cashapp-image {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+/***********************************EXTRALARGE DESKTOP****************************************/
+@media only screen and (min-width: 1920px) {
+}
