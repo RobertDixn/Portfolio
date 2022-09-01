@@ -32,12 +32,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 max(40px, 4%);
   text-align: center;
 }
 .name-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.name {
   width: 80%;
-  background-color: crimson;
+  max-width: 400px;
+  block-size: auto;
+  margin: 0 max(40px, 4%);
+}
+.name img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .content-wrapper {
   min-height: 100vh;
@@ -292,7 +303,9 @@ h3 {
   .content-wrapper {
     margin: 0 max(60px, 4%);
   }
-  .cover-page {
+  .name {
+    width: 50%;
+    max-width: 500px;
     margin: 0 max(60px, 4%);
   }
   .row-layout {
@@ -343,7 +356,9 @@ h3 {
   .page-wrapper {
     row-gap: 120px;
   }
-  .cover-page {
+  .name {
+    width: 50%;
+    max-width: 600px;
     margin: 0 max(80px, 4%);
   }
   .content-wrapper {
