@@ -32,9 +32,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 0 max(40px, 4%);
   text-align: center;
-  /*margin: 0 max(40px, 4%);*/
+}
+.name-wrapper {
+  width: 80%;
+  background-color: crimson;
 }
 .content-wrapper {
   min-height: 100vh;
@@ -289,6 +292,9 @@ h3 {
   .content-wrapper {
     margin: 0 max(60px, 4%);
   }
+  .cover-page {
+    margin: 0 max(60px, 4%);
+  }
   .row-layout {
     flex-direction: row-reverse;
     gap: 0 40px;
@@ -336,6 +342,9 @@ h3 {
   }
   .page-wrapper {
     row-gap: 120px;
+  }
+  .cover-page {
+    margin: 0 max(80px, 4%);
   }
   .content-wrapper {
     margin: 0 max(80px, 4%);
