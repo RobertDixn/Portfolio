@@ -112,7 +112,7 @@ h2 {
   margin-left: 20px;
 }
 .logo-wrapper img {
-  inline-size: 98%;
+  inline-size: auto;
   height: 100%;
   object-fit: cover;
 }
