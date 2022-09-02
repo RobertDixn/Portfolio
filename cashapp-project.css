@@ -150,7 +150,7 @@ h4 {
 }
 .collage-wrapper {
   width: 100%;
-  margin-bottom: calc(-80px - 4px); /*NOT SURE WHY THEIR IS 4PX OF SPACE BELOW WRAPPER AND SLIMEGUY IMAGE*/
+  margin-bottom: calc(-80px - 8px); /*NOT SURE WHY THEIR IS 4PX OF SPACE BELOW WRAPPER AND SLIMEGUY IMAGE*/
   position: relative;
   z-index: 1;
 }
