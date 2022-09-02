@@ -201,14 +201,13 @@ p {
 }
 .logo-wrapper {
   height: 20px;
-  max-width: 103px;
   display: block;
   position: absolute;
   left: 0;
   margin-left: 20px;
 }
 .logo-wrapper img {
-  inline-size: 100%;
+  inline-size: auto;
   height: 100%;
   object-fit: cover;
 }
