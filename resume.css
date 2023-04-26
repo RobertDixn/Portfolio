@@ -63,7 +63,8 @@ p {
   margin-bottom: -40px;
 }
 .line-break {
-  opacity: 62.5%;
+  color: #b7b7b7;
+  /*opacity: 62.5%*/;
 }
 .line-break::before {
   content: "\A";
