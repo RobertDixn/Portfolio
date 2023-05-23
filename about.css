@@ -199,9 +199,6 @@ h3 {
 }
 /***************************TABLET**********************/
 @media only screen and (min-width: 768px) {
-  #home-link2 {
-  display: none;
-  }
   .content-wrapper {
     flex-direction: row;
     justify-content: center;
