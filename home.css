@@ -332,6 +332,9 @@ h3 {
     height: 30px;
     margin-left: max(60px, 4%);
   }
+  .home-link2 { 
+    display: none;
+  )
   /************************************FOOTER***************************************/
   footer {
     height: calc(100vh - 60px);
