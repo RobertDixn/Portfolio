@@ -300,6 +300,10 @@ h3 {
 }
 /***************************TABLET**********************/
 @media only screen and (min-width: 768px) {
+  #home-link2 { 
+    display:none;
+    visibility: hidden; 
+  )
   .content-wrapper {
     margin: 0 max(60px, 4%);
   }
@@ -332,9 +336,6 @@ h3 {
     height: 30px;
     margin-left: max(60px, 4%);
   }
-  .home-link2 { 
-    visibility: hidden; 
-  )
   /************************************FOOTER***************************************/
   footer {
     height: calc(100vh - 60px);
