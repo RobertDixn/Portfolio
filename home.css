@@ -300,10 +300,6 @@ h3 {
 }
 /***************************TABLET**********************/
 @media only screen and (min-width: 768px) {
-  #home-link2 { 
-    display:none;
-    visibility: hidden; 
-  )
   .content-wrapper {
     margin: 0 max(60px, 4%);
   }
