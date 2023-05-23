@@ -297,9 +297,6 @@ h3 {
   .miranda-background {
     height: 38%;
   }
-  .home-link2 { 
-    display: none !important;
-  )
 }
 /***************************TABLET**********************/
 @media only screen and (min-width: 768px) {
