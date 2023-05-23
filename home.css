@@ -298,7 +298,7 @@ h3 {
     height: 38%;
   }
   .home-link2 { 
-    display: none;
+    display: none !important;
   )
 }
 /***************************TABLET**********************/
