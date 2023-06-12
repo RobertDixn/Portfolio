@@ -214,12 +214,19 @@
     align-items: center;
   }
   .solution-gif {
-    width: 100vw;
+    width: 95vw;
   }
   .solution-gif img {
     width: 100%;
     min-width: 200px;
     object-fit: fill;
+  }
+  .last-section {
+    padding-bottom: 150px;
+  }
+ .percent { /*THIS WOULND'T WORK FOR SOME REASON..?*/
+    color: #02B844;
+    font-weight: 700;
   }
   .collage-image {
     background-color: #0a0a0a;
