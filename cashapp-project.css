@@ -208,17 +208,25 @@
     min-height: calc(100vh - 60px);
     justify-content: center;
     align-items: center;
+    gap: 32px;
   }
   .final-solution .text-section {
     text-align: center;
     align-items: center;
   }
-  .solution-gif {
-    width: 95vw;
+  .hide-video {
+    display: none;
+  }
+  .solution-video {
+    width: 92.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .solution-gif img {
     width: 100%;
-    min-width: 200px;
+    min-width: 300px;
+    max-width: 450px;
     object-fit: fill;
   }
   .last-section {
