@@ -154,15 +154,16 @@
   }
   .design-image {
     width: 100%;
-    display: flex;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+
   }
   .design-image img {
     width: 100%;
-    min-width: ;
     object-fit: fill;
   }
-  .design-image :nth-child(odd){
+  .design1, .design3, .design5 {
     display: none;
   }
   .solutions {
@@ -218,13 +219,13 @@
     display: none;
   }
   .solution-video {
-    width: 92.5vw;
+    width: 85vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .solution-gif img {
-    width: 100%;
+    width: 95vw;
     min-width: 300px;
     max-width: 450px;
     object-fit: fill;
