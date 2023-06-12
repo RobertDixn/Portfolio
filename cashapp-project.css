@@ -210,10 +210,11 @@
     align-items: center;
   }
   .final-solution .text-section {
+    text-align: center;
     align-items: center;
   }
   .solution-gif {
-    width: 100%;
+    width: 100vw;
   }
   .solution-gif img {
     width: 100%;
