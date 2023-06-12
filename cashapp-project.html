@@ -225,13 +225,20 @@
                     <section class="final-solution">
                         <!--TEXT-->
                         <div class="text-section">
-                            <h2>Payment Process</h2>  
+                            <h2 id="video-text1">Payment Process</h2>
+                            <h2 class="hide-video" id="video-text2">Favorites Feature</h2>
+                            <h2 class="hide-video" id="video-text3">Favorites Feature</h2>
+                            <h2 class="hide-video" id="video-text4">Investing Process</h2>
                         </div>
 
-                        <!--GIF-->
-                        <div class="solution-gif">
-                            <img src="Cash App Images/payment-gif-cashapp.gif" alt="Video showing new and redesigned components in Cash Ap's payment process.">
-                        </div>  
+                        <!--VIDEO-->
+                        <video class="solution-video"  id="myVideo" autoplay>
+                            <source src="Cash App Images/solution-video1.mp4" id="mp4Source" type="video/mp4" alt="Video showing new and redesigned components in Cash Ap's payment process.">
+                        </video>
+
+<!--                        <div class="solution-gif" id="solution-gif-wrapper">
+                            <img id="gif" src="Cash App Images/solution-gif1.gif" alt="Video showing new and redesigned components in Cash Ap's payment process.">
+                        </div>  -->
                     </section>
 
                     <!--INSIGHT-->
@@ -241,9 +248,7 @@
                         <div class="text-section">
                             <h3>Insight</h3>  
                             <h2>A Good Review</h2>
-                            <div class="paragraphs">
-                                <p>By introducing solutions into Cash App’s core features that help users remain confident in their decisions, 83% of users were able to spot errors in transactions before finalizing them and 67% of users commented that they felt more comfortable investing given the informative guides.</p>
-                            </div>
+                            <p>By introducing solutions into Cash App’s core features that help users remain confident in their decisions, <span class="percent">83%</span> of users were able to spot errors in transactions before finalizing them and <span class="percent">67%</span> of users commented that they felt more comfortable investing given the informative guides.</p>
 
                         <!--IMAGE
                         <div class="design-image">
@@ -330,5 +335,87 @@
                      document.getElementById("nav-menu").classList.remove("open-menu");
                     } 
             }
-                 </script>
+
+            
+            var count = 1;
+            var player = document.getElementById('myVideo');
+            var mp4Vid = document.getElementById('mp4Source');
+            player.addEventListener('ended',myHandler,false);
+
+            function myHandler(e)
+            {
+
+                if(!e) 
+                {
+                    e = window.event; 
+                }
+                
+                count++;
+
+                if (count == 5) {
+                    count = 1;
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+                    setTimeout(function(){
+                        document.getElementById('video-text1').classList.remove("hide-video");
+                    },5); 
+
+                }else if (count == 2) {
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+
+                    setTimeout(function(){
+                        document.getElementById('video-text2').classList.remove("hide-video");
+                    },5);
+
+
+                }else if (count == 3) {
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+                    setTimeout(function(){
+                        document.getElementById('video-text3').classList.remove("hide-video");
+                    },5);
+
+                } else {
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+                    setTimeout(function(){
+                        document.getElementById('video-text4').classList.remove("hide-video");
+                    },5);
+                }
+
+
+            }
+
+
+                </script>
     </html>
+    
