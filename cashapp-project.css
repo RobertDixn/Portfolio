@@ -209,7 +209,8 @@ section {
 .final-solution {
   background-color: #0a0a0a;
   color: #ffffff;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
+  padding-bottom: 64px;
   justify-content: center;
   align-items: center;
   gap: 64px;
@@ -606,7 +607,7 @@ h3 {
     grid-area: sol6;
   }
     .solution-image-wrapper img {
-      width: 300px;
+      width: 275px;
     }
     .solution-image-text h4{
       font-size: 1.25em;
