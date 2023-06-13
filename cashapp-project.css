@@ -386,9 +386,10 @@ footer {
   row-gap: 40px;
   z-index: 2;
 }
-h3 {
+h5 {
+  font-family: "Montserrat";
   font-size: 2.125em;
-  font-weight: 500; /*medium*/
+  font-weight: 400; /*medium*/
   text-transform: capitalize;
   text-align: center;
   line-height: 1.5em;
@@ -487,7 +488,7 @@ h3 {
     height: calc(100vh - 60px);
     row-gap: 60px;
   }
-  h3 {
+  h5 {
     font-size: 2.375em;
   }
   .extra-bold::before {
@@ -495,7 +496,7 @@ h3 {
     white-space: pre;
   }
   .social-media-wrapper {
-    row-gap: 30px;
+    row-gap: 32px;
   }
 }
 /***************************DESKTOP**************************/
@@ -569,8 +570,8 @@ h3 {
     margin-left: max(80px, 4%);
   }
   /************************************FOOTER***************************************/
-  h3 {
-    font-size: 2.875em; /*Added .25*2 = .5px*/
+  h5 {
+    font-size: 3.125em; /*Added .25*2 = .5px*/
   }
   footer {
     row-gap: 80px;
