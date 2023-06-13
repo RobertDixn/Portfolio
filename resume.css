@@ -63,8 +63,7 @@ p {
   margin-bottom: -40px;
 }
 .line-break {
-  color: #b7b7b7;
-  /*opacity: 62.5%*/;
+  opacity: 62.5%;
 }
 .line-break::before {
   content: "\A";
@@ -79,7 +78,7 @@ p {
   opacity: 100%;
 }
 .blue {
-  color: #1e3768;
+  color: #1155cc;
   font-weight: 700;
 }
 .btn-wrapper {
@@ -253,10 +252,6 @@ h3 {
   }
 /***************************TABLET**********************/
 @media only screen and (min-width: 768px) {
-  #home-link2 { 
-    display:none;
-    visibility: hidden; 
-  )
   .content-wrapper {
     margin: 0 max(60px, 4%);
   }
