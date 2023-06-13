@@ -10,124 +10,256 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Montserrat", Open Sans, sans-serif;
+  font-family: "Open Sans";
   font-size: 16px;
-  background-color: #f3eff5;
   letter-spacing: 0.5px;
+  background-color: #f3eff5;
 }
-/************************************CONTENT***************************************/
+/************************************CONTENT****************************************/
 .page-wrapper {
   font-size: 1rem;
+  line-height: 1.5em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
-  top: 60px;
-  position: relative;
   overflow: hidden;
 }
-.cover-page {
+.coverpage-wrapper {
+  background-color: #0a0a0a;
   width: 100%;
   height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.name-wrapper {
-  width: 100%;
+  padding: 0 max(40px, 4%);
+  padding-bottom: 60px; /*to center content*/
   display: flex;
   justify-content: center;
-}
-.name {
-  width: 80%;
-  max-width: 400px;
-  block-size: auto;
-  margin: 0 max(40px, 4%);
-}
-.name img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.content-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  row-gap: 80px;
-  margin: 0 max(40px, 4%);
+  position: relative;
+  top: 60px;
+}
+.coverpage-text {
+  min-width: 300px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.coverpage-subheader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cashapp-logo {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+h1 {
+  font-family: "Open Sans";
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+h2 {
+  width: 100%;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 2.125em;
+  line-height: 1.5em;
+  text-transform: capitalize;
+}
+.coverpage-image {
+  display: none;
+  width: 500px; 
+}
+.coverpage-image img {
+  width: 100%;
+  min-width: 290px;
+  object-fit: fill;
+}
+.section-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 150px;
 }
 section {
   width: 100%;
-  min-height: calc(100vh - 60px);
+  padding: 0 max(40px, 4%);
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-.cont3 {
-  min-height: 100%;
-}
-.miranda-background {
-  background-color: #161615;
-  width: 100vw;
-  height: 30%;
-  position: absolute;
-  top: -40px;
-  z-index: 1;
+  gap: 64px;
 }
 .text-section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: start;
+  gap: 64px;
+  min-width: 300px;
+  max-width: 500px;
+}
+.text-section h3 {
+  font-family: "Open Sans";
+  font-size: 1em;
+  font-weight: 400; /*semi-bold*/
+  text-transform: uppercase;
+}
+#design, #solution {
+  max-width: 100%;
+}
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.text-section p {
+  font-family: "Open Sans";
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+  opacity: 62.5%;
+  line-height: 2em;
+}
+.exception {
+  text-transform: lowercase;
+}
+.problem-image {
+  width: auto;
+  margin-left: 18%;
+}
+.problem-image img {
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  object-fit: fill;
+}
+.research-image {
+  width: 105%;
+}
+.research-image img {
+  width: 100%;
+  min-width: 300px;
+  object-fit: fill;
+}
+.design-wrapper {
+  background-color: #0a0a0a;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+#design {
+  color: #ffffff;
+}
+.design-image {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
+}
+.design-image img {
+  width: 100%;
+  object-fit: fill;
+}
+.design1, .design3, .design5 {
+  display: none;
+}
+.solutions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 16px;
+  row-gap: 150px;
+}
+.solution-image-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
-  row-gap: 20px;
+  gap: 32px;
+}
+.solution-image-wrapper img {
+  width: 275px;
+  object-fit: fill;
+}
+.solution-image-text {
+  max-width: 350px;
   text-align: center;
-  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-h2 {
-  font-size: 2.125em;
-  font-weight: 600; /*semi-bold*/
-  text-transform: capitalize;
-  line-height: 1.5em;
-  white-space: nowrap;
-  /* margin-bottom: -8px;*/
+.solution-image-text h4{
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.25em;
+  color: #02B844;
 }
-p {
+.solution-image-text p {
+  font-size: 1em;
   line-height: 2em;
   opacity: 62.5%;
 }
-.project-image {
-  width: 100%;
-  max-width: 400px;
-  block-size: auto;
-  z-index: 2;
+.final-solution {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-bottom: 64px;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
 }
-.project-image img {
+.final-solution .text-section {
+  text-align: center;
+  align-items: center;
+}
+.hide-video {
+  display: none;
+}
+.solution-video {
+  width: 85vw;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.last-section {
+  padding-bottom: 150px;
+}
+.percent { /*THIS WOULND'T WORK FOR SOME REASON..?*/
+  color: #02B844;
+  font-weight: 700;
+}
+.collage-image {
+  background-color: #0a0a0a;
+  width: 100%;
+}
+.collage-image img {
+  width: 100%;
+}
+.next-wrapper {
+  background-color: #161615;
+  padding: 80px 0;
+  gap: 40px;
+}
+.next-image {
+  width: 100%;
+  block-size: auto;
+  max-width: 300px;
+}
+.next-image img {
   width: 100%;
   height: 100%;
   object-fit: fill;
-  z-index: 2;
-}
-.cashapp-image {
-  width: 100%;
-  max-width: 275px;
-}
-.cashapp-image img {
-  object-fit: contain;
-}
-.miranda-image {
-  margin-top: 40px;
-}
-.radius {
-  border-radius: 3.5px;
 }
 .btn-wrapper {
-  background-color: #141414;
+  background-color: #C3874D;
   height: 48px; /*15px of top+bot padding*/
   width: calc(110.133px + 40px); /*20px of side padding*/
   border-radius: 30px;
@@ -140,15 +272,6 @@ p {
   color: white;
   font-weight: 700;
   text-decoration: none;
-}
-.cashapp {
-  background-color: #01b844;
-}
-.miranda {
-  background-color: #c3874d;
-}
-.homes {
-  background-color: #f2bb06;
 }
 /************************************NAVIGATION***************************************/
 #navbar {
@@ -292,39 +415,67 @@ h3 {
   color: #ffffff;
   opacity: 50%;
 }
-/***************************MOBILE************************/
-@media screen and (min-width: 414px) {
-  .miranda-background {
-    height: 38%;
+/***************************TABLET**********************/
+@media only screen and (min-width: 600px) {
+  .design-image {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .design3 {
+    display: block;
+  }
+  .design1, .design5 {
+    display: none;
   }
 }
-/***************************TABLET**********************/
 @media only screen and (min-width: 768px) {
-  .content-wrapper {
-    margin: 0 max(60px, 4%);
+  .coverpage-wrapper {
+    padding: 0 max(60px, 4%);
   }
-  .name {
-    width: 50%;
-    max-width: 500px;
-    margin: 0 max(60px, 4%);
+  .coverpage-image {
+    display: flex;
+  }
+  section {
+    padding: 0 max(60px, 4%);
+  }
+  .text-section {
+    min-width: 325px;
   }
   .row-layout {
-    flex-direction: row-reverse;
-    gap: 0 40px;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  .cashapp-image {
     width: 100%;
-    max-width: 300px;
-  }
-  .cash-text {
+    display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    gap: 32px;
   }
-  /************************************NAVIGATION***************************************/
+  .problem-image {
+    display: flex;
+    justify-content: end;
+    margin-left: 0;
+  }
+  .problem-image img {
+    min-width: 300px;
+  }
+  .research-image {
+    width: 100%;
+  }
+  .design-image {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .design5 {
+    display: block;
+  }
+  .solutions {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+  }
+  .solution-image-wrapper img {
+   width: 250px;
+  }
+  .next-image {
+    max-width: 400px;
+  }
+ /************************************NAVIGATION***************************************/
   #hamburger-menu {
     margin-right: max(60px, 4%);
   }
@@ -353,30 +504,45 @@ h3 {
   html {
     font-size: 18px;
   }
-  .page-wrapper {
-    row-gap: 120px;
-  }
-  .name {
-    width: 50%;
-    max-width: 600px;
-    margin: 0 max(80px, 4%);
-  }
-  .content-wrapper {
-    margin: 0 max(80px, 4%);
+  .coverpage-wrapper, section {
+    padding: 0 max(80px, 4%);
   }
   .text-section {
-    max-width: 400px;
+    max-width: 500px;
   }
-  .cash-text {
-    max-width: 350px;
+  .problem-image img {
+    width: 500px;/*define for desktop*/
   }
-  .btn-wrapper {
-    height: 49px; /*15px of top+bot padding*/
-    width: calc(125.767px + 40px); /*20px of side padding*/
+  .research-image {
+    max-width: 900px;
   }
-  .btn {
-    font-size: 0.8888888888888888em; /*16px*/
+  .design-image {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1024px;
+    column-gap: 32px;
   }
+  .design1 {
+    display: block;
+  }
+  .solutions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .solution-image-wrapper img {
+      width: 250px;
+    }
+    .solution-image-text {
+      max-width: ;
+    }
+    .solution-image-text h4{
+      font-size: 1.33em;
+    }
+    .solution-image-text p {
+      font-size: .88em;
+      line-height: 2em;
+    }
+    .collage-image {
+     height: 80vh;
+    }
   /************************************NAVIGATION***************************************/
   #navbar {
     z-index: 6;
@@ -408,7 +574,7 @@ h3 {
   }
   /************************************FOOTER***************************************/
   h3 {
-    font-size: 3.125em; /*Added .25*2 = .5px*/
+    font-size: 2.875em; /*Added .25*2 = .5px*/
   }
   footer {
     row-gap: 80px;
@@ -416,29 +582,45 @@ h3 {
 }
 /***********************************LARGE DESKTOP****************************************/
 @media only screen and (min-width: 1440px) {
-  .content-wrapper {
-    margin: 0 max(80px, 4%);
+  .solutions {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "sol1 sol2 sol3 sol4"
+    ". sol5 sol6 ." ;
   }
-  section {
-    row-gap: 60px;
+  .solution1 {
+    grid-area: sol1;
   }
-  .text-section {
-    row-gap: 30px;
+  .solution2 {
+    grid-area: sol2;
   }
-  .miranda-background {
-    height: 42%;
+  .solution3 {
+    grid-area: sol3;
   }
-  .project-image {
-    max-width: 600px;
+  .solution4 {
+    grid-area: sol4;
   }
-  .row-layout {
-    gap: 0 80px;
+  .solution5 {
+    grid-area: sol5;
   }
-  .cashapp-image {
-    width: 100%;
-    max-width: 400px;
+  .solution6 {
+    grid-area: sol6;
   }
+    .solution-image-wrapper img {
+      width: 275px;
+    }
+    .solution-image-text h4{
+      font-size: 1.25em;
+    }
+    .solution-image-text p {
+      font-size: .875em;
+      line-height: 1.75em;
+    }
+    .next-image {
+      max-width: 600px;
+    }
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
 @media only screen and (min-width: 1920px) {
+
 }
