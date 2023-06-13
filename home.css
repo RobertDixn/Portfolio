@@ -114,8 +114,8 @@ p {
   z-index: 2;
 }
 .cashapp-image {
-  width: calc(100% - 140px);
-  max-width: 200px;
+  width: 100%;
+  max-width: 275px;
 }
 .cashapp-image img {
   object-fit: contain;
@@ -436,7 +436,7 @@ h3 {
   }
   .cashapp-image {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
   }
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
