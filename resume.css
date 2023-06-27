@@ -59,7 +59,7 @@ p {
 }
 .cont1,
 .cont2,
-.cont3
+.cont3,
 .cont4 {
   margin-bottom: -40px;
 }
@@ -347,7 +347,8 @@ h3 {
   }
   .cont1,
   .cont2,
-  .cont3 {
+  .cont3, 
+  .cont4 {
     margin-bottom: -60px; /*Half of contnet-wrapper row-gap*/
   }
   .btn-wrapper {
@@ -401,31 +402,31 @@ h3 {
 /***********************************LARGE DESKTOP****************************************/
 @media only screen and (min-width: 1440px) {
   .cont1 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 1 / 2;
   }
   .cont2 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 2 / 3;
   }
   .cont3 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 3 / 4;
   }
   .cont4 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 4 / 5;
   }
   .cont5 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 5 / 6;
   }
   .cont6 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 6 / 7;
   }
   .cont7 {
-    grid-column: 4 / 11;
+    grid-column: 4 / 10;
     grid-row: 7 / 8;
   }
   .header1 {
@@ -434,9 +435,13 @@ h3 {
   }
   .header2 {
     grid-column: 1 / auto;
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
   }
   .header3 {
+    grid-column: 1 / auto;
+    grid-row: 6 / 7;
+  }
+  .header4 {
     grid-column: 1 / auto;
     grid-row: 7 / 8;
   }
@@ -462,7 +467,7 @@ h3 {
   }
   .cont1,
   .cont2,
-  .cont3
+  .cont3,
   .cont4 {
     margin-bottom: -60px; /*Half of contnet-wrapper row-gap*/
   }
