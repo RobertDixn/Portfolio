@@ -34,7 +34,6 @@ section {
   justify-content: center;/*x-axis*/
   position: relative;/*DELETE MAYBE*/
   gap: 40px; /*Gap between text and content*/
-  
 }
 .text_section {
   max-width: 600px;
@@ -114,91 +113,81 @@ h4 {
   min-height: calc(100vh - 60px);
   background-color: #461E7D;
   background: linear-gradient(to bottom, #461e7d 0%, #1d1d1d 100%);
-  margin-bottom: -80px;
+  margin-bottom: -160px;
   padding-top: 80px;
   padding-bottom: 80px;
 }
-/****************PROJECT SECTION******************/
-.project_section_wrapper1 {
-  background-color: aquamarine;
+/****************NEXT SECTION******************/
+.project_section {
+  /*background-color: #f3eff5;*/
   width: 100%;
-  min-height: calc(100vh - 60px);
-  padding: 40px max(40px, 4%);
+  height: 225vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
   margin-bottom: -160px;
-  display: flex;
-  align-items: center;
 }
-.project_section_wrapper2 {
-  background-color: #461E7D;
+.project_wrapper {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
+  align-items: normal;
+  justify-content: normal;
   gap: 40px;
 }
-.project_section_wrapper2 div {
-  background-color: aliceblue;
-  width: 100px;
-  height: 100px;
-}
-
-/*.project_section {
+.projects {
   width: 100%;
-  min-height: calc(100vh - 40px);
-  padding: 80px max(40px, 4%);
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  gap: 40px; 
-  margin-bottom: -160px;
-}
-.project_wrapper {
-  background-color: #01B844;
-  width: 100%;
-  min-width: calc(100vw - 80px);
-  height: 50vh;
+  max-width: 380px;
+  height: 100%;
+  display: flex;
+  align-items: end;
   background-position: center;
   background-size: cover;
-  position: relative;
+  place-self: center;
 }
 .project_text {
-  width: max(min-content, 100%);
   background-color: #000000;
   opacity: 80%;
+  width: 100%;
+  line-height: 1.5em;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   padding: 20px;
-  position: absolute;
-  bottom: 0;
 }
 .project_name {
   font-size: 1.5em;
   font-weight: 700;
-  white-space: nowrap;
+  line-height: 1.25em;
+  opacity: 100%;
 }
 .button {
   width: min-content;
   font-size: .875em;
   font-weight: 700;
+  line-height: 1em;
   color: #ffffff;
   text-align: center;
   text-decoration: none;
   border: none;
   border-radius: 20px;
   padding: 10px 40px;
+  margin-top: 10px;
   cursor: pointer;
+  opacity: 100%;
 }
 .project1 {
   background-image: url("Cash App Images/enel_background.png");
 }
 .project2 {
   background-image: url("Cash App Images/cashapp_background.png");
-}.project3 {
-  background-image: url("Cash App Images/miranda_light_background.png");
+}
+.project3 {
+  background-image: url("Cash App Images/miranda_dark_background.png");
 }
 .project4 {
-  background-image: url("Cash App Images/homes_dark_background.png");
-} 
+  background-image: url("Cash App Images/homes_light_background.png");
+}
 .enelx {
   background-color: #9146ff;
 }
@@ -210,7 +199,7 @@ h4 {
 }
 .homes {
   background-color: #F2BB06;
-}*/
+}
 /************************************NAVIGATION***************************************/
 #navbar {
   background-color: #0a0a0a;
@@ -363,6 +352,21 @@ h5 {
     align-items: center; 
     text-align: center;
   }
+  .project_section {
+    height: 125vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .project_wrapper {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects {
+    max-width: 480px;
+    place-self: center;
+  }
+  .project1, .project3 { place-self: end;}
+  .project2, .project4 { place-self: start;}
 }
 @media only screen and (min-width: 768px) {
 
@@ -513,6 +517,18 @@ h5 {
   .only_text {
     max-width: 600px;
   }
+  .project_section {
+    height: calc(100vh - 60px);
+  }
+  .project_wrapper {
+    grid-template-rows: none;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .projects {
+    max-width: 410px;
+    max-height: 75%;
+  }
+  .project1, .project2, .project3, .project4 { place-self: center stretch;}
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
 @media only screen and (min-width: 1800px) { /*changed from 1920px for img*/
@@ -522,51 +538,4 @@ h5 {
 }
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
-}
-
-
-
-
-.project_section {
-  width: 100%;
-  height: calc(100vh - 60px);
-  padding: 160px max(80px, 8%);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px; /*Gap between text and content*/
-  margin-bottom: -160px;
-  
-}
-.project_wrapper {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-.project_text {
-  width: 100%;
-  background-color: #000000;
-  opacity: 75%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-}
-.project_name {
-  font-size: 1.5em;
-  font-weight: 700;
-}
-.project1 {
-  background-image: url("Cash App Images/enel_background.png");
-}
-.project2 {
-  background-image: url("Cash App Images/cashapp_background.png");
-}.project3 {
-  background-image: url("Cash App Images/miranda_light_background.png");
-}
-.project4 {
-  background-image: url("Cash App Images/homes_dark_background.png");
 }
