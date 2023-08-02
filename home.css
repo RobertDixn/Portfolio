@@ -16,139 +16,139 @@ body {
   letter-spacing: 0.5px;
 }
 /************************************CONTENT***************************************/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+html,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat", Open Sans, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  background-color: #f3eff5;
+  color: #ffffff;
+}
+/************************************CONTENT****************************************/
 .page-wrapper {
+  width: 100%;
+  min-height: 100vh; /*NEW ADDITON*/  
   font-size: 1rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
-  top: 60px;
-  position: relative;
   overflow: hidden;
+  gap: 80px; /*CHANGED FROM 160PX*/
+  position: relative;
 }
-.cover-page {
-  width: 100%;
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.name-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.name {
-  width: 80%;
-  max-width: 400px;
-  block-size: auto;
-  margin: 0 max(40px, 4%);
-}
-.name img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.content-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 80px;
-  margin: 0 max(40px, 4%);
+.page_shifter {  
+  position: relative;
+  top: 60px;
 }
 section {
   width: 100%;
   min-height: calc(100vh - 60px);
+  padding: 0 max(40px, 4%);
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
-  justify-content: center;
-  align-items: center;
+  align-items: center; /* y-axis*/
+  justify-content: center;/*x-axis*/
   position: relative;
 }
-.cont3 {
-  min-height: 100%;
-}
-.miranda-background {
-  background-color: #161615;
-  width: 100vw;
-  height: 30%;
-  position: absolute;
-  top: -40px;
+.section_img {
+  width: 100%;
+  max-width: 400px; /*DECIDE LATER*/
+  block-size: auto;
   z-index: 1;
 }
-.text-section {
+.section_img img {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 20px;
-  text-align: center;
-  max-width: 300px;
+  min-width: 150px; 
+  object-fit: fill;
 }
-h2 {
-  font-size: 2.125em;
-  font-weight: 600; /*semi-bold*/
-  text-transform: capitalize;
-  line-height: 1.5em;
-  white-space: nowrap;
-  /* margin-bottom: -8px;*/
-}
-p {
-  line-height: 2em;
-  opacity: 62.5%;
-}
-.project-image {
+.project_section {
   width: 100%;
-  max-width: 400px;
-  block-size: auto;
-  z-index: 2;
+  height: 225vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-.project-image img {
+.project_wrapper {
   width: 100%;
   height: 100%;
-  object-fit: fill;
-  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: normal;
+  justify-content: normal;
+  gap: 40px;
 }
-.cashapp-image {
+.projects {
   width: 100%;
-  max-width: 275px;
-}
-.cashapp-image img {
-  object-fit: contain;
-}
-.miranda-image {
-  margin-top: 40px;
-}
-.radius {
-  border-radius: 3.5px;
-}
-.btn-wrapper {
-  background-color: #141414;
-  height: 48px; /*15px of top+bot padding*/
-  width: calc(110.133px + 40px); /*20px of side padding*/
-  border-radius: 30px;
+  max-width: 380px;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: end;
+  background-position: center;
+  background-size: cover;
+  place-self: center;
 }
-.btn {
-  font-size: 0.875em; /*14px*/
-  color: white;
+.project_text {
+  background-color: #000000;
+  opacity: 80%;
+  width: 100%;
+  line-height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.project_name {
+  font-size: 1.5em;
   font-weight: 700;
+  line-height: 1.25em;
+  opacity: 100%;
+}
+.button {
+  width: min-content;
+  font-size: .875em;
+  font-weight: 700;
+  line-height: 1em;
+  color: #ffffff;
+  text-align: center;
   text-decoration: none;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 40px;
+  margin-top: 10px;
+  cursor: pointer;
+  opacity: 100%;
+}
+.project1 {
+  background-image: url("Cash App Images/enel_background.png");
+}
+.project2 {
+  background-image: url("Cash App Images/cashapp_background.png");
+}
+.project3 {
+  background-image: url("Cash App Images/miranda_dark_background.png");
+}
+.project4 {
+  background-image: url("Cash App Images/homes_light_background.png");
+}
+.enelx {
+  background-color: #9146ff;
 }
 .cashapp {
-  background-color: #01b844;
+  background-color: #01B844;
 }
 .miranda {
-  background-color: #c3874d;
+  background-color: #C3874D;
 }
 .homes {
-  background-color: #f2bb06;
+  background-color: #F2BB06;
 }
 /************************************NAVIGATION***************************************/
 #navbar {
@@ -251,7 +251,6 @@ p {
   transition: 0.4s;
   width: 35px;
 }
-
 /************************************FOOTER***************************************/
 footer {
   background-color: #0a0a0a;
@@ -264,9 +263,10 @@ footer {
   row-gap: 40px;
   z-index: 2;
 }
-h3 {
+h5 {
+  font-family: "Montserrat";
   font-size: 2.125em;
-  font-weight: 500; /*medium*/
+  font-weight: 400; /*medium*/
   text-transform: capitalize;
   text-align: center;
   line-height: 1.5em;
@@ -292,39 +292,32 @@ h3 {
   color: #ffffff;
   opacity: 50%;
 }
-/***************************MOBILE************************/
-@media screen and (min-width: 414px) {
-  .miranda-background {
-    height: 38%;
-  }
-}
 /***************************TABLET**********************/
+@media only screen and (min-width: 600px) {
+  section {
+    padding: 0 max(60px, 4%);
+  }
+  .project_section {
+    height: 125vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .project_wrapper {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects {
+    max-width: 480px;
+    place-self: center;
+  }
+  .project1, .project3 { place-self: end;}
+  .project2, .project4 { place-self: start;}
+}
 @media only screen and (min-width: 768px) {
-  .content-wrapper {
-    margin: 0 max(60px, 4%);
-  }
-  .name {
-    width: 50%;
+  .section_img {
     max-width: 500px;
-    margin: 0 max(60px, 4%);
   }
-  .row-layout {
-    flex-direction: row-reverse;
-    gap: 0 32px;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-  }
-  .cashapp-image {
-    width: 100%;
-    max-width: 300px;
-  }
-  .cash-text {
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-  }
-  /************************************NAVIGATION***************************************/
+ /************************************NAVIGATION***************************************/
   #hamburger-menu {
     margin-right: max(60px, 4%);
   }
@@ -337,7 +330,7 @@ h3 {
     height: calc(100vh - 60px);
     row-gap: 60px;
   }
-  h3 {
+  h5 {
     font-size: 2.375em;
   }
   .extra-bold::before {
@@ -345,7 +338,7 @@ h3 {
     white-space: pre;
   }
   .social-media-wrapper {
-    row-gap: 30px;
+    row-gap: 32px;
   }
 }
 /***************************DESKTOP**************************/
@@ -353,29 +346,11 @@ h3 {
   html {
     font-size: 18px;
   }
-  .page-wrapper {
-    row-gap: 120px;
+  section {
+    padding: 0 max(80px, 4%);
   }
-  .name {
-    width: 50%;
+  .section_img {
     max-width: 600px;
-    margin: 0 max(80px, 4%);
-  }
-  .content-wrapper {
-    margin: 0 max(80px, 4%);
-  }
-  .text-section {
-    max-width: 400px;
-  }
-  .cash-text {
-    max-width: 350px;
-  }
-  .btn-wrapper {
-    height: 49px; /*15px of top+bot padding*/
-    width: calc(125.767px + 40px); /*20px of side padding*/
-  }
-  .btn {
-    font-size: 0.8888888888888888em; /*16px*/
   }
   /************************************NAVIGATION***************************************/
   #navbar {
@@ -407,7 +382,7 @@ h3 {
     margin-left: max(80px, 4%);
   }
   /************************************FOOTER***************************************/
-  h3 {
+  h5 {
     font-size: 3.125em; /*Added .25*2 = .5px*/
   }
   footer {
@@ -416,26 +391,24 @@ h3 {
 }
 /***********************************LARGE DESKTOP****************************************/
 @media only screen and (min-width: 1440px) {
-  .content-wrapper {
-    margin: 0 max(80px, 4%);
+  .project_section {
+    height: calc(100vh - 60px);
   }
-  section {
-    row-gap: 60px;
+  .project_wrapper {
+    grid-template-rows: none;
+    grid-template-columns: repeat(4, 1fr);
   }
-  .text-section {
-    row-gap: 30px;
+  .projects {
+    max-width: 410px;
+    max-height: 75%;
   }
-  .miranda-background {
-    height: 42%;
-  }
-  .project-image {
-    max-width: 600px;
-  }
-  .cashapp-image {
-    width: 100%;
-    max-width: 400px;
-  }
+  .project1, .project2, .project3, .project4 { place-self: center stretch;}
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
+
 }
+
+
+
+
