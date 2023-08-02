@@ -163,10 +163,10 @@ h4 {
 }
 .next-image {
   width: 80%;
-  max-width: 250px;
+  max-width: 550px;
 }
 .btn-wrapper {
-  background-color: #01b844;
+  background-color: #461E7D;
   height: 48px; /*15px of top+bot padding*/
   width: calc(110.133px + 40px); /*20px of side padding*/
   border-radius: 30px;
@@ -517,7 +517,7 @@ h3 {
     top: -35%;
   }
   .next-image {
-    max-width: 300px;
+    max-width: 725px;
   }
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
