@@ -121,7 +121,7 @@ h4 {
 .project_section {
   /*background-color: #f3eff5;*/
   width: 100%;
-  height: 225vh;
+  height: 175vh;
   padding-top: 80px;
   padding-bottom: 80px;
   margin-bottom: -160px;
@@ -130,7 +130,7 @@ h4 {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-items: normal;
   justify-content: normal;
   gap: 40px;
@@ -177,6 +177,7 @@ h4 {
   opacity: 100%;
 }
 .project1 {
+  display: none;
   background-image: url("Cash App Images/enel_background.png");
 }
 .project2 {
@@ -352,24 +353,21 @@ h5 {
     align-items: center; 
     text-align: center;
   }
+}
+@media only screen and (min-width: 768px) {
   .project_section {
-    height: 125vh;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    height: calc(100vh - 60px);
   }
   .project_wrapper {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-template-columns: repeat(3, 1fr);
   }
   .projects {
     max-width: 480px;
-    place-self: center;
+    min-height: 480px; /*NEW ADDITION*/
+    max-height: 75%;
   }
-  .project1, .project3 { place-self: end;}
-  .project2, .project4 { place-self: start;}
-}
-@media only screen and (min-width: 768px) {
-
+  .project1, .project2, .project3, .project4 { place-self: center stretch;}
  /************************************NAVIGATION***************************************/
   #hamburger-menu {
     margin-right: max(60px, 4%);
@@ -517,18 +515,14 @@ h5 {
   .only_text {
     max-width: 600px;
   }
-  .project_section {
-    height: calc(100vh - 60px);
-  }
   .project_wrapper {
-    grid-template-rows: none;
-    grid-template-columns: repeat(4, 1fr);
+    width: max-content;
   }
   .projects {
     max-width: 410px;
+    min-height: 480px; /*NEW ADDITION*/
     max-height: 75%;
   }
-  .project1, .project2, .project3, .project4 { place-self: center stretch;}
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
 @media only screen and (min-width: 1800px) { /*changed from 1920px for img*/
