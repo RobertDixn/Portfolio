@@ -117,9 +117,58 @@ h4 {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-/****************NEXT SECTION******************/
+/*NEXT SECTION (old)*/
+.project-image {
+  width: 100%;
+  block-size: auto;
+  z-index: 2;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.next-wrapper {
+  background-color: #f3eff5;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  padding: 80px 0;
+  margin-bottom: -160px;
+  position: relative;
+  z-index: 2;
+}
+.cover {
+  width: 80%;
+  max-width: 600px;
+}
+.next-image {
+  width: 80%;
+  max-width: 250px;
+  /*taken from .project-image on homesforvalue css*/
+  block-size: auto;
+  z-index: 2;
+}
+.btn-wrapper {
+  background-color: #01b844;
+  height: 48px; /*15px of top+bot padding*/
+  width: calc(110.133px + 40px); /*20px of side padding*/
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  font-size: 0.875em; /*14px*/
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+/****************NEXT SECTION******************
 .project_section {
-  /*background-color: #f3eff5;*/
+  /*background-color: #f3eff5;*
   width: 100%;
   height: 175vh;
   padding-top: 80px;
@@ -141,6 +190,7 @@ h4 {
   height: 100%;
   display: flex;
   align-items: end;
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   place-self: center;
@@ -431,6 +481,17 @@ h5 {
   .image_wrapper {
     padding: max(30px, 2%) max(60px, 4%) 0 max(60px, 4%); 
   }
+  /*next wrapper*/
+  .next-wrapper {
+    padding: 120px 0;
+  }
+  .btn-wrapper {
+    height: 49px; /*15px of top+bot padding*/
+    width: calc(125.767px + 40px); /*20px of side padding*/
+  }
+  .btn {
+    font-size: 0.8888888888888888em; /*16px*/
+  }
   /************************************NAVIGATION***************************************/
   #navbar {
     z-index: 6;
@@ -522,6 +583,10 @@ h5 {
     max-width: 410px;
     min-height: 480px; /*NEW ADDITION*/
     max-height: 75%;
+  }
+  /*next wrapper*/
+  .next-image {
+    max-width: 300px;
   }
 }
 /***********************************EXTRALARGE DESKTOP****************************************/
