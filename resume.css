@@ -79,7 +79,7 @@ p {
   opacity: 100%;
 }
 .blue {
-  color: #1155cc;
+  color: #1e3768;
   font-weight: 700;
 }
 .btn-wrapper {
@@ -401,58 +401,6 @@ h3 {
 }
 /***********************************LARGE DESKTOP****************************************/
 @media only screen and (min-width: 1440px) {
-  .cont1 {
-    grid-column: 4 / 10;
-    grid-row: 1 / 2;
-  }
-  .cont2 {
-    grid-column: 4 / 10;
-    grid-row: 2 / 3;
-  }
-  .cont3 {
-    grid-column: 4 / 10;
-    grid-row: 3 / 4;
-  }
-  .cont4 {
-    grid-column: 4 / 10;
-    grid-row: 4 / 5;
-  }
-  .cont5 {
-    grid-column: 4 / 10;
-    grid-row: 5 / 6;
-  }
-  .cont6 {
-    grid-column: 4 / 10;
-    grid-row: 6 / 7;
-  }
-  .cont7 {
-    grid-column: 4 / 10;
-    grid-row: 7 / 8;
-  }
-  .header1 {
-    grid-column: 1 / auto;
-    grid-row: 1 / 2;
-  }
-  .header2 {
-    grid-column: 1 / auto;
-    grid-row: 5 / 6;
-  }
-  .header3 {
-    grid-column: 1 / auto;
-    grid-row: 6 / 7;
-  }
-  .header4 {
-    grid-column: 1 / auto;
-    grid-row: 7 / 8;
-  }
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 0;
-  }
-  .btn-wrapper {
-    grid-column: 1 / auto;
-    grid-row: 8 / 9;
-  }
   .line-break::before {
     content: "\A";
     white-space: normal;
