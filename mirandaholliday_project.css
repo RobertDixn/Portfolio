@@ -147,6 +147,7 @@ h4 {
   padding-bottom: 80px;
 }
 .collage {
+  background-color: #161615;
   width: 100%;
   max-height: calc(100vh - 60px);
   block-size: auto;
