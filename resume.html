@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume - Robert Dixon</title>
+        <meta name="descripiton" content="Robert Dixon's UX/UI Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="resume.css">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"> 
+    </head>
+        <body>
+            <!-------------------------------------NAVIGATION---------------------------------------->
+            <!--NAV BAR-->
+            <div id="navbar">
+
+                <!--LOGO-->
+                <div class="logo-wrapper">
+                    <a href="index.html"><img src="Other\logo-white.png" alt="website logo"></a>
+                </div>
+
+                <!--HAMBURGER MENU-->
+                <div id="hamburger-menu" onclick="toggle_menu(this)">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div> 
+                </div>
+            </div>
+
+            <!--NAV OVERLAY-->
+            <nav id="nav-overlay">
+
+                <!--NAV-MENU/ITEMS-->
+                <ul id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" onclick="close-Menu()"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" onclick="close-Menu()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="enel_project.html" class="nav-link" onclick="close-Menu()">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resume.html" class="nav-link active-link" onclick="close-Menu()">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+
+           <!-------------------------------------CONTENT---------------------------------------->
+            <!--PAGE WRAPPER-->
+            <main class="page-wrapper">
+
+                <!--CONTENT WRAPPER-->
+                <div class="content-wrapper">
+                    
+                    <!--EXPERIENCE-->
+                    <h2 class="header1">Experience</h2>
+                    <div class="text-section cont1">
+                        <div class="paragraph">
+                            <p class="position"><span class="blue">UX/UI Designer</span>&nbsp;&nbsp;&nbsp;<span class="line-break bold">Enel X</span>&nbsp;&nbsp;&nbsp;<span class="line-break">Oct 2022 — May 2023</span></p>
+                            <p>Ensured design consistency and quality across digital products by helping the company transition to a new design system.
+                                Collaborated with stakeholders to design complex global processes and features based on user feedback and market needs.
+                                Mentored associate designers and contributed to the growth of the UX Design team.
+                                Developed research plans and reports that lead to actionable insights.
+                                Conducted W3C audits on global applications to ensure compliance with accessibility standards.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-section cont2">
+                        <div class="paragraph">
+                            <p class="position"><span class="blue">UX/UI Designer</span>&nbsp;&nbsp;&nbsp;<span class="line-break bold">Cash App Project</span>&nbsp;&nbsp;&nbsp;<span class="line-break">Feb 2022 — Feb 2022</span></p>
+                            <p>Facilitated usability tests to validate project assumptions.
+                                Outlined the user journeys of central processes using research insights.
+                                Completed a competitive analysis to capitalize on gaps in the market.
+                                Redesigned central processes to appeal to both current and competing product users.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-section cont3">
+                        <div class="paragraph">
+                            <p class="position"><span class="blue">UX/UI Designer</span>&nbsp;&nbsp;&nbsp;<span class="line-break bold">Miranda Holliday Portfolio</span>&nbsp;&nbsp;&nbsp;<span class="line-break">Aug 2021 — Sep 2021</span></p>
+                            <p>Interviewed users to understand their wants, expectations, and needs.
+                                Created user personas based on shared motivations and pain points from research.
+                                Identified shared success factors in products targeting the same audience.
+                                Delivered a user-centric product that helped client secure representation within a
+                                month.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="text-section cont4">
+                        <div class="paragraph">
+                            <p class="position"><span class="blue">UX/UI Designer</span>&nbsp;&nbsp;&nbsp;<span class="line-break bold">Homes For Value</span>&nbsp;&nbsp;&nbsp;<span class="line-break">Dec 2020 — Feb 2021</span></p>
+                            <p>Collaborate with stakeholders to define product requirements, user expectations, and business goals.
+                                Transformed a postcard into an accessible, cross-platform digital experience that aligned
+                                with the company's core values and messaging.</p>
+                        </div>
+                    </div>
+
+                    <div class="text-section cont5">
+                        <div class="paragraph">
+                            <p class="position"><span class="blue">Web Design Intern</span>&nbsp;&nbsp;&nbsp;<span class="line-break bold">KIRUNIVERSE</span>&nbsp;&nbsp;&nbsp;<span class="line-break">Dec 2020 — June 2021</span></p>
+                            <p>Maintained the company website, updating web pages based on curated nt and data from Google Analytics and Google my Business.
+                                Lead and participated in weekly design meetings, presenting and explaining design concepts that assisted in the attainment 
+                                of established success metrics.</p>
+                        </div>
+                    </div>
+
+                    <!--EDUCATION-->
+                    <h2 class="header2">Education</h2>
+                    <div class="text-section cont6">
+                        <p><span class="blue"> BS in Information Systems</span>&nbsp;&nbsp;&nbsp;<span class="line-break2 bold">Towson University</span>&nbsp;&nbsp;&nbsp;<span class="line-break2">May 2021</span></p>
+                    </div>
+
+                    <!--SKILLS-->
+                    <h2 class="header3">Skills</h2>
+                    <div class="text-section cont7">
+                        <p><span class="bold">Tools:</span> Figma, Sketch, Miro, Adobe XD, Adobe Photoshop, Jira, Mixpanel, Google Analytics</p>
+                        <p><span class="bold">Design:</span> Information Architecture, User Flows, Wireframing, Rapid Prototyping</p>
+                        <p><span class="bold">Research:</span> User Interviews, User surveys, Card Sorting, A/B Testing, Competitive Analysis, Empathy Mapping, User Personas, Journey Mapping, Usability Testing</p>
+                        <p><span class="bold">Programming:</span> HTML, CSS, JQuery</p>
+                    </div>
+                    
+                    <!--RESUME BUTTON-->
+                    <div class="btn-wrapper">
+                        <a href="Other/Resume 2023.pdf" target="_blank" class="btn">Download PDF</a>
+                    </div>
+                    
+                </div>
+
+                <!------------------------------------FOOTER------------------------------------------------->
+                <footer>
+                    <!--HEADER-->
+                    <h3>Ready to reconnect with your <span class="extra-bold">audience</span></h3>
+
+                    <!--CONTACT LINKS-->
+                    <div class="social-media-wrapper">
+                        <div class="media-icons"><a href="https://www.linkedin.com/in/robert-dixon-34a3b0154/">Linkedin</a></div>
+                        <div class="media_icons"><a href="https://profile.indeed.com/?hl=en&co=US&from=gnav-homepage&_ga=2.228005400.405605151.1659400805-1104227890.1623627628">Indeed</a></div>
+                        <!--<div class="media_icons"><a href="https://towson.joinhandshake.com/stu/users/19678440">Handshake</a></div>-->
+                        <div class="media_icons"><a href="mailto:RobertDixn369@Gmail.com?subject=Ready%20To%20Reconnect%20With%20My%20Audinece!"">Email</a></div>
+                    </div>
+
+                    <!--COPYRIGHT-->
+                    <p class="copyright">&#169; 2022 Robert Dixon</p>
+                </footer>
+            </main>
+        </body>
+
+         <!------------------JQUERY SCRIPT----------------------------->
+         <script>
+            if (window.matchMedia('(max-width: 1023px)').matches) {
+        // do functionality on screens smaller than 1024px
+    
+                /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
+                document.querySelectorAll('.nav-item').forEach(function(el) {
+                el.style.opacity = '0';
+                });
+    
+                /*Hamburger Menu Change & Transition*/   
+                 function toggle_menu(x) {
+                     x.classList.toggle("open-menu");
+         
+                     var x = document.getElementById("nav-overlay")
+                     var y = document.getElementById("page")
+                     var n = document.getElementById("nav-menu")     
+    
+                     if (x.style.height === "100vh") {
+                         x.style.height = "0"; 
+                         
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '0';
+                        });
+    
+                     } else {
+                         x.style.height = "100vh";
+                         
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '100';
+                        });
+
+                        }
+                     }
+         
+                     function closeMenu() {
+                     var nav = document.getElementById("nav-overlay")  
+                     document.getElementById("nav-menu").classList.remove("open-menu");
+                    } 
+            }
+                 </script>
+    </html>

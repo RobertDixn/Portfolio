@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cash App Project - Robert Dixon</title>
+        <meta name="descripiton" content="Robert Dixon's UX/UI Portfolio">
+        <meta charset="utf-8">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="cashapp_project.css">
+
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Cormorant:wght@400;500;600;700&family=Domine:wght@400;700&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+        <body>
+            <!-------------------------------------NAVIGATION---------------------------------------->
+            <!--NAV BAR-->
+            <div id="navbar">
+
+                <!--LOGO-->
+                <div class="logo-wrapper">
+                    <a href="index.html"><img src="Other\logo-white.png" alt="website logo"></a>
+                </div>
+
+                <!--HAMBURGER MENU-->
+                <div id="hamburger-menu" onclick="toggle_menu(this)">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div> 
+                </div>
+            </div>
+
+            <!--NAV OVERLAY-->
+            <nav id="nav-overlay">
+
+                <!--NAV-MENU/ITEMS-->
+                <ul id="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" onclick="close-Menu()"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" onclick="close-Menu()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#about" class="nav-link" onclick="close-Menu()">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cashapp_project.html" class="nav-link active-link" onclick="close-Menu()">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resume.html" class="nav-link" onclick="close-Menu()">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-------------------------------------CONTENT---------------------------------------->
+            <main class="page_wrapper">
+                
+                <!--COVER-->
+                <section class="cover_section row_layout">
+                    <!--TEXT-->
+                    <div class="text_section cover_text">
+                        <h1>Matching The <span class="line_break">Ranking With The Reviews</span></h1>
+                        <h3>An exploration of how to improve Cash App’s core features.</h3>
+                    </div>
+
+                    <!--IMAGE-->
+                    <div class="cover_image">
+                        <img src="Cash App/cover-img-cashapp.png" alt="Picture of one of the screens I redesigned for this project.">
+                    </div>
+                </section>
+
+                <!--PROBLEM-->
+                <section class="problem_section reverse_row_layout">
+                    <!--TEXT-->
+                    <div class="text_section problem_text">
+                        <h4>The Problem</h4>
+                        <h2>Ranking Vs. Reviews</h2>
+                        <p>Despite being the number one ranked finance app on Apple’s App Store, Cash App has received numerous one and two-star reviews from users commenting that they would rather use other products, like Venmo or PayPal, for their financial needs.</p>
+                    </div>
+
+                    <!--IMAGE-->
+                    <div class="section_image problem_img">
+                        <img src="Cash App/slimeguy-persona.png" alt="Picture of one Slime Guy's user persona.">
+                    </div>
+                </section>
+
+                <!--RESEARCH-->
+                <section class="research_section">
+                    <!--TEXT-->
+                    <div class="text_section">
+                        <h4>Research</h4>
+                        <h2>A Bad Review</span></h2>
+                        <p>Cash App allows users to spend, send, save, and invest their money without the use of a bank account. However, research shows that relevant information is not accessible to users, leading them to question their decisions while using the app’s core features.</p>
+                        <p class="second_paragraph">These features need to be redesigned to match the experience users have using competing products, and to include related information in areas where users feel uncertain.</p>
+                    </div>
+
+                    <!--IMAGE-->
+                    <div class="section_image">
+                        <img src="Cash App/statistics-cashapp.png" alt="Picture of reasearch findings.">
+                    </div>
+                </section>
+
+                <!--DESIGN-->
+                <section class="design_section">
+                    <!--TEXT-->
+                    <div class="text_section">
+                        <h4>Research</h4>
+                    </div>
+
+                    <!--IMAGES-->
+                    <div class="design_img_wrapper">
+                        <img class="design1" src="Cash App/lowfidelity1-cashapp.png" alt="Picture of low fidelity desings for the project.">
+                        <img class="design2" src="Cash App/lowfidelity2-cashapp.png" alt="Picture of low fidelity desings for the project.">
+                        <img class="design3" src="Cash App/lowfidelity3-cashapp.png" alt="Picture of low fidelity desings for the project.">
+                        <img class="design4" src="Cash App/lowfidelity4-cashapp.png" alt="Picture of low fidelity desings for the project.">
+                        <img class="design5" src="Cash App/lowfidelity5-cashapp.png" alt="Picture of low fidelity desings for the project.">
+                    </div>    
+                </section>
+
+                <!--SOLUTIONS-->
+                <section class="solution_section">
+                    <!--TEXT-->
+                    <div class="text_section">
+                        <h4>Solutions</h4>
+                    </div>
+
+                    <div class="solution_grid">
+
+                        <!--SOLUTIION 1-->
+                        <div class="solution_wrapper solution1">
+                            <!--IMAGE-->
+                            <div class="solution_image">
+                                <img src="Cash App/solution1-cashapp.png" alt="A picture of a high-fidelity screen designed for the project.">
+                            </div>
+                            <!--TEXT-->
+                            <div class="text_section solution_text">
+                                <h2>Account Balance</h2>
+                                <p>A user’s account balance is accurately displayed on the app’s homepage so that users can start a transaction without wondering how much they have in their account.</p>
+                            </div>
+                        </div>     
+                        
+                        <!--SOLUTIION 2-->
+                        <div class="solution_wrapper solution2">
+                            <!--IMAGE-->
+                            <div class="solution_image">
+                                <img src="Cash App/solution2-cashapp.png" alt="A picture of a high-fidelity screen designed for the project.">
+                            </div>
+                            <!--TEXT-->
+                            <div class="text_section solution_text">
+                                <h2>Informative Icons</h2>
+                                <p>Icons legitimizing another person’s account instills trust in users so that they don’t have to worry about being scammed when sending money to someone new.</p>
+                            </div>
+                        </div>
+                        
+                        <!--SOLUTIION 3-->
+                        <div class="solution_wrapper solution3">
+                            <!--IMAGE-->
+                            <div class="solution_image">
+                                <img src="Cash App/solution3-cashapp.png" alt="A picture of a high-fidelity screen designed for the project.">
+                            </div>
+                            <!--TEXT-->
+                            <div class="text_section solution_text">
+                                <h2>Payment Verification</h2>
+                                <p>A payment verification screen gives users a chance to check if they’ve made any mistakes before finalizing a transaction.</p>
+                            </div>
+                        </div>     
+
+                        <!--SOLUTIION 4-->
+                        <div class="solution_wrapper solution4">
+                            <!--IMAGE-->
+                            <div class="solution_image">
+                                <img src="Cash App/solution4-cashapp.png" alt="A picture of a high-fidelity screen designed for the project.">
+                            </div>
+                            <!--TEXT-->
+                            <div class="text_section solution_text">
+                                <h2>Accessible Information</h2>
+                                <p>Detailed information about transactions combined with the ability to switch between different types of transactions help users distinguish between money they spent and money they received.</p>
+                            </div>
+                        </div>     
+
+                        <!--SOLUTIION 5-->
+                        <div class="solution_wrapper solution5">
+                            <!--IMAGE-->
+                            <div class="solution_image">
+                                <img src="Cash App/solution5-cashapp.png" alt="A picture of a high-fidelity screen designed for the project.">
+                            </div>
+                            <!--TEXT-->
+                            <div class="text_section solution_text">
+                                <h2>Favorites Feature</h2>
+                                <p>Users now have the ability to preset and presave both accounts and payments, bypassing the original payment process and all the potenial mistakes that come with it.</p>
+                            </div>
+                        </div> 
+
+                        <!--SOLUTIION 6-->
+                        <div class="solution_wrapper solution6">
+                            <!--IMAGE-->
+                            <div class="solution_image">
+                                <img src="Cash App/solution6-cashapp.png" alt="A picture of a high-fidelity screen designed for the project.">
+                            </div>
+                            <!--TEXT-->
+                            <div class="text_section solution_text">
+                                <h2>Bitcoins and Stocks</h2>
+                                <p>New and experienced investors can now find answers to their most frequently asked questions using newly added informative guides on the Bitcoin and Stocks page.</p>
+                            </div>
+                        </div> 
+
+                    </div>
+                </section>
+                
+                <!--SOLUTION VIDEO-->
+                <section class="solution_video_section final-solution">
+                    <!--TEXT-->
+                    <div class="text_section">
+                        <h2 id="video-text1">Payment Process</h2>
+                        <h2 class="hide-video" id="video-text2">Favorites Feature</h2>
+                        <h2 class="hide-video" id="video-text3">Favorites Feature</h2>
+                        <h2 class="hide-video" id="video-text4">Investing Process</h2>
+                    </div>
+
+                    <!--VIDEO-->
+                    <video class="solution-video"  id="myVideo" autoplay playsinline>
+                        <source src="Cash App/solution-video1.mp4" id="mp4Source" type="video/mp4" alt="Video showing new and redesigned components in Cash Ap's payment process.">
+                    </video>
+                </section>
+
+                <!--INSIGHT-->
+                <section class="insight_section">
+                    <!--TEXT-->
+                    <div class="text_section">
+                        <h4>Insight</h4>
+                        <h2>A Good Review</h2>
+                        <p>By introducing solutions into Cash App’s core features that help users remain confident in their decisions, 83% of users were able to spot errors in transactions before finalizing them and 67% of users commented that they felt more comfortable investing given the informative guides.</p>
+                    </div>
+                </section>
+
+                <!--COLLAGE-->
+                <div class="collage">
+                    <img class="img" src="Cash App/cashapp-collage.png" alt="A Collage of the different screens used in the Cash App Project.">
+                </div>
+
+                <!--PROJECTS-->
+                    <section class="project_section">
+                        
+                        <!--PROJECT WRAPPER-->
+                        <div class="project_wrapper">
+
+                            <!--PROJECTS (ENEL X)-->
+                            <div class="projects project1">
+
+                                <!--TEXT CONTAINER-->
+                                <div class="project_text">
+                                    <p class="project_name">Enel X</p>
+                                    <p>Ending the Game of Hide ‘N Seek</p>
+
+                                    <!--BUTTON-->
+                                    <a href="enel_project.html" class="button enelx">View</a>
+                                </div>
+                            </div>
+                            
+                            <!--PROJECTS (CASH APP PROJECT)-->
+                            <div class="projects project2">
+
+                                <!--TEXT CONTAINER-->
+                                <div class="project_text">
+                                    <p class="project_name">Cash App Project</p>
+                                    <p>Making Payments Less Stressful</p>
+
+                                    <!--BUTTON-->
+                                    <a href="cashapp_project.html" class="button cashapp">View</a>
+                                </div>
+                            </div>
+                            
+                            <!--PROJECTS (ENEL X)-->
+                            <div class="projects project3">
+
+                                <!--TEXT CONTAINER-->
+                                <div class="project_text">
+                                    <p class="project_name">Miranda Holliday</p>
+                                    <p>Dispelling The Illusion Of Inexperience</p>
+
+                                    <!--BUTTON-->
+                                    <a href="mirandaholliday_project.html" class="button miranda">View</a>
+                                </div>
+                            </div>
+
+                            <!--PROJECTS (ENEL X)-->
+                            <div class="projects project4">
+
+                                <!--TEXT CONTAINER-->
+                                <div class="project_text">
+                                    <p class="project_name">Homes For Value</p>
+                                    <p>From A Postcard To A Website</p>
+
+                                    <!--BUTTON-->
+                                    <a href="homesforvalue_project.html" class="button homes">View</a>
+                                </div>
+                            </div>
+
+                        </div>    
+                    </section>
+
+                
+                <!------------------------------------FOOTER------------------------------------------------->
+                <footer>
+                    <!--HEADER-->
+                    <h5>Ready to reconnect with your <span class="extra-bold">audience</span></h5>
+
+                    <!--CONTACT LINKS-->
+                    <div class="social-media-wrapper">
+                        <div class="media-icons"><a href="https://www.linkedin.com/in/robert-dixon-34a3b0154/">Linkedin</a></div>
+                        <div class="media_icons"><a href="https://profile.indeed.com/?hl=en&co=US&from=gnav-homepage&_ga=2.228005400.405605151.1659400805-1104227890.1623627628">Indeed</a></div>
+                        <!--<div class="media_icons"><a href="https://towson.joinhandshake.com/stu/users/19678440">Handshake</a></div>-->
+                        <div class="media_icons"><a href="mailto:RobertDixn369@Gmail.com?subject=Ready%20To%20Reconnect%20With%20My%20Audinece!"">Email</a></div>
+                    </div>
+
+                    <!--COPYRIGHT-->
+                    <p class="copyright">&#169; 2022 Robert Dixon</p>
+                </footer>           
+            </main>
+        </body>
+
+         <!------------------JQUERY SCRIPT----------------------------->
+         <script>
+            if (window.matchMedia('(max-width: 1023px)').matches) {
+        // do functionality on screens smaller than 1024px
+    
+                /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
+                document.querySelectorAll('.nav-item').forEach(function(el) {
+                el.style.opacity = '0';
+                });
+    
+                /*Hamburger Menu Change & Transition*/   
+                 function toggle_menu(x) {
+                     x.classList.toggle("open-menu");
+         
+                     var x = document.getElementById("nav-overlay")
+                     var y = document.getElementById("page")
+                     var n = document.getElementById("nav-menu")     
+    
+                     if (x.style.height === "100vh") {
+                         x.style.height = "0"; 
+                         
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '0';
+                        });
+    
+                     } else {
+                         x.style.height = "100vh";
+                         
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '100';
+                        });
+
+                        }
+                     }
+         
+                     function closeMenu() {
+                     var nav = document.getElementById("nav-overlay")  
+                     document.getElementById("nav-menu").classList.remove("open-menu");
+                    } 
+            }
+
+            
+            var count = 1;
+            var player = document.getElementById('myVideo');
+            var mp4Vid = document.getElementById('mp4Source');
+            player.addEventListener('ended',myHandler,false);
+
+            function myHandler(e)
+            {
+
+                if(!e) 
+                {
+                    e = window.event; 
+                }
+                
+                count++;
+
+                if (count == 5) {
+                    count = 1;
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+                    setTimeout(function(){
+                        document.getElementById('video-text1').classList.remove("hide-video");
+                    },5); 
+
+                }else if (count == 2) {
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+
+                    setTimeout(function(){
+                        document.getElementById('video-text2').classList.remove("hide-video");
+                    },5);
+
+
+                }else if (count == 3) {
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+                    setTimeout(function(){
+                        document.getElementById('video-text3').classList.remove("hide-video");
+                    },5);
+
+                } else {
+                    document.getElementById('video-text1').classList.add("hide-video");
+                    document.getElementById('video-text2').classList.add("hide-video");
+                    document.getElementById('video-text3').classList.add("hide-video");
+                    document.getElementById('video-text4').classList.add("hide-video");
+
+                    mp4Vid.setAttribute("src","Cash App/solution-video"+count+".mp4");
+                    player.load();
+                    player.play();
+
+                    setTimeout(function(){
+                        document.getElementById('video-text4').classList.remove("hide-video");
+                    },5);
+                }
+
+
+            }
+
+
+                </script>
+    </html>
