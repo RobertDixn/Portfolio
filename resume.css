@@ -176,6 +176,7 @@ p {
   color: #f3eff5;
   text-decoration: none;
   opacity: 50%;
+  letter-spacing: .5px;
 }
 .active-link {
   opacity: 100%;
