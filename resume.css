@@ -172,6 +172,7 @@ p {
   transition: 0.4s;
 }
 .nav-link {
+  font-family: "Montserrat", Open Sans, sans-serif;
   color: #f3eff5;
   text-decoration: none;
   opacity: 50%;
