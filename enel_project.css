@@ -373,11 +373,11 @@ h5 {
     max-height: min(70%, 530px);
     /*place-self: center stretch;*/
   }
-  h1 {
-    font-size: 2.625em;
-  }
   .cover_text { 
     max-width: 600px;
+  }
+  h1 {
+    font-size: 2.875em;
   }
   /*.project1, .project2, .project3, .project4 { place-self: center stretch;}*/
  /************************************NAVIGATION***************************************/
@@ -435,10 +435,8 @@ h5 {
   }
   .cover_text {
     min-width: 457px;
+    max-width: 600px;
     gap: 40px;
-  }
-  h1 {
-    font-size: 2.875em;
   }
   .image_wrapper {
     padding: max(30px, 2%) max(60px, 4%) 0 max(60px, 4%); 
