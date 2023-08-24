@@ -309,11 +309,12 @@
     list-style-type: none;
     transition: 0.4s;
   }
-  .nav-link {
-    color: #f3eff5;
-    text-decoration: none;
-    opacity: 50%;
-  }
+.nav-link {
+  font-family: "Montserrat", Open Sans, sans-serif;
+  color: #f3eff5;
+  text-decoration: none;
+  opacity: 50%;
+}
   .active-link {
     opacity: 100%;
   }
