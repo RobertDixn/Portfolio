@@ -208,7 +208,12 @@ h2 {
   position: fixed;
   top: 0;
   transition: 0.8s;
+}
+.nav-show {
   z-index: 6;
+}
+.nav-hide {
+  z-index: -1;
 }
 .logo-wrapper {
   height: 20px;
@@ -236,7 +241,6 @@ h2 {
   transition: 0.4s;
 }
 .nav-link {
-  font-family: "Montserrat", Open Sans, sans-serif;
   color: #f3eff5;
   text-decoration: none;
   opacity: 50%;
