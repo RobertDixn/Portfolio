@@ -32,24 +32,24 @@
             </div>
 
             <!--NAV OVERLAY-->
-            <nav id="nav-overlay">
+            <nav id="nav-overlay" class="nav-show">
 
                 <!--NAV-MENU/ITEMS-->
                 <ul id="nav-menu">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link" onclick="close-Menu()"></a>
+                        <a href="index.html" class="nav-link"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link active-link" onclick="close-Menu()">Home</a>
+                        <a href="index.html" class="nav-link active-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about" class="nav-link" onclick="close-Menu()">About</a>
+                        <a href="#about" class="nav-link" onclick="closeMenu()">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#portfolio" class="nav-link" onclick="close-Menu()">Portfolio</a>
+                        <a href="#portfolio" class="nav-link" onclick="closeMenu()">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="resume.html" class="nav-link" onclick="close-Menu()">Resume</a>
+                        <a href="resume.html" class="nav-link">Resume</a>
                     </li>
                 </ul>
             </nav>
@@ -167,6 +167,7 @@
          <!------------------JQUERY SCRIPT----------------------------->
          <script>
             if (window.matchMedia('(max-width: 1023px)').matches) {
+                document.getElementById("nav-overlay").classList.add("nav-hide");
         // do functionality on screens smaller than 1024px
     
                 /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
@@ -176,7 +177,21 @@
     
                 /*Hamburger Menu Change & Transition*/   
                  function toggle_menu(x) {
-                     x.classList.toggle("open-menu");
+                    document.getElementById("nav-overlay").classList.toggle("open-menu");
+
+                    var line1 = document.getElementById("line1")
+                    var line2 = document.getElementById("line2")
+                    var line3 = document.getElementById("line3")
+                    var overlay = document.getElementById('nav-overlay');
+
+                    line1.style.transition = ".4s"
+                    line2.style.transition = "0s"
+                    line3.style.transition = "0s"
+                    line3.style.transition = ".4s"
+                    overlay.style.transition = ".8s"
+
+
+                     /*x.classList.toggle("open-menu");*/
          
                      var x = document.getElementById("nav-overlay")
                      var y = document.getElementById("page")
@@ -184,28 +199,53 @@
     
                      if (x.style.height === "100vh") {
                          x.style.height = "0"; 
+                         x.classList.remove("nav-show");
+                         x.classList.add("nav-hide");
                          
                         document.querySelectorAll('.nav-item').forEach(function(el) {
                         el.style.opacity = '0';
                         });
     
                      } else {
+                         x.classList.remove("nav-hide");
+                         x.classList.add("nav-show");
                          x.style.height = "100vh";
-                         
+
                         document.querySelectorAll('.nav-item').forEach(function(el) {
-                        el.style.opacity = '100';
+                            el.style.opacity = '100';
                         });
 
                         }
                      }
          
-                     function closeMenu() {
-                     var nav = document.getElementById("nav-overlay")  
-                     document.getElementById("nav-menu").classList.remove("open-menu");
+                function closeMenu() {
+                    document.getElementById("hamburger-menu").classList.remove("open-menu")
+                    document.getElementById("nav-overlay").style.height = "0";
+                    document.getElementById("nav-overlay").classList.remove("nav-show");
+                    document.getElementById("nav-overlay").classList.add("nav-hide");
+                    
+                    var line1 = document.getElementById("line1")
+                    var line2 = document.getElementById("line2")
+                    var line3 = document.getElementById("line3")
+                    var overlay = document.getElementById('nav-overlay');
+
+                    line1.style.transition = "0s"
+                    line2.style.transition = "0s"
+                    line3.style.transition = "0s"
+                    line3.style.transition = "0s"
+                    overlay.style.transition = "0s"
+
+
+
                     } 
             }
 
             
+            /*MPAKET ABOUT ACTIVE LINK ON SCROLL*/
+
+
+                /***************************/
+
             var count = 1;
             var player = document.getElementById('myVideo');
             var mp4Vid = document.getElementById('mp4Source');
@@ -280,8 +320,6 @@
                         document.getElementById('video-text4').classList.remove("hide-video");
                     },5);
                 }
-
-
             }
 
 
