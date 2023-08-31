@@ -60,13 +60,13 @@
                 <!--COVER-->
                 <section class="cover_section">
                     <!--IMAGE-->
-                    <div class="cover_logo">
-                        <img src="Miranda Holliday/miranda-logo.svg" alt="Logo for MirandaHolliday.com">
+                    <div class="cover_image cover1">
+                        <img src="Miranda Holliday/miranda_cover1.png" alt="Image of MirandaHolliday.com landing page on a laptop.">
                     </div>
 
                     <!--IMAGE-->
-                    <div class="cover_image">
-                        <img src="Miranda Holliday/miranda-laptop.png" alt="Image of MirandaHolliday.com landing page on a laptop.">
+                    <div class="cover_image cover2">
+                        <img src="Miranda Holliday/miranda_cover2.png" alt="Image of MirandaHolliday.com landing page on a laptop.">
                     </div>
 
                     <!--BACKGROUND-->
@@ -85,7 +85,7 @@
                 </section>
 
                 <!--SOLUTION 1-->
-                <section class="solution1_section">
+                <section class="solution1_section row_layout">
                     <!--TEXT-->
                     <div class="text_section">
                         <h4>Solutions</h4>
@@ -95,15 +95,12 @@
 
                     <!--IMAGE-->
                     <div class="section_image">
-                        <img class="img" src="Miranda Holliday/acting-portfolio.png" alt="Photo of a Miranda's acting portfolio.">
+                        <img class="img" src="Miranda Holliday/acting_img.jpg" alt="Photo of a Miranda's acting portfolio.">
                     </div>
-
-                    <!--BACKGROUND-->
-                    <div class="black_background1"></div>
                 </section>
 
                 <!--SOLUTION 2-->
-                <section class="solution2_section">
+                <section class="solution2_section reverse_row_layout">
                     <!--TEXT-->
                     <div class="text_section">
                         <h2>Attention To Detail</h2>
@@ -112,11 +109,26 @@
 
                     <!--IMAGE-->
                     <div class="section_image">
-                        <img class="img" src="Miranda Holliday/writing-portfolio.png" alt="Photo of a Miranda's writing portfolio.">
+                        <img class="img" src="Miranda Holliday/writing_img.jpg" alt="Photo of a Miranda's writing portfolio.">
+                    </div>
+                </section>
+
+                <!--SOLUTION IMAGES-->
+                <section class="solution_image_section">
+                    <!--TEXT-->
+                    <div class="text_section">
+                        <h2>MirandaHolliday.com</h2>
                     </div>
 
-                    <!--BACKGROUND-->
-                    <div class="black_background2"></div>
+                    <!--IMAGE-->
+                    <div class="solution_image show" id="solution1">
+                        <img class="img" src="Miranda Holliday/miranda_acting.png" alt="Photo of a Miranda's acting portfolio.">
+                    </div>
+
+                    <!--IMAGE-->
+                    <div class="solution_image" id="solution2">
+                        <img class="img" src="Miranda Holliday/miranda_writing.png" alt="Photo of a Miranda's writing portfolio.">
+                    </div>
                 </section>
 
                 <!--INSIGHT-->
@@ -217,7 +229,8 @@
 
          <!------------------JQUERY SCRIPT----------------------------->
          <script>
-            if (window.matchMedia('(max-width: 1023px)').matches) {
+if (window.matchMedia('(max-width: 1023px)').matches) {
+                document.getElementById("nav-overlay").classList.add("nav-hide");
         // do functionality on screens smaller than 1024px
     
                 /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
@@ -227,7 +240,21 @@
     
                 /*Hamburger Menu Change & Transition*/   
                  function toggle_menu(x) {
-                     x.classList.toggle("open-menu");
+                    document.getElementById("nav-overlay").classList.toggle("open-menu");
+
+                    var line1 = document.getElementById("line1")
+                    var line2 = document.getElementById("line2")
+                    var line3 = document.getElementById("line3")
+                    var overlay = document.getElementById('nav-overlay');
+
+                    line1.style.transition = ".4s"
+                    line2.style.transition = "0s"
+                    line3.style.transition = "0s"
+                    line3.style.transition = ".4s"
+                    overlay.style.transition = ".8s"
+
+
+                     /*x.classList.toggle("open-menu");*/
          
                      var x = document.getElementById("nav-overlay")
                      var y = document.getElementById("page")
@@ -235,26 +262,70 @@
     
                      if (x.style.height === "100vh") {
                          x.style.height = "0"; 
+                         x.classList.remove("nav-show");
+                         x.classList.add("nav-hide");
                          
                         document.querySelectorAll('.nav-item').forEach(function(el) {
                         el.style.opacity = '0';
                         });
     
                      } else {
+                         x.classList.remove("nav-hide");
+                         x.classList.add("nav-show");
                          x.style.height = "100vh";
-                         
+
                         document.querySelectorAll('.nav-item').forEach(function(el) {
-                        el.style.opacity = '100';
+                            el.style.opacity = '100';
                         });
 
                         }
                      }
          
-                     function closeMenu() {
-                     var nav = document.getElementById("nav-overlay")  
-                     document.getElementById("nav-menu").classList.remove("open-menu");
+                function closeMenu() {
+                    document.getElementById("hamburger-menu").classList.remove("open-menu")
+                    document.getElementById("nav-overlay").style.height = "0";
+                    document.getElementById("nav-overlay").classList.remove("nav-show");
+                    document.getElementById("nav-overlay").classList.add("nav-hide");
+                    
+                    var line1 = document.getElementById("line1")
+                    var line2 = document.getElementById("line2")
+                    var line3 = document.getElementById("line3")
+                    var overlay = document.getElementById('nav-overlay');
+
+                    line1.style.transition = "0s"
+                    line2.style.transition = "0s"
+                    line3.style.transition = "0s"
+                    line3.style.transition = "0s"
+                    overlay.style.transition = "0s"
+
+
+
                     } 
             }
+
+            
+            /*SOLUTION IMAGE SHOW AND HIDE*/    
+            const myInterval = setInterval(switchImg, 8000);
+
+                function switchImg() {
+
+                    const sol1 = document.getElementById("solution1");
+                    const sol2 = document.getElementById("solution2");
+
+                    if (sol1.matches(".show")) {
+                        sol1.classList.remove("show");
+                        sol2.classList.add("show");
+                    } else {
+                        sol2.classList.remove("show");
+                        sol1.classList.add("show");
+                    }
+                }
+
+                
+             
+
+
+
 
             
             var count = 1;
