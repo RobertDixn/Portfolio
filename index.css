@@ -85,6 +85,10 @@ h2 {
   padding-top: 80px;
   padding-bottom: 80px;
 }
+#about {
+  visibility: hidden;
+  height: 80px;
+}
 .project_wrapper {
   width: 100%;
   height: 100%;
