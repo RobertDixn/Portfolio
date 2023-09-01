@@ -46,7 +46,7 @@ section {
   display: none;
 }
 .text_section {
-  max-width: 600px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -378,9 +378,6 @@ h5 {
   .reverse_row_layout {
     flex-direction: row-reverse;
     gap: 80px;
-  }
-  .text_section {
-    max-width: 400px;
   }
   .portfolio_img {
     display: block;
