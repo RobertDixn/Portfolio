@@ -176,7 +176,12 @@ p {
   color: #f3eff5;
   text-decoration: none;
   opacity: 50%;
-  letter-spacing: .5px;
+  transition: .8s;
+}
+.hide-nav-link {
+  opacity: 0;
+  pointer-events: none;  
+  transition: 0.4s;      
 }
 .active-link {
   opacity: 100%;
@@ -392,6 +397,11 @@ h3 {
   }
   .logo-wrapper {
     margin-left: max(80px, 4%);
+  }
+  .nav-link {
+    opacity: 50%;
+    transition: 0s;
+    pointer-events: auto;
   }
   /************************************FOOTER***************************************/
   h3 {
