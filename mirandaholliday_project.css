@@ -289,12 +289,6 @@ h4 {
   transition: 0.8s;
   z-index: 6;
 }
-.nav-show {
-  z-index: 6;
-}
-.nav-hide {
-  z-index: -1;
-}
 .logo-wrapper {
   height: 20px;
   display: block;
@@ -325,6 +319,12 @@ h4 {
   color: #f3eff5;
   text-decoration: none;
   opacity: 50%;
+  transition: .8s;
+}
+.hide-nav-link {
+  opacity: 0;
+  pointer-events: none;  
+  transition: 0.4s;      
 }
 .active-link {
   opacity: 100%;
@@ -512,6 +512,11 @@ h5 {
   }
   .logo-wrapper {
     margin-left: max(80px, 4%);
+  }
+  .nav-link {
+    opacity: 50%;
+    transition: 0s;
+    pointer-events: auto;
   }
   /************************************FOOTER***************************************/
   h5 {
