@@ -32,7 +32,7 @@
             </div>
 
             <!--NAV OVERLAY-->
-            <nav id="nav-overlay" class="nav-show">
+            <nav class="show-nav" id="nav-overlay">
 
                 <!--NAV-MENU/ITEMS-->
                 <ul id="nav-menu">
@@ -70,10 +70,8 @@
                     <section class="about_section reverse_row_layout" id="about">
                         <!--TEXT-->
                         <div class="text_section">
-                            <h2>About</h2>
-                            <p>Anyone with a working computer and access to Google can design an app, but designing an experience requires something that
-                                can't be found using a search bar. It requires passion.</p>                           
-                            <p class="second_paragraph">I have a passion for people. This statement should tell you two things. One, I am what you would call a "social butterfly". 
+                            <h2>About</h2>                            
+                            <p>I have a passion for people. This statement should tell you two things. One, I am what you would call a "social butterfly". 
                                 Two, I have the ability to consistently deliver accessible, intuitive, and user-centric design solutions that exceed 
                                 expectations and enrich the relationship between brands and their audiences.</p>
                         </div>
@@ -166,163 +164,56 @@
 
          <!------------------JQUERY SCRIPT----------------------------->
          <script>
-            if (window.matchMedia('(max-width: 1023px)').matches) {
-                document.getElementById("nav-overlay").classList.add("nav-hide");
-        // do functionality on screens smaller than 1024px
+            if (window.matchMedia('(min-width: 1024px)').matches) {
+                /*Hide nav-items/links on load*/
+                document.querySelectorAll('.nav-link').forEach(function(el) {
+                el.classList.remove("hide-nav-link");
+                });
+            }    
+
+             if (window.matchMedia('(max-width: 1023px)').matches) {
     
-                /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
-                document.querySelectorAll('.nav-item').forEach(function(el) {
-                el.style.opacity = '0';
+                /*Hide nav-items/links on load*/
+                document.querySelectorAll('.nav-link').forEach(function(el) {
+                el.classList.add("hide-nav-link");
                 });
     
                 /*Hamburger Menu Change & Transition*/   
-                 function toggle_menu(x) {
-                    document.getElementById("nav-overlay").classList.toggle("open-menu");
+                function toggle_menu(x) {
+                    x.classList.toggle("open-menu");
 
-                    var line1 = document.getElementById("line1")
-                    var line2 = document.getElementById("line2")
-                    var line3 = document.getElementById("line3")
-                    var overlay = document.getElementById('nav-overlay');
-
-                    line1.style.transition = ".4s"
-                    line2.style.transition = "0s"
-                    line3.style.transition = "0s"
-                    line3.style.transition = ".4s"
-                    overlay.style.transition = ".8s"
-
-
-                     /*x.classList.toggle("open-menu");*/
-         
-                     var x = document.getElementById("nav-overlay")
-                     var y = document.getElementById("page")
-                     var n = document.getElementById("nav-menu")     
-    
-                     if (x.style.height === "100vh") {
-                         x.style.height = "0"; 
-                         x.classList.remove("nav-show");
-                         x.classList.add("nav-hide");
+                    var overlay = document.getElementById("nav-overlay")
+   
+                    if (overlay.style.height === "100vh") {
+                        overlay.style.height = "0"; 
                          
-                        document.querySelectorAll('.nav-item').forEach(function(el) {
-                        el.style.opacity = '0';
+                        /*.Hide nav-items/links*/
+                        document.querySelectorAll('.nav-link').forEach(function(el) {
+                        el.classList.add("hide-nav-link");
                         });
     
-                     } else {
-                         x.classList.remove("nav-hide");
-                         x.classList.add("nav-show");
-                         x.style.height = "100vh";
-
-                        document.querySelectorAll('.nav-item').forEach(function(el) {
-                            el.style.opacity = '100';
+                    } else {
+                        overlay.style.height = "100vh";
+                         
+                        /*.Show nav-items/links*/
+                        document.querySelectorAll('.nav-link').forEach(function(el) {
+                        el.classList.remove("hide-nav-link");
                         });
 
                         }
-                     }
+                    }
          
+                /*when about or portfolio is selected*/    
                 function closeMenu() {
                     document.getElementById("hamburger-menu").classList.remove("open-menu")
                     document.getElementById("nav-overlay").style.height = "0";
-                    document.getElementById("nav-overlay").classList.remove("nav-show");
-                    document.getElementById("nav-overlay").classList.add("nav-hide");
                     
-                    var line1 = document.getElementById("line1")
-                    var line2 = document.getElementById("line2")
-                    var line3 = document.getElementById("line3")
-                    var overlay = document.getElementById('nav-overlay');
-
-                    line1.style.transition = "0s"
-                    line2.style.transition = "0s"
-                    line3.style.transition = "0s"
-                    line3.style.transition = "0s"
-                    overlay.style.transition = "0s"
-
-
-
+                    /*.Hide nav-items/links*/
+                    document.querySelectorAll('.nav-link').forEach(function(el) {
+                        el.classList.add("hide-nav-link");
+                        });
                     } 
-            }
-
-            
-            /*MPAKET ABOUT ACTIVE LINK ON SCROLL*/
-
-
-                /***************************/
-
-            var count = 1;
-            var player = document.getElementById('myVideo');
-            var mp4Vid = document.getElementById('mp4Source');
-            player.addEventListener('ended',myHandler,false);
-
-            function myHandler(e)
-            {
-
-                if(!e) 
-                {
-                    e = window.event; 
                 }
-                
-                count++;
-
-                if (count == 5) {
-                    count = 1;
-                    document.getElementById('video-text1').classList.add("hide-video");
-                    document.getElementById('video-text2').classList.add("hide-video");
-                    document.getElementById('video-text3').classList.add("hide-video");
-                    document.getElementById('video-text4').classList.add("hide-video");
-
-                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
-                    player.load();
-                    player.play();
-
-                    setTimeout(function(){
-                        document.getElementById('video-text1').classList.remove("hide-video");
-                    },5); 
-
-                }else if (count == 2) {
-                    document.getElementById('video-text1').classList.add("hide-video");
-                    document.getElementById('video-text2').classList.add("hide-video");
-                    document.getElementById('video-text3').classList.add("hide-video");
-                    document.getElementById('video-text4').classList.add("hide-video");
-
-                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
-                    player.load();
-                    player.play();
-
-
-                    setTimeout(function(){
-                        document.getElementById('video-text2').classList.remove("hide-video");
-                    },5);
-
-
-                }else if (count == 3) {
-                    document.getElementById('video-text1').classList.add("hide-video");
-                    document.getElementById('video-text2').classList.add("hide-video");
-                    document.getElementById('video-text3').classList.add("hide-video");
-                    document.getElementById('video-text4').classList.add("hide-video");
-
-                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
-                    player.load();
-                    player.play();
-
-                    setTimeout(function(){
-                        document.getElementById('video-text3').classList.remove("hide-video");
-                    },5);
-
-                } else {
-                    document.getElementById('video-text1').classList.add("hide-video");
-                    document.getElementById('video-text2').classList.add("hide-video");
-                    document.getElementById('video-text3').classList.add("hide-video");
-                    document.getElementById('video-text4').classList.add("hide-video");
-
-                    mp4Vid.setAttribute("src","Cash App Images/solution-video"+count+".mp4");
-                    player.load();
-                    player.play();
-
-                    setTimeout(function(){
-                        document.getElementById('video-text4').classList.remove("hide-video");
-                    },5);
-                }
-            }
-
-
                 </script>
     </html>
     
