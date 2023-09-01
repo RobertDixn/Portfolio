@@ -37,19 +37,19 @@
                 <!--NAV-MENU/ITEMS-->
                 <ul id="nav-menu">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link" onclick="close-Menu()"></a>
+                        <a href="index.html" class="nav-link"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link" onclick="close-Menu()">Home</a>
+                        <a href="index.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="index.html#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html#portfolio" class="nav-link" onclick="close-Menu()">Portfolio</a>
+                        <a href="index.html#portfolio" class="nav-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="resume.html" class="nav-link active-link" onclick="close-Menu()">Resume</a>
+                        <a href="resume.html" class="nav-link active-link">Resume</a>
                     </li>
                 </ul>
             </nav>
@@ -156,43 +156,55 @@
 
          <!------------------JQUERY SCRIPT----------------------------->
          <script>
-            if (window.matchMedia('(max-width: 1023px)').matches) {
-        // do functionality on screens smaller than 1024px
+if (window.matchMedia('(min-width: 1024px)').matches) {
+                /*Hide nav-items/links on load*/
+                document.querySelectorAll('.nav-link').forEach(function(el) {
+                el.classList.remove("hide-nav-link");
+                });
+            }    
+
+             if (window.matchMedia('(max-width: 1023px)').matches) {
     
-                /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
-                document.querySelectorAll('.nav-item').forEach(function(el) {
-                el.style.opacity = '0';
+                /*Hide nav-items/links on load*/
+                document.querySelectorAll('.nav-link').forEach(function(el) {
+                el.classList.add("hide-nav-link");
                 });
     
                 /*Hamburger Menu Change & Transition*/   
-                 function toggle_menu(x) {
-                     x.classList.toggle("open-menu");
-         
-                     var x = document.getElementById("nav-overlay")
-                     var y = document.getElementById("page")
-                     var n = document.getElementById("nav-menu")     
-    
-                     if (x.style.height === "100vh") {
-                         x.style.height = "0"; 
+                function toggle_menu(x) {
+                    x.classList.toggle("open-menu");
+
+                    var overlay = document.getElementById("nav-overlay")
+   
+                    if (overlay.style.height === "100vh") {
+                        overlay.style.height = "0"; 
                          
-                        document.querySelectorAll('.nav-item').forEach(function(el) {
-                        el.style.opacity = '0';
+                        /*.Hide nav-items/links*/
+                        document.querySelectorAll('.nav-link').forEach(function(el) {
+                        el.classList.add("hide-nav-link");
                         });
     
-                     } else {
-                         x.style.height = "100vh";
+                    } else {
+                        overlay.style.height = "100vh";
                          
-                        document.querySelectorAll('.nav-item').forEach(function(el) {
-                        el.style.opacity = '100';
+                        /*.Show nav-items/links*/
+                        document.querySelectorAll('.nav-link').forEach(function(el) {
+                        el.classList.remove("hide-nav-link");
                         });
 
                         }
-                     }
+                    }
          
-                     function closeMenu() {
-                     var nav = document.getElementById("nav-overlay")  
-                     document.getElementById("nav-menu").classList.remove("open-menu");
+                /*when about or portfolio is selected*/    
+                function closeMenu() {
+                    document.getElementById("hamburger-menu").classList.remove("open-menu")
+                    document.getElementById("nav-overlay").style.height = "0";
+                    
+                    /*.Hide nav-items/links*/
+                    document.querySelectorAll('.nav-link').forEach(function(el) {
+                        el.classList.add("hide-nav-link");
+                        });
                     } 
-            }
+                }
                  </script>
     </html>
