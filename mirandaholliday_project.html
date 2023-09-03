@@ -79,8 +79,7 @@
                     <div class="text_section only_text">
                         <h4>The Problem</h4>
                         <h2>The Illusion Of Inexperience</h2>
-                        <p>MirandaHolliday.com is Miranda’s online introduction to both Talent and Literary Agencies however, as a relatively new actress and playwright her work in each area is limited.</p> 
-                        <p class="second_paragraph">To combat this limitation, I elevated her existing work to create a first impression that communicates a sense of professionalism rather than inexperience.</p>
+                        <p>Despite having limited professional experience, Miranda wants her online portfolio to communicate a sense of professionalism in order to gain representation from talent and literary agencies.</p>
                     </div>
                 </section>
 
@@ -89,8 +88,8 @@
                     <!--TEXT-->
                     <div class="text_section">
                         <h4>Solutions</h4>
-                        <h2>Ditching The Template</h2>
-                        <p>Instead of following a template, Miranda's acting portfolio is designed to reflect the preferences of its target audience. This takes away unnecessary distractions allowing her work to dominate the screen as well as the users attention.</p> 
+                        <h2>Moving Center Stage</h2>
+                        <p>To shift user’s attention from the number of times she’s performed on stage to her theatrical brilliance, Miranda’s acting portfolio features a muted background to create contrast and amplify her existing work as an actress.</p> 
                     </div>
 
                     <!--IMAGE-->
@@ -103,8 +102,8 @@
                 <section class="solution2_section reverse_row_layout">
                     <!--TEXT-->
                     <div class="text_section">
-                        <h2>Attention To Detail</h2>
-                        <p>Miranda’s writing portfolio uses limited but choice wording paired with vibrant visuals to arouse the user's senses. This pairing produces a gripping atmosphere that excites users and raises their engagement with displayed content.</p>                 
+                        <h2>One Good Reason</h2>
+                        <p>Users are given a reason to “read more” as they come across vibrant visuals and gripping text in Miranda’s writing portfolio that arouse their curiosity, seize their attention, and accentuates Miranda’s writing prowess.</p>                 
                     </div>
 
                     <!--IMAGE-->
@@ -122,11 +121,16 @@
 
                     <!--IMAGE-->
                     <div class="solution_image show" id="solution1">
-                        <img class="img" src="Miranda Holliday/miranda_acting.png" alt="Photo of a Miranda's acting portfolio.">
+                        <img class="img" src="Miranda Holliday/miranda_home.png" alt="Photo of a MirandaHolliday.coms's landing page.">
                     </div>
 
                     <!--IMAGE-->
                     <div class="solution_image" id="solution2">
+                        <img class="img" src="Miranda Holliday/miranda_acting.png" alt="Photo of a Miranda's acting portfolio.">
+                    </div>
+
+                    <!--IMAGE-->
+                    <div class="solution_image" id="solution3">
                         <img class="img" src="Miranda Holliday/miranda_writing.png" alt="Photo of a Miranda's writing portfolio.">
                     </div>
                 </section>
@@ -137,7 +141,7 @@
                     <div class="text_section only_text">
                         <h4>Insight</h4>
                         <h2>Quality Over Quantity</h2>
-                        <p>Combining a minimalistic approach with a cinematic mindset produced a solution that allowed users to look beyond the illusion of inexperience and towards the brilliant talent within a young professional's work.</p>                           
+                        <p>Miranda’s online portfolio uses strategic design solutions to engage and captivate audiences, compelling them to evaluate her professionalism based on the quality of her work, rather than the quantity.</p>                           
                     </div>
                 </section>
 
@@ -287,12 +291,16 @@
 
                     const sol1 = document.getElementById("solution1");
                     const sol2 = document.getElementById("solution2");
+                    const sol3 = document.getElementById("solution3");
 
                     if (sol1.matches(".show")) {
                         sol1.classList.remove("show");
                         sol2.classList.add("show");
-                    } else {
+                    } else if (sol2.matches(".show")) {
                         sol2.classList.remove("show");
+                        sol3.classList.add("show");
+                    } else {
+                        sol3.classList.remove("show");
                         sol1.classList.add("show");
                     }
                 }
