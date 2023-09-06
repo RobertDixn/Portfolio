@@ -156,55 +156,43 @@
 
          <!------------------JQUERY SCRIPT----------------------------->
          <script>
-if (window.matchMedia('(min-width: 1024px)').matches) {
-                /*Hide nav-items/links on load*/
-                document.querySelectorAll('.nav-link').forEach(function(el) {
-                el.classList.remove("hide-nav-link");
-                });
-            }    
-
-             if (window.matchMedia('(max-width: 1023px)').matches) {
+        if (window.matchMedia('(max-width: 1023px)').matches) {
+        // do functionality on screens smaller than 1024px
     
-                /*Hide nav-items/links on load*/
-                document.querySelectorAll('.nav-link').forEach(function(el) {
-                el.classList.add("hide-nav-link");
+                /*.NAV-ITEMS OPACITY 0 WHEN DOC LOADS*/
+                document.querySelectorAll('.nav-item').forEach(function(el) {
+                el.style.opacity = '0';
                 });
     
                 /*Hamburger Menu Change & Transition*/   
-                function toggle_menu(x) {
-                    x.classList.toggle("open-menu");
-
-                    var overlay = document.getElementById("nav-overlay")
-   
-                    if (overlay.style.height === "100vh") {
-                        overlay.style.height = "0"; 
+                 function toggle_menu(x) {
+                     x.classList.toggle("open-menu");
+         
+                     var x = document.getElementById("nav-overlay")
+                     var y = document.getElementById("page")
+                     var n = document.getElementById("nav-menu")     
+    
+                     if (x.style.height === "100vh") {
+                         x.style.height = "0"; 
                          
-                        /*.Hide nav-items/links*/
-                        document.querySelectorAll('.nav-link').forEach(function(el) {
-                        el.classList.add("hide-nav-link");
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '0';
                         });
     
-                    } else {
-                        overlay.style.height = "100vh";
+                     } else {
+                         x.style.height = "100vh";
                          
-                        /*.Show nav-items/links*/
-                        document.querySelectorAll('.nav-link').forEach(function(el) {
-                        el.classList.remove("hide-nav-link");
+                        document.querySelectorAll('.nav-item').forEach(function(el) {
+                        el.style.opacity = '100';
                         });
 
                         }
-                    }
+                     }
          
-                /*when about or portfolio is selected*/    
-                function closeMenu() {
-                    document.getElementById("hamburger-menu").classList.remove("open-menu")
-                    document.getElementById("nav-overlay").style.height = "0";
-                    
-                    /*.Hide nav-items/links*/
-                    document.querySelectorAll('.nav-link').forEach(function(el) {
-                        el.classList.add("hide-nav-link");
-                        });
+                     function closeMenu() {
+                     var nav = document.getElementById("nav-overlay")  
+                     document.getElementById("nav-menu").classList.remove("open-menu");
                     } 
-                }
+            }
                  </script>
     </html>
