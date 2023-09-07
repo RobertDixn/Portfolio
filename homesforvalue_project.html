@@ -26,7 +26,7 @@
                 <!--HAMBURGER MENU-->
                 <div id="hamburger-menu" onclick="toggle_menu(this)">
                     <div class="line" id="line1"></div>
-                    <div class="line" id="line2"></div>
+                    <div class="line" id="line2"></div>s
                     <div class="line" id="line3"></div> 
                 </div>
             </div>
@@ -58,31 +58,25 @@
             <main class="page_wrapper">
                 
                 <!--COVER-->
-                <section class="cover_section">
+                <section class="cover_section row_layout">
                     <!--TEXT-->
-                    <div class="text_section">
+                    <div class="text_sections">
                         <h1>Homes For Value</h1>
                     </div>
 
                     <!--IMAGE-->
                     <div class="cover_image">
-                        <img src="Homes For Value/homes-house.png" alt="Homepage of the desktop version of Homesforvalue.com">
+                        <img src="Homes For Value/homes_cover.png" alt="Homepage of the tablet and mobile sversion of Homesforvalue.com">
                     </div>
-
-
-
-                    <!--BACKGROUND-->
-                    <div class="img_background"></div>
                 </section>
 
                 <!--PROBLEM-->
                 <section class="problem_section">
                     <!--TEXT-->
-                    <div class="text_section only_text">
+                    <div class="text_section ">
                         <h4>The Problem</h4>
-                        <h2>Opportunity Left <span class="line_break">At The Door</span></h2>
-                        <p>Homes For Value is a real estate agency that makes selling your home less of a nightmare, however with the steady downfall of door-to-door sales and the reliability of print marketing the company's clientele began to shrink.</p> 
-                        <p class="second_paragraph">To overcome this challenge, I added some technology to their marketing method to increase cusotmer impact and growth.</p>
+                        <h2>Time For A Change</h2>
+                        <p>Recognizing the declining reliability of using print marketing to generate new business, Homes For Value wanted to transform a postcard, left with potential clients, into a website clients can use to easily reconnect with the agency.</p>
                     </div>
                 </section>
 
@@ -91,13 +85,13 @@
                     <!--TEXT-->
                     <div class="text_section">
                         <h4>Solutions</h4>
-                        <h2>Aligning Experiences</h2>
-                        <p>Instead of homeowners losing that sense of connection the second they say farewell to agents, the moment they look at the company’s website they are reminded of their conversation through the use of words and images that reaffirm the company's core messaging.</p>                          
+                        <h2>Using Accessibility As The Key</h2>
+                        <p>Instead of having the loss of a piece of paper resulting in the loss of a client, agents at Homes For Value can leave clients with a loss-proof, digital means to reconnect with the agency that is accessible as long as they have access to a device with internet.</p>                          
                     </div>
 
                     <!--IMAGE-->
                     <div class="section_image">
-                        <img class="img" src="Homes For Value/homes-landing.png" alt="Photo of a Homesforvalue.com's desktop landing page.">
+                        <img class="img" src="Homes For Value/homes_viewports.png" alt="Photo of a Homesforvalue.com's desktop landing page.">
                     </div>
 
                     <!--BACKGROUND-->
@@ -108,26 +102,29 @@
                 <section class="solution2_section row_layout">
                     <!--TEXT-->
                     <div class="text_section solution2_text">
-                        <h2>Accessibility Is The Key</h2>
-                        <p>By making the company’s website responsive, the loss of a paper pamphlet doesn’t result in the loss of a customer. Instead, home owners can access and even share vital information that can save them from the nightmare that is selling a home.</p>                                         
+                        <h2>Aligning Experiences</h2>
+                        <p>Homes For Value’s website uses choice text and visuals that are consistent with the conversational script and core messaging of the agency to invoke the same sense of trust and security clients have during their initial conversation with an agent.</p>                                         
                     </div>
 
                     <!--IMAGE-->
-                    <div class="section_image second_image">
-                        <img class="img" src="Homes For Value/homes-accessibility.png" alt="Photo of a Homesforvalue.com on different devices.">
+                    <div class="section2_image show" id="solution1">
+                        <img class="img" src="Homes For Value/homes_postcard.png" alt="Photo of a the inital post card Homes For Value agents left with clients.">
                     </div>
 
-                    <!--BACKGROUND-->
-                    <div class="blue_background2"></div>
+                    <!--IMAGE-->
+                    <div class="section2_image" id="solution2">
+                        <img class="img" src="Homes For Value/homes_laptop.png" alt="Photo of a Homes For Value's website on desktop.">
+                    </div>
+
                 </section>
 
                 <!--INSIGHT-->
                 <section class="insight_section">
                     <!--TEXT-->
-                    <div class="text_section only_text">
+                    <div class="text_section">
                         <h4>Insight</h4>
                         <h2>The Value Of Emotion</h2>
-                        <p>Reproducing the emotional element in the conversation between homeowner and agent at the door in the company’s website helped Homes For Value not only grow their clientele but build a lasting relationship with them.</p>                          
+                        <p>By replacing a postcard with an accessible, digital means to reconnect that is reminiscent of a reassuring conversation between a homeowner and an agent, Homes For Value is able to rely on a more reliable marketing method to not only grow their clientele but build a lasting relationship with them.</p>                          
                     </div>
                 </section>
 
@@ -263,6 +260,25 @@
                         el.classList.add("hide-nav-link");
                         });
                     } 
+                }
+
+                /*SOLUTION IMAGE SHOW AND HIDE*/    
+                const myInterval = setInterval(switchImg, 4000);
+
+                function switchImg() {
+
+                    const sol1 = document.getElementById("solution1");
+                    const sol2 = document.getElementById("solution2");
+
+                    if (sol1.matches(".show")) {
+                        sol1.classList.remove("show");
+                        sol2.classList.add("show");
+                    } else if (sol2.matches(".show")) {
+                        sol2.classList.remove("show");
+                        sol1.classList.add("show");
+                    } else {
+                        sol1.classList.add("show");
+                    }
                 }
                 </script>
     </html>
