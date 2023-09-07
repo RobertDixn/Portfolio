@@ -38,7 +38,7 @@
     z-index: 1;
   }
   .text_section {
-    max-width: 600px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -46,9 +46,7 @@
     align-items: start;
   }
   p { opacity: 65%;}
-  .second_paragraph {
-    margin-top: -20px;
-  }
+
   h1, h2, h3, h4 {
     font-size: 1em;
     font-weight: 400;/*REGULAR*/
@@ -56,56 +54,28 @@
     text-transform: capitalize;
   }
   h1 {
-    color: #ffffff;
+    font-family: "Montserrat";
     font-size: 2.5em;
-    font-weight: 700; /*BOLD*/
+    font-weight: 600; /*SEMI-BOLD*/
     line-height: 1.25em;
   }
   h2 {
     font-size: 1.875em;
     font-weight: 500; /*MEDIUM*/
-    line-height: 1.25em;
+    line-height: 1.55em;
   }
   h4 {
     font-size: .875em;
     text-transform: uppercase;
   }
-  .cover_section {
+  .cover_section, .insight_section {
+    color: #ffffff;
+    background-color: #0A0E18;
     min-height: calc(100vh - 60px);
-    overflow-x: hidden;
-    margin-bottom: -160px;
-  }
-  .img_background {
-    background-color: #090D17;
-    width: 100%;
-    height: 60%;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    /*background-image: url("Homes For Value/homes-house.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    place-self: center;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);  */
-  }
-  .cover_logo {
-    background-color: ;
-    width: 100%;
-    max-width: 150px; /*DECIDE LATER*/
-    block-size: auto;
-    z-index: 1;
-  }
-  .cover_logo img {
-    width: 100%;
-    min-width: 125px; 
-    object-fit: fill
   }
   .cover_image {
-    background-color: ;
     width: 100%;
-    max-width: 800px; /*DECIDE LATER*/
+    max-width: 400px; /*DECIDE LATER*/
     block-size: auto;
     z-index: 1;
   }
@@ -116,7 +86,7 @@
   }
   .section_image {
     width: 100%;
-    max-width: 600px; /*DECIDE LATER*/
+    max-width: 800px; /*DECIDE LATER*/
     block-size: auto;
     z-index: 1;
   }
@@ -125,32 +95,39 @@
     min-width: 150px; 
     object-fit: fill;
   }
-  .solution2_section {
-    color: #ffffff;
-  }
-  .blue_background1, .blue_background2 {
-    background-color: #090D17;
+  .blue_background1 {
+    background-color: #0A0E18;
     width: 100%;
     z-index: -1;
-  }
-  .blue_background1{
-    height: 35%;
+    height: 25%;
     position: absolute;
-    bottom: -160px;
+    bottom: -40px;
   }
-  .blue_background2 {
-    height: calc(100% + 80px + 240px);
-    position: absolute;
-    top: -80px;
+  .solution2_section {
+    padding-top: 40px;
+  }
+  .section2_image {
+    width: 100%;
+    max-width: 600px; /*DECIDE LATER*/
+    block-size: auto;
+    z-index: 1;
+  }
+  .section2_image img {
+    width: 100%;
+    min-width: 150px; 
+    object-fit: fill;
+  }
+  .section2_image {
+    display: none;
+  }
+  .show {
+    display: block;
   }
   .insight_section {
-    background-color: #090D17;
-    color: #ffffff;
     margin-bottom: -160px;
-    padding-bottom: 160px;
   }
   .project_section {
-    background-color: #090D17;
+    background-color: #0A0E18;
     width: 100%;
     height: 172.84vh;
     padding-top: 80px;
@@ -391,13 +368,25 @@
       padding: 0 max(60px, 4%);
     }
     .blue_background1{
-      height: 50%;
+      height: 35%;
     }
   }
   @media only screen and (min-width: 768px) {
-    .cover_logo {
-      max-width: 175px;
+    .row_layout {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
     }
+    .cover_image {
+      max-width: 500px; 
+    }
+    h1 {
+      font-size: 3.5em;
+      width: 280px;
+    }
+    .solution2_text {
+      max-width: 300px;
+   }
     .project_section {
       height: calc(100vh - 60px);
     }
@@ -441,21 +430,31 @@
     }
     section {
       padding: 0 max(80px, 4%);
+      gap: 80px;
     }
-    .cover_section {
-        margin-bottom: -80px;
-    }
-    .solution2_text {
-        max-width: 400px;
-    }
-    .second_image {
-        max-width: 600px;
+    .text_section {
+      max-width: 600px;
     }
     .row_layout {
-        display: flex;
-        flex-direction: row;
-        gap: 80px;
-      }
+      gap: 80px;
+    }
+    h1 {
+      font-size: 4.5em;
+      width: 400px;
+    }
+    .blue_background1{
+      height: 45%;
+      bottom: -80px;
+    }
+    .solution2_section {
+      padding-top: 80px;
+    }
+    .solution2_text {
+      max-width: 400px;
+   }
+   .section_image {
+    max-width: 1000px; /*DECIDE LATER*/
+  }
     /************************************NAVIGATION***************************************/
     #navbar {
       z-index: 6;
@@ -503,37 +502,30 @@
     .page_wrapper {
       gap: 240px;
     }
+    h1 {
+      font-size: 5em;
+      width: 450px;
+    }
     h2 {
       font-size: 2.5em;
-    }
-    section {
-      padding: 0 max(80px, 4%);
-      gap: 80px;  
     }
     .section_image {
         max-width: min(1000px, 75%);
     }
-    .second_image {
-        max-width: 600px;
-    }
     .insight_section {
       margin-bottom: -240px;
-    }
-    .insight_section {
-        padding-bottom: 240px;
     }
     .project_section {
       margin-bottom: -240px;
     }
-    .cover_image {
-        max-width: 1000px;
-    }
   }
   /***********************************EXTRALARGE DESKTOP****************************************/
-  @media only screen and (min-width: 1800px) { /*changed from 1920px for img*/
-  
-}
   @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
-
+    /*html {
+      font-size: 20px;
+    }
+    h1 {
+      width: 500px;
+    }*/
   }
   
