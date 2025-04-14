@@ -341,6 +341,10 @@ h3 {
     grid-column: 4 / 11;
     grid-row: 8 / 9;
   }
+  .cont9 {
+    grid-column: 4 / 11;
+    grid-row: 9 / 10;
+  }
   .header1 {
     grid-column: 1 / auto;
     grid-row: 1 / 2;
@@ -366,7 +370,8 @@ h3 {
   .cont3, 
   .cont4,
   .cont5, 
-  .cont6 {
+  .cont6,
+  .cont7 {
     margin-bottom: -60px; /*Half of contnet-wrapper row-gap*/
   }
   .btn-wrapper {
@@ -441,7 +446,8 @@ h3 {
   .cont3,
   .cont4,
   .cont5,
-  .cont6 {
+  .cont6,
+  .cont7 {
     margin-bottom: -60px; /*Half of contnet-wrapper row-gap*/
   }
 }
