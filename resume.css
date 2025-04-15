@@ -376,7 +376,7 @@ h3 {
   }
   .btn-wrapper {
     grid-column: 4 / auto;
-    grid-row: 9 /10;
+    grid-row: 10 / 11;
   }
   .btn-wrapper {
     height: 49px; /*15px of top+bot padding*/
