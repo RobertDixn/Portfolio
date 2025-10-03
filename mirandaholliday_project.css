@@ -213,7 +213,7 @@ h4 {
   opacity: 100%;
 }
 .project1 {
-  background-image: url("Other/Global Entry-background.jpg");
+  background-image: url("Other/Global Entry-background.png");
 }
 .project2 {
   background-image: url("Enel X/enel_background.png");
@@ -559,5 +559,6 @@ h5 {
     max-width: 1200px;
   }
 }
+
 
 
