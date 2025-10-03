@@ -179,7 +179,7 @@ h4 {
   opacity: 100%;
 }
 .project1 {
-  background-image: url("Other/Global Entry-background.jpg");
+  background-image: url("Other/Global Entry-background.png");
 }
 .project2 {
   display: none;
@@ -562,5 +562,6 @@ h5 {
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
 }
+
 
 
