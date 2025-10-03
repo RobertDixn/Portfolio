@@ -122,25 +122,23 @@ h4 {
 }
 .project_section {
   width: 100%;
-  height: 172.84vh;
+  height: 225vh;
   padding-top: 80px;
   padding-bottom: 80px;
-  margin-bottom: -160px;
 }
 .project_wrapper {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   align-items: normal;
   justify-content: normal;
   gap: 40px;
 }
 .projects {
   width: 100%;
-  max-width: 412px;
+  max-width: 380px;
   height: 100%;
-  max-height: 435px;
   display: flex;
   align-items: end;
   background-position: center;
@@ -148,7 +146,7 @@ h4 {
   place-self: center;
 }
 .project_text {
-  background-color: #000000;
+  background-color: #0a0a0a;
   font-family: sans-serif;
   color: #ffffff;
   opacity: 85%;
@@ -181,17 +179,19 @@ h4 {
   opacity: 100%;
 }
 .project1 {
-  display: none;
-  background-image: url("Enel X/enel_background.png");
+  background-image: url("Other/Global Entry-background.jpg");
 }
 .project2 {
-  background-image: url("Cash App/cashapp_background.png");
+  background-image: url("Enel X/enel_background.png");
 }
 .project3 {
   background-image: url("Miranda Holliday/miranda_dark_background.png");
 }
 .project4 {
-  background-image: url("Homes For Value/homes_light_background.png");
+ background-image: url("Cash App/cashapp_background.png");
+}
+.global {
+  background-color: #0D4169;
 }
 .enelx {
   background-color: #9146ff;
@@ -202,8 +202,8 @@ h4 {
 .miranda {
   background-color: #C3874D;
 }
-.homes {
-  background-color: #F2BB06;
+/*.homes {
+  background-color: #F2BB06;*/
 }
 /************************************NAVIGATION***************************************/
 #navbar {
@@ -561,3 +561,4 @@ h5 {
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
 }
+
