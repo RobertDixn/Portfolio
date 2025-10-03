@@ -153,6 +153,9 @@ h2 {
 .project4 {
  background-image: url("Cash App/cashapp_background.png");
 }
+.global {
+  background-color: #0D4169;
+}
 .enelx {
   background-color: #9146ff;
 }
@@ -162,8 +165,8 @@ h2 {
 .miranda {
   background-color: #C3874D;
 }
-.homes {
-  background-color: #F2BB06;
+/*.homes {
+  background-color: #F2BB06;*/
 }
 /************************************NAVIGATION***************************************/
 #navbar {
@@ -454,5 +457,6 @@ h5 {
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
 }
+
 
 
