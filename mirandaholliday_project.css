@@ -219,6 +219,7 @@ h4 {
   background-image: url("Enel X/enel_background.png");
 }
 .project3 {
+  display: none;
   background-image: url("Miranda Holliday/miranda_dark_background.png");
 }
 .project4 {
@@ -558,4 +559,5 @@ h5 {
     max-width: 1200px;
   }
 }
+
 
