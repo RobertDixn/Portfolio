@@ -142,7 +142,7 @@ h2 {
   opacity: 100%;
 }
 .project1 {
-  background-image: url("Other/Global Entry-cover");
+  background-image: url("Other/Global Entry-cover.jpg");
 }
 .project2 {
   background-image: url("Enel X/enel_background.png");
@@ -457,6 +457,7 @@ h5 {
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
 }
+
 
 
 
