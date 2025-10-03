@@ -142,16 +142,16 @@ h2 {
   opacity: 100%;
 }
 .project1 {
-  background-image: url("Enel X/enel_background.png");
+  background-image: url("Other/Global Entry-cover");
 }
 .project2 {
-  background-image: url("Cash App/cashapp_background.png");
+  background-image: url("Enel X/enel_background.png");
 }
 .project3 {
   background-image: url("Miranda Holliday/miranda_dark_background.png");
 }
 .project4 {
-  background-image: url("Homes For Value/homes_light_background.png");
+ background-image: url("Cash App/cashapp_background.png");
 }
 .enelx {
   background-color: #9146ff;
@@ -454,4 +454,5 @@ h5 {
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
 }
+
 
