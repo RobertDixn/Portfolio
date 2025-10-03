@@ -268,7 +268,8 @@ h4 {
   background-image: url("Miranda Holliday/miranda_dark_background.png");
 }
 .project4 {
- background-image: url("Cash App/cashapp_background.png");
+  display: none;
+  background-image: url("Cash App/cashapp_background.png");
 }
 .global {
   background-color: #0D4169;
@@ -656,4 +657,5 @@ h5 {
 @media only screen and (min-width: 1920px) { /*changed from 1920px for img*/
 
 }
+
 
